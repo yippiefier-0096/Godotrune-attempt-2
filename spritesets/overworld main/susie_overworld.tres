@@ -1,0 +1,89 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://pqi56gxfkg52"]
+
+[ext_resource type="Texture2D" uid="uid://dr171db8clrnw" path="res://misc resources/main characters sprites/susie overworld/spr_susied_dark_eyes/spr_susied_dark_eyes_0.png" id="1_qnbt6"]
+[ext_resource type="Texture2D" uid="uid://chqlf5qm6wvlg" path="res://misc resources/main characters sprites/susie overworld/spr_susied_dark_eyes/spr_susied_dark_eyes_1.png" id="2_xx7j1"]
+[ext_resource type="Texture2D" uid="uid://d3ignqmlkroqm" path="res://misc resources/main characters sprites/susie overworld/spr_susied_dark_eyes/spr_susied_dark_eyes_2.png" id="3_oka31"]
+[ext_resource type="Texture2D" uid="uid://be2qa1d80gegr" path="res://misc resources/main characters sprites/susie overworld/spr_susied_dark_eyes/spr_susied_dark_eyes_3.png" id="4_3iixy"]
+[ext_resource type="Texture2D" uid="uid://w2c5qyopjoob" path="res://misc resources/main characters sprites/susie overworld/spr_susiel_dark_eyes/spr_susiel_dark_eyes_0.png" id="5_7tfah"]
+[ext_resource type="Texture2D" uid="uid://b1hxnv57n6dv5" path="res://misc resources/main characters sprites/susie overworld/spr_susiel_dark_eyes/spr_susiel_dark_eyes_1.png" id="6_cv071"]
+[ext_resource type="Texture2D" uid="uid://ci3ec68ubaqib" path="res://misc resources/main characters sprites/susie overworld/spr_susiel_dark_eyes/spr_susiel_dark_eyes_2.png" id="7_03oqk"]
+[ext_resource type="Texture2D" uid="uid://s5ywtyeu66ro" path="res://misc resources/main characters sprites/susie overworld/spr_susiel_dark_eyes/spr_susiel_dark_eyes_3.png" id="8_jsr7s"]
+[ext_resource type="Texture2D" uid="uid://d17744mepcomj" path="res://misc resources/main characters sprites/susie overworld/spr_susier_dark_eyes/spr_susier_dark_eyes_0.png" id="9_r50gd"]
+[ext_resource type="Texture2D" uid="uid://1j2chmy1dhyi" path="res://misc resources/main characters sprites/susie overworld/spr_susier_dark_eyes/spr_susier_dark_eyes_1.png" id="10_ldvva"]
+[ext_resource type="Texture2D" uid="uid://dmw6trrtpvtqh" path="res://misc resources/main characters sprites/susie overworld/spr_susier_dark_eyes/spr_susier_dark_eyes_2.png" id="11_5nicj"]
+[ext_resource type="Texture2D" uid="uid://yp4k36sivnhm" path="res://misc resources/main characters sprites/susie overworld/spr_susier_dark_eyes/spr_susier_dark_eyes_3.png" id="12_1ydyv"]
+[ext_resource type="Texture2D" uid="uid://upo0f55ybujf" path="res://misc resources/main characters sprites/susie overworld/spr_susieu_dark/spr_susieu_dark_0.png" id="13_e2bfo"]
+[ext_resource type="Texture2D" uid="uid://tkq5udumib61" path="res://misc resources/main characters sprites/susie overworld/spr_susieu_dark/spr_susieu_dark_1.png" id="14_oxhht"]
+[ext_resource type="Texture2D" uid="uid://cjnnn7gd3n20h" path="res://misc resources/main characters sprites/susie overworld/spr_susieu_dark/spr_susieu_dark_2.png" id="15_wwy7f"]
+[ext_resource type="Texture2D" uid="uid://bix7q6ykl87r2" path="res://misc resources/main characters sprites/susie overworld/spr_susieu_dark/spr_susieu_dark_3.png" id="16_6t43l"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qnbt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xx7j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oka31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3iixy")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7tfah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cv071")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_03oqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jsr7s")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_r50gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ldvva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5nicj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1ydyv")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_e2bfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_oxhht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wwy7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6t43l")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]

@@ -1,0 +1,89 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bfa4q01xr86tx"]
+
+[ext_resource type="Texture2D" uid="uid://b6avfryek6aef" path="res://misc resources/main characters sprites/fraud overworld/spr_krisd_dark/spr_krisd_dark_0.png" id="1_0nk1p"]
+[ext_resource type="Texture2D" uid="uid://dudxjnqb7v8r0" path="res://misc resources/main characters sprites/fraud overworld/spr_krisd_dark/spr_krisd_dark_1.png" id="2_sictk"]
+[ext_resource type="Texture2D" uid="uid://b83reo5ncjbve" path="res://misc resources/main characters sprites/fraud overworld/spr_krisd_dark/spr_krisd_dark_2.png" id="3_bah3q"]
+[ext_resource type="Texture2D" uid="uid://dm7kctmc2vo86" path="res://misc resources/main characters sprites/fraud overworld/spr_krisd_dark/spr_krisd_dark_3.png" id="4_5c2nj"]
+[ext_resource type="Texture2D" uid="uid://blf6ickd217sp" path="res://misc resources/main characters sprites/fraud overworld/spr_krisl_dark/spr_krisl_dark_0.png" id="5_xjgwl"]
+[ext_resource type="Texture2D" uid="uid://cxcjg5v2jdqc5" path="res://misc resources/main characters sprites/fraud overworld/spr_krisl_dark/spr_krisl_dark_1.png" id="6_mgax6"]
+[ext_resource type="Texture2D" uid="uid://kc4s2rpa6ysh" path="res://misc resources/main characters sprites/fraud overworld/spr_krisl_dark/spr_krisl_dark_2.png" id="7_o3r25"]
+[ext_resource type="Texture2D" uid="uid://m4k64lngl8ne" path="res://misc resources/main characters sprites/fraud overworld/spr_krisl_dark/spr_krisl_dark_3.png" id="8_ywueq"]
+[ext_resource type="Texture2D" uid="uid://devj0aiwah6sr" path="res://misc resources/main characters sprites/fraud overworld/spr_krisr_dark/spr_krisr_dark_0.png" id="9_h6g86"]
+[ext_resource type="Texture2D" uid="uid://cyn5cjsk04bgs" path="res://misc resources/main characters sprites/fraud overworld/spr_krisr_dark/spr_krisr_dark_1.png" id="10_hb5fa"]
+[ext_resource type="Texture2D" uid="uid://5kkhoc8p3aui" path="res://misc resources/main characters sprites/fraud overworld/spr_krisr_dark/spr_krisr_dark_2.png" id="11_aunmn"]
+[ext_resource type="Texture2D" uid="uid://efekcnme3fh1" path="res://misc resources/main characters sprites/fraud overworld/spr_krisr_dark/spr_krisr_dark_3.png" id="12_8txxw"]
+[ext_resource type="Texture2D" uid="uid://02eeb2ss7x8p" path="res://misc resources/main characters sprites/fraud overworld/spr_krisu_dark/spr_krisu_dark_0.png" id="13_vj6w6"]
+[ext_resource type="Texture2D" uid="uid://b7guh3h0jt1jq" path="res://misc resources/main characters sprites/fraud overworld/spr_krisu_dark/spr_krisu_dark_1.png" id="14_0uahf"]
+[ext_resource type="Texture2D" uid="uid://c25kpq4w1ljg1" path="res://misc resources/main characters sprites/fraud overworld/spr_krisu_dark/spr_krisu_dark_2.png" id="15_ims8y"]
+[ext_resource type="Texture2D" uid="uid://ca06dwn266w48" path="res://misc resources/main characters sprites/fraud overworld/spr_krisu_dark/spr_krisu_dark_3.png" id="16_dkywf"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0nk1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sictk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bah3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5c2nj")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xjgwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mgax6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o3r25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ywueq")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_h6g86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hb5fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aunmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8txxw")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_vj6w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0uahf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ims8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dkywf")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]

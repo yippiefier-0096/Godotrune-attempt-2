@@ -1,0 +1,74 @@
+extends Node
+## Base class for characters, ally or foes, that can appear in combat, and is the main way they interact with battles.
+## [br][br]A class extending from this is needed for each unique character.
+## [br][br]Each instance represents the status and equipment of a character. 
+
+class_name battle_profile 
+## the character's id, for identifying purposes.
+var char_id:int=0
+##the character's maximum HP, past which increasing HP should be ineffective.
+var max_hp:int=100
+## the character's effective HP.
+var hp:int=100
+## the character's maximum HP bonuses given by various effects.
+var maxhp_aug:Array[int]=[0,0,0,0]
+## the character's attack power.
+var atk:int=5
+## bonus to the character's attack power given by various effects.
+var atk_aug:Array[int]=[0,0,0,0]
+## the character's defense.
+var def:int=2
+## bonus to the character's defense given by various effects.
+var def_aug:Array[int]=[0,0,0,0]
+## the character's magic.
+var mag:int=3
+## bonus to the character's magic given by various effects.
+var mag_aug:Array[int]=[0,0,0,0]
+## Used in tendem with [member turn_timer], representing any effect the character is under, from equipment, skills, or otherwise.
+var turn_effect:Array[Callable]
+## Used in tendem with [member turn_effect], representing the time (in turns) each effect would last.
+var turn_timer:Array[int]
+##list of attack patterns this character can use, if they're on the enemy roster.
+var attack_patterns:Array 
+##list of attack patterns this character can use while alone in the enemy team.
+var attack_patterns_solo:Array
+## the weapon this character currently holds. 
+var equipped_weapon:weapon_base=Inventory.no_weapon
+## the two pieces of accessories this character currently holds.
+var equipped_armors:Array[equipment_base]=[Inventory.no_armor,Inventory.no_armor]
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	
+	pass # Replace with function body.
+func faux_turn():
+	
+	for i in turn_effect.size():
+		if turn_timer[i]>0:
+			turn_effect[i].call(self)
+		turn_timer[i]-=1
+	for i in turn_timer.size():
+		if turn_timer[clamp(turn_timer.size()-(i+1),0,9999)]<=0:
+			turn_effect.pop_at(clamp(turn_timer.size()-(i+1),0,9999))
+			turn_timer.pop_at(clamp(turn_timer.size()-(i+1),0,9999))
+		print(turn_effect)
+	if self.equipped_weapon:
+		self.equipped_weapon.passive_effect(self)
+	for i in self.equipped_armors.size():
+		self.equipped_armors[i].passive_effect(self)
+	print (self.atk_aug)
+		
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("confirm"):
+		faux_turn()
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	
+	pass
+func choose_attack(turn:int=0):
+	if !attack_patterns.is_empty():
+		BattleManager.enemy_attacks.append(attack_patterns[randi_range(0,attack_patterns.size()-1)])
+	pass
+func choose_attack_solo(turn:int=0):
+	if !attack_patterns_solo.is_empty():
+		BattleManager.enemy_attacks.append(attack_patterns_solo[randi_range(0,attack_patterns_solo.size()-1)])

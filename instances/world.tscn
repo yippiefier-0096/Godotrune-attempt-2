@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bvbmsovj1tg0k"]
+
+[ext_resource type="PackedScene" uid="uid://d3xarslahwuit" path="res://instances/object_1.tscn" id="1_7wxkg"]
+[ext_resource type="Script" uid="uid://babbyw1h1omwg" path="res://instances/object_2.gd" id="2_oaqeo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaqeo"]
+size = Vector2(101.859985, 161.63342)
+
+[node name="World" type="Node2D" unique_id=89434878]
+position = Vector2(321, 233)
+scale = Vector2(2, 2)
+
+[node name="object_1" parent="." unique_id=472712243 instance=ExtResource("1_7wxkg")]
+position = Vector2(4.5, 88)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1703821221]
+position = Vector2(92.5, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=298982748]
+shape = SubResource("RectangleShape2D_oaqeo")
+metadata/_edit_lock_ = true
+
+[node name="object_2" type="StaticBody2D" parent="." unique_id=1713748144]
+position = Vector2(-78.5, 77)
+script = ExtResource("2_oaqeo")
+metadata/_custom_type_script = "uid://cqjtg4hvctykg"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=497903260]
+zoom = Vector2(2, 2)

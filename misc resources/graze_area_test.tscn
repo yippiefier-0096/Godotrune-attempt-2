@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://btf5neo75yf0k"]
+
+[ext_resource type="Texture2D" uid="uid://dvyw5tfhqe588" path="res://misc resources/soul/spr_grazeappear_1.png" id="1_mwak5"]
+
+[node name="graze area test" type="RigidBody2D" unique_id=578131710]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1051543500]
+polygon = PackedVector2Array(39, 10, 39, -26, 27, -39, 9, -39, 2, -33, -2, -33, -9, -39, -27, -39, -39, -27, -39, 10, -9, 40, 9, 40)
+
+[node name="SprGrazeappear1" type="Sprite2D" parent="." unique_id=1027055456]
+self_modulate = Color(1, 1, 1, 0.28627452)
+scale = Vector2(1.605, 1.605)
+texture = ExtResource("1_mwak5")

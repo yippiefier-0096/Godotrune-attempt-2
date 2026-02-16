@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d3xarslahwuit"]
+
+[ext_resource type="Script" uid="uid://brgj6nn6iayke" path="res://instances/object_1.gd" id="1_yiqlq"]
+
+[node name="object1" type="StaticBody2D" unique_id=193957004]
+script = ExtResource("1_yiqlq")
+metadata/_custom_type_script = "uid://cqjtg4hvctykg"

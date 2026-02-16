@@ -1,0 +1,89 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cgmj7xivj1yhx"]
+
+[ext_resource type="Texture2D" uid="uid://cgf2gb4i4pjei" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_down_dw/spr_noelle_walk_down_dw_0.png" id="1_pbwbh"]
+[ext_resource type="Texture2D" uid="uid://be6leb21yctti" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_down_dw/spr_noelle_walk_down_dw_1.png" id="2_rrp3w"]
+[ext_resource type="Texture2D" uid="uid://clg2echs6j23w" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_down_dw/spr_noelle_walk_down_dw_2.png" id="3_e58sw"]
+[ext_resource type="Texture2D" uid="uid://bkqxtc3pyj2vm" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_down_dw/spr_noelle_walk_down_dw_3.png" id="4_rp5y5"]
+[ext_resource type="Texture2D" uid="uid://cwf56vk3vlatb" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_left_dw/spr_noelle_walk_left_dw_0.png" id="5_cjawr"]
+[ext_resource type="Texture2D" uid="uid://coh32xkublvr1" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_left_dw/spr_noelle_walk_left_dw_1.png" id="6_dllwu"]
+[ext_resource type="Texture2D" uid="uid://ye6sqku5jjji" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_left_dw/spr_noelle_walk_left_dw_2.png" id="7_1ndue"]
+[ext_resource type="Texture2D" uid="uid://bsdv1np7xf08q" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_left_dw/spr_noelle_walk_left_dw_3.png" id="8_mhcpb"]
+[ext_resource type="Texture2D" uid="uid://dblfsfxmsjppl" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_right_dw/spr_noelle_walk_right_dw_0.png" id="9_toc6k"]
+[ext_resource type="Texture2D" uid="uid://cthdgjbvu7su8" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_right_dw/spr_noelle_walk_right_dw_1.png" id="10_mg2us"]
+[ext_resource type="Texture2D" uid="uid://c6ka8l3bjgxja" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_right_dw/spr_noelle_walk_right_dw_2.png" id="11_c7riv"]
+[ext_resource type="Texture2D" uid="uid://hrsklxsjd6xy" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_right_dw/spr_noelle_walk_right_dw_3.png" id="12_r80ry"]
+[ext_resource type="Texture2D" uid="uid://2eycix837iey" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_up_dw/spr_noelle_walk_up_dw_0.png" id="13_i6d1k"]
+[ext_resource type="Texture2D" uid="uid://cc7o6c7kxw4ju" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_up_dw/spr_noelle_walk_up_dw_1.png" id="14_tm2gw"]
+[ext_resource type="Texture2D" uid="uid://ca4c204rokwde" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_up_dw/spr_noelle_walk_up_dw_2.png" id="15_52sab"]
+[ext_resource type="Texture2D" uid="uid://b6epsorko5r50" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_up_dw/spr_noelle_walk_up_dw_3.png" id="16_rbp08"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pbwbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rrp3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e58sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rp5y5")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cjawr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dllwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1ndue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mhcpb")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_toc6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mg2us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c7riv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_r80ry")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_i6d1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tm2gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_52sab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rbp08")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
