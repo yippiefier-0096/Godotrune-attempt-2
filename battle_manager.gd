@@ -22,11 +22,23 @@ func my_turn():
 	globals.mode=globals.mode_index.battle_turn
 func enemy_turn():
 	if globals.mode==globals.mode_index.battle_turn:
+		bt_timer=0
 		self.position=OverworldTeam.position
 		soul_normal=heart_shaped_object.new()
 		self.add_child(soul_normal)
 		globals.mode=globals.mode_index.battle_dodge
-		add_child(test_pattern.new())
+		for i in enemy_team.size():
+			var _v=enemy_team[i].choose_attack()
+			add_child(_v)
+			enemy_attacks.append(_v)
+			bt_timer+=enemy_attacks[i].attack_length
+		bt_timer/=enemy_attacks.size()	
+		await get_tree().create_timer(bt_timer).timeout
+		soul_normal.queue_free()
+		for i in enemy_attacks.size():
+			enemy_attacks.pop_front().queue_free()
+			
+		my_turn()
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input(event: InputEvent) -> void:

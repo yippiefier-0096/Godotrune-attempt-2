@@ -1,14 +1,14 @@
-extends Area2D
-##This is the class of foes roaming the overworld. They contain 
-class_name overworld_enemy
-
-##the visuals for the enemy
-@export var graphics:AnimatedSprite2D=AnimatedSprite2D.new()
-
+extends battle_profile
+class_name enemy2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-
+	atk=5
+	def=2
+	mag=0
+	max_hp=100
+	hp=max_hp
+	attack_patterns=[test_pattern_icee]
 	pass # Replace with function body.
 
 

@@ -7,7 +7,7 @@ var graze:graze_box
 var graphics:AnimatedSprite2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-
+	
 	hitbox=CollisionShape2D.new()
 	hitbox.shape=CircleShape2D.new()
 	self.add_child(hitbox)
@@ -20,17 +20,13 @@ func _ready() -> void:
 	collision_layer=2
 	collision_mask=2
 	self.scale=Vector2(0.6,0.6)
-	intro()
-	
 	pass # Replace with func`tion body.
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("cancel"):
 		speed=1.0
 	if event.is_action_released("cancel"):
 		speed=1.8
-func intro():
 
-	pass
 	
 
 # Called every frame. 'd`elta' is the elapsed time since the previous frame.

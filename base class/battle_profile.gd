@@ -65,10 +65,12 @@ func _input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	
 	pass
-func choose_attack(turn:int=0):
+func choose_attack(turn:int=0)->bullet_pattern_base:
 	if !attack_patterns.is_empty():
-		BattleManager.enemy_attacks.append(attack_patterns[randi_range(0,attack_patterns.size()-1)])
-	pass
+		return attack_patterns[randi_range(0,attack_patterns.size()-1)].new()
+		
+	else:
+		return null
 func choose_attack_solo(turn:int=0):
 	if !attack_patterns_solo.is_empty():
 		BattleManager.enemy_attacks.append(attack_patterns_solo[randi_range(0,attack_patterns_solo.size()-1)])
