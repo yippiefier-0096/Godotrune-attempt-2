@@ -37,11 +37,6 @@ window/size/viewport_height=960
 window/size/resizable=false
 window/stretch/scale_mode="integer"
 
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
-
 [input]
 
 confirm={
