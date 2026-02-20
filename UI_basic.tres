@@ -1,0 +1,95 @@
+[gd_resource type="Theme" format=3 uid="uid://dqbt1qotxciwu"]
+
+[ext_resource type="FontFile" uid="uid://b0ixdmo1uekv2" path="res://misc resources/DeterminationMonoWebRegular-Z5oq.ttf" id="1_0k3kt"]
+[ext_resource type="Texture2D" uid="uid://cyqtsn82mrsep" path="res://misc resources/battle menu buttons/spr_btact/spr_btact_1.png" id="2_ehlut"]
+[ext_resource type="Texture2D" uid="uid://b5n3xn8jutwtp" path="res://misc resources/battle menu buttons/spr_btact/spr_btact_0.png" id="2_vimfk"]
+[ext_resource type="Texture2D" uid="uid://drqslf6j07v3l" path="res://misc resources/battle menu buttons/spr_btfight/spr_btfight_1.png" id="4_m741k"]
+[ext_resource type="Texture2D" uid="uid://bp1ckjsnd8vo6" path="res://misc resources/battle menu buttons/spr_btfight/spr_btfight_0.png" id="5_u7xw0"]
+[ext_resource type="Texture2D" uid="uid://dptylsbexbsyp" path="res://misc resources/battle menu buttons/spr_btitem_grey/spr_btitem_grey_0.png" id="6_548jd"]
+[ext_resource type="Texture2D" uid="uid://br0y5uwohsd6m" path="res://misc resources/soul/spr_heart_0.png" id="6_x452x"]
+[ext_resource type="Texture2D" uid="uid://cqjgikoee3a80" path="res://misc resources/battle menu buttons/spr_btitem/spr_btitem_1.png" id="7_x452x"]
+[ext_resource type="Texture2D" uid="uid://brrkqgwe038i1" path="res://misc resources/battle menu buttons/spr_btitem/spr_btitem_0.png" id="8_xj4vo"]
+[ext_resource type="Texture2D" uid="uid://bv2lfral6tiwl" path="res://misc resources/battle menu buttons/spr_btspare/spr_btspare_1.png" id="9_btv68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m741k"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6ysu"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7xw0"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_m741k"]
+base_font = ExtResource("1_0k3kt")
+spacing_glyph = -2
+spacing_space = -8
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0k3kt"]
+texture = ExtResource("2_vimfk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vimfk"]
+texture = ExtResource("2_ehlut")
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i8o3y"]
+texture = ExtResource("2_vimfk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8x8na"]
+texture = ExtResource("4_m741k")
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_548jd"]
+texture = ExtResource("5_u7xw0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xj4vo"]
+texture = ExtResource("6_x452x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f03di"]
+texture = ExtResource("6_548jd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wmmly"]
+texture = ExtResource("7_x452x")
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a661w"]
+texture = ExtResource("8_xj4vo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ol7y"]
+texture = ExtResource("9_btv68")
+texture_margin_bottom = 6.0
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(0, 0, 0, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_0k3kt")
+Button/styles/disabled = SubResource("StyleBoxFlat_m741k")
+Button/styles/focus = SubResource("StyleBoxFlat_p6ysu")
+Button/styles/hover = SubResource("StyleBoxFlat_p6ysu")
+Button/styles/normal = SubResource("StyleBoxFlat_p6ysu")
+Button/styles/pressed = SubResource("StyleBoxFlat_u7xw0")
+ItemList/colors/font_color = Color(1, 1, 1, 1)
+ItemList/font_sizes/font_size = 32
+ItemList/fonts/font = ExtResource("1_0k3kt")
+RichTextLabel/font_sizes/normal_font_size = 32
+RichTextLabel/fonts/normal_font = SubResource("FontVariation_m741k")
+actbutton/base_type = &"Button"
+actbutton/styles/disabled = SubResource("StyleBoxTexture_0k3kt")
+actbutton/styles/focus = SubResource("StyleBoxTexture_vimfk")
+actbutton/styles/hover = SubResource("StyleBoxTexture_vimfk")
+actbutton/styles/normal = SubResource("StyleBoxTexture_i8o3y")
+defendbutton/base_type = &"Button"
+fightbutton/base_type = &"Button"
+fightbutton/styles/focus = SubResource("StyleBoxTexture_8x8na")
+fightbutton/styles/hover = SubResource("StyleBoxTexture_8x8na")
+fightbutton/styles/normal = SubResource("StyleBoxTexture_548jd")
+heartbutton/base_type = &"Button"
+heartbutton/styles/focus = SubResource("StyleBoxTexture_xj4vo")
+itembutton/base_type = &"Button"
+itembutton/styles/disabled = SubResource("StyleBoxTexture_f03di")
+itembutton/styles/focus = SubResource("StyleBoxTexture_wmmly")
+itembutton/styles/normal = SubResource("StyleBoxTexture_a661w")
+mercybutton/base_type = &"Button"
+mercybutton/styles/focus = SubResource("StyleBoxTexture_8ol7y")

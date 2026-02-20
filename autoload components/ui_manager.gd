@@ -13,6 +13,7 @@ var dialogue:dialogue_manager
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	self.theme=load("uid://dqbt1qotxciwu")
 	self.size=Vector2(640,480)
 	normal=normal_text.new()
 	self.add_child(normal)
