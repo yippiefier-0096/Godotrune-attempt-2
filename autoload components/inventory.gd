@@ -15,7 +15,7 @@ var equip_content:Array[equipment_base]
 var weapon_content:Array[weapon_base]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in 12:
+	for i in 9:
 		var _i=miracle_drink.new()
 		self.item_content.append(_i)
 		add_child(_i)
@@ -25,7 +25,6 @@ func _ready() -> void:
 		self.equip_content.append(equipmentA.new())
 	for i in self.weapon_content.size():
 		add_child(self.weapon_content[i])
-	print (self.item_content)
 	for i in equip_content.size():
 		add_child(equip_content[i])
 	pass # Replace with function body.
@@ -37,7 +36,6 @@ func use_item(which:int,on_who:Array[battle_profile]):
 			item_content[which].use(on_who[i])
 		if item_content[which].consume_on_use:
 			item_content.pop_at(which).queue_free()
-	print(item_content)
 ##equips the [equipment_base] stored in index [param which] of [member equip_content] to [param on_who]'s weapon.
 func equip_weapon(which:int, on_who:battle_profile):
 	if on_who.equipped_weapon!=weapon_content[which]:
@@ -53,14 +51,14 @@ func equip_armor(which:int, on_who:battle_profile, what_slot:int):
 	if on_who.equipped_armors.size()<which+1:
 		on_who.equipped_armors.append(no_armor)
 	if !equip_content[which].is_equipped:
-		equip_content[which].equip(on_who,what_slot)
-		print (equip_content[which].atk_arg)
-		print ("equipped ",on_who.equipped_armors)
-		print(on_who.atk_aug)
+		equip_content[which].equip(on_who,what_slot)# still have to fix this!!!!!!!!!!!
+		#print (equip_content[which].atk_arg)
+		#print ("equipped ",on_who.equipped_armors)
+		#print(on_who.atk_aug)
 	else:
 		on_who.equipped_armors[what_slot].is_equipped=false
 		on_who.equipped_armors[what_slot]=no_armor
-		print("i've unequipped thing")
+		#print("i've unequipped thing")
 	pass
 
 	

@@ -5,6 +5,8 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kf0y4"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_et48t"]
+
 [node name="option board" type="Control" unique_id=2116588164]
 layout_mode = 3
 anchors_preset = 0
@@ -13,6 +15,7 @@ offset_bottom = 160.0
 theme = ExtResource("1_gkut6")
 
 [node name="Option2" type="RichTextLabel" parent="." unique_id=1407349751]
+visible = false
 layout_mode = 0
 offset_left = 260.0
 offset_top = 10.0
@@ -32,6 +35,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kf0y4")
+metadata/_edit_lock_ = true
 
 [node name="SprHeart0" type="Button" parent="." unique_id=669191682]
 layout_mode = 0
@@ -52,7 +56,35 @@ text = "[img=center
 ]uid://b5n3xn8jutwtp[/img]Option one"
 scroll_active = false
 
+[node name="Panel" type="Panel" parent="SprHeart0" unique_id=1463059182]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 364.96
+offset_bottom = 20.0
+rotation = -6.2831855
+scale = Vector2(1.605, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_et48t")
+
+[node name="Panel2" type="Panel" parent="SprHeart0" unique_id=858056161]
+layout_mode = 0
+offset_left = 500.0
+offset_right = 620.0
+offset_bottom = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_et48t")
+
+[node name="Option2" type="RichTextLabel" parent="SprHeart0" unique_id=1825831767]
+layout_mode = 0
+offset_left = 200.0
+offset_top = -8.0
+offset_right = 419.99973
+offset_bottom = 32.0
+bbcode_enabled = true
+text = "[img=center
+]uid://b5n3xn8jutwtp[/img]Option one"
+scroll_active = false
+
 [node name="Option3" type="RichTextLabel" parent="." unique_id=194232201]
+visible = false
 layout_mode = 0
 offset_left = 30.0
 offset_top = 60.0
@@ -64,6 +96,7 @@ text = "[img=center
 scroll_active = false
 
 [node name="Option4" type="RichTextLabel" parent="." unique_id=445294652]
+visible = false
 layout_mode = 0
 offset_left = 260.0
 offset_top = 60.0
@@ -75,6 +108,7 @@ text = "[img=center
 scroll_active = false
 
 [node name="Option5" type="RichTextLabel" parent="." unique_id=1242291973]
+visible = false
 layout_mode = 0
 offset_left = 30.0
 offset_top = 110.0
@@ -86,6 +120,7 @@ text = "[img=center
 scroll_active = false
 
 [node name="Option6" type="RichTextLabel" parent="." unique_id=412345203]
+visible = false
 layout_mode = 0
 offset_left = 260.0
 offset_top = 110.0
@@ -99,9 +134,19 @@ scroll_active = false
 [node name="Descriptions" type="RichTextLabel" parent="." unique_id=2055879789]
 layout_mode = 0
 offset_left = 480.0
-offset_top = 10.0
+offset_top = 9.0
 offset_right = 620.0
-offset_bottom = 150.0
-theme_override_colors/default_color = Color(0.4351923, 0.43519226, 0.43519226, 1)
+offset_bottom = 98.0
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.43529412, 1)
 text = "Describe
 effect here"
+
+[node name="Descriptions2" type="RichTextLabel" parent="." unique_id=1284305373]
+visible = false
+layout_mode = 0
+offset_left = 480.0
+offset_top = 110.0
+offset_right = 620.0
+offset_bottom = 150.0
+theme_override_colors/default_color = Color(0.43529412, 0.43529412, 0.43529412, 1)
+text = "100% TP"

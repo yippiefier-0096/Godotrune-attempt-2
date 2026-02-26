@@ -3,7 +3,9 @@ class_name item_base
 
 var consume_on_use:bool=true
 
-
+var desc:String=""
+var b_desc:String=""
+var nametag:String=""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

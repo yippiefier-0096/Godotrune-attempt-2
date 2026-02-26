@@ -7,8 +7,10 @@ func _ready() -> void:
 	def=2
 	mag=0
 	max_hp=100
-	hp=max_hp
+	hp=27
 	attack_patterns=[test_pattern_icee]
+	mercy=0.75
+	nametag="creepy dude"
 	pass # Replace with function body.
 
 

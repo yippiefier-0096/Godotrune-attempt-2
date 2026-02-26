@@ -1,0 +1,26 @@
+extends main_button
+class_name magicbutton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	super()
+	self.theme_type_variation="magicbutton"
+	replacer.texture=load("uid://dfg8cxaapr20j")
+	option_type_called=magic_option
+	pass # Replace with function body.
+
+
+
+#func _pressed() -> void:
+	#UiManager.create_page_h(root_character,0,magic_option)
+	#self.self_modulate.a=0
+	#replacer.visible=true
+	#
+	#pass
+
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

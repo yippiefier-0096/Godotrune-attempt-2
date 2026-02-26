@@ -36,7 +36,28 @@ var attack_patterns_solo:Array
 var equipped_weapon:weapon_base=Inventory.no_weapon
 ## the two pieces of accessories this character currently holds.
 var equipped_armors:Array[equipment_base]=[Inventory.no_armor,Inventory.no_armor]
-# Called when the node enters the scene tree for the first time.
+## list of skills. structured like this : [name, description, battle description, tp, callable, target style]
+var power_list:Dictionary={}
+##which skills are active
+var active_power:Array[int]=[]
+##the character's name
+var nametag:String=""
+##the character's sleepiness
+var sleepy:float=0
+##the character's mercy gauge
+var mercy:float=0
+var can_mercy:bool=true
+var teammate:bool=true
+##acts toward this character, structered like this: [name, description, tp, callable]
+var act_list:Dictionary
+
+var active_act:Array[int]
+
+var is_ally:bool=false
+##The list of five buttons that this character gets to access on the first layer of menu (e.g. kris' second button being ACT instead of MAGIC. eg2. DOG button)
+##[br]alternatively, putting classes extended from sprite2d can effectively make a button "disabled" (as if, it's just a sprite)
+var button_config:Array[GDScript]=[fightbutton,magicbutton,itembutton,mercybutton,defendbutton]
+
 func _ready() -> void:
 	
 	pass # Replace with function body.
@@ -59,18 +80,16 @@ func faux_turn():
 		
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("confirm"):
-		faux_turn()
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
 	pass
 func choose_attack(turn:int=0)->bullet_pattern_base:
 	if !attack_patterns.is_empty():
-		return attack_patterns[randi_range(0,attack_patterns.size()-1)].new()
-		
+		return attack_patterns[randi_range(0,attack_patterns.size()-1)].new()	
 	else:
 		return null
+
 func choose_attack_solo(turn:int=0):
 	if !attack_patterns_solo.is_empty():
 		BattleManager.enemy_attacks.append(attack_patterns_solo[randi_range(0,attack_patterns_solo.size()-1)])

@@ -15,7 +15,9 @@ func _ready() -> void:
 		add_child(ally)
 		party_list.append(ally)
 		if ally.profile:
+			ally.profile.is_ally=true
 			ally_list.append(ally)
+			
 		pass
 	pass # Replace with function body.
 func _input(event: InputEvent) -> void:
@@ -29,7 +31,7 @@ func _input(event: InputEvent) -> void:
 			test=true
 		else:
 			for i in 4:
-				ally_list[i].regroup(i)
+				party_list[i].regroup(i)
 			test=false
 			
 	if event.is_action_pressed("q"):

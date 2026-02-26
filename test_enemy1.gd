@@ -8,8 +8,10 @@ func _ready() -> void:
 	def=2
 	mag=0
 	max_hp=100
-	hp=max_hp
+	hp=-2
 	attack_patterns=[test_pattern,test_pattern_icee]
+	self.nametag="funny dude"
+	self.act_list={1:["KILL","horribly murders (not)",1000,null]}
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

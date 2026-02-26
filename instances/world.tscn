@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://d3xarslahwuit" path="res://instances/object_1.tscn" id="1_7wxkg"]
 [ext_resource type="Script" uid="uid://babbyw1h1omwg" path="res://instances/object_2.gd" id="2_oaqeo"]
 [ext_resource type="Script" uid="uid://lyirym8l4rru" path="res://instances/test_battle_1.gd" id="3_u4b3c"]
-[ext_resource type="Script" uid="uid://ds8k6y4kkwa4p" path="res://instances/test_battle_2.gd" id="4_1n58p"]
+[ext_resource type="Script" uid="uid://dictttk0lyssi" path="res://base class/battle_instance.gd" id="4_y0txv"]
+[ext_resource type="Script" uid="uid://bup3t6k60os1u" path="res://test_enemy1.gd" id="5_s1ndw"]
+[ext_resource type="Script" uid="uid://dh717s28il530" path="res://test_enemy_2.gd" id="6_ejn1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oaqeo"]
 size = Vector2(101.859985, 161.63342)
@@ -35,6 +37,7 @@ script = ExtResource("3_u4b3c")
 metadata/_custom_type_script = "uid://dictttk0lyssi"
 
 [node name="test_battle_2" type="Area2D" parent="." unique_id=127033026]
-position = Vector2(-6, -74)
-script = ExtResource("4_1n58p")
+position = Vector2(-125, -90.5)
+script = ExtResource("4_y0txv")
+enemy_team = Array[GDScript]([ExtResource("5_s1ndw"), ExtResource("6_ejn1u"), ExtResource("5_s1ndw")])
 metadata/_custom_type_script = "uid://dictttk0lyssi"
