@@ -40,16 +40,17 @@ func my_turn():
 		globals.mode=globals.mode_index.battle_turn
 		for i in globals.ally_list:
 			turn_action.append([0,0,0,null])
-		turn_order=0
+		turn_order=1
 		character_turn()
 
 func character_turn():
+	print(UiManager.get_tree())
 	if UiManager.menu_b:
 		UiManager.queue_free()
 	current_char=globals.ally_list[turn_order].profile
 	UiManager.menu_b=battle_ui.new(current_char)
 	UiManager.add_child(UiManager.menu_b)
-
+	print(UiManager.menu_b,UiManager.menu_b.get_tree())
 func turn_consequence():
 	for i in turn_action.size():
 		pass
