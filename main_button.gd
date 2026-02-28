@@ -8,7 +8,6 @@ var replacer:Sprite2D=Sprite2D.new()
 
 var option_type_called:GDScript
 
-
 ##The context of this action
 var context_pass:int=BattleManager.actioncontext.skipped
 # Called when the node enters the scene tree for the first time.
@@ -26,7 +25,6 @@ func _init(current_char:battle_profile) -> void:
 	pass
 	
 func _pressed() -> void:
-	
 	UiManager.create_page_h(root_character,0,option_type_called)
 	self.self_modulate.a=0
 	replacer.visible=true

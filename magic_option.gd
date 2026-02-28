@@ -1,6 +1,6 @@
 extends battle_option
 class_name magic_option
-
+##the individual skill for every single button of this class
 var skill_held:Array
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,8 +12,15 @@ func _init(x:int,y:int,my_owner:battle_profile,my_page:int) -> void:
 	self.focus_entered.connect(UiManager.set_desc.bind(skill_held[2],skill_held[3]))
 	
 func _pressed():
-	
-	
+	BattleManager.turn_action[BattleManager.turn_order][3]=skill_held[4]
+	match skill_held[5]:
+		battle_profile.target_style.single_enemy:
+			UiManager.create_page_v(BattleManager.enemy_team,0,char_option)
+		battle_profile.target_style.single_ally:	
+			UiManager.create_page_v(globals.ally_list,0,char_option)
+		_:
+			BattleManager.turn_action[BattleManager.turn_order][1]=-1
+			BattleManager.next_turn()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

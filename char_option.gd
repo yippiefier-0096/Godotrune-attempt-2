@@ -17,7 +17,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 func _init(y:int,my_targets:Array[battle_profile],my_page:int) -> void:
 	superprep(0,y,my_targets[my_page*3+y],my_page)
-	my_targets=target_group
+	target_group=my_targets
 	add_child(health_bar_base)
 	health_bar_base.add_child(health_bar_true)
 	health_bar_base.size=Vector2(120,20)
@@ -43,14 +43,17 @@ func _input(event: InputEvent) -> void:
 				UiManager.create_page_v(target_group,on_page-1,self.get_script(),2)
 				pass
 	if event.is_action_pressed("ui_down") and self.has_focus():
-		if pos.x==2:
-			if on_page<(root_character.active_power.size()/3):
+		if pos.y==2:
+			print("got here")
+			print(on_page,(target_group))
+			if on_page<(target_group.size()/3):
 				UiManager.create_page_v(target_group,on_page+1,self.get_script(),0)
 				pass
 func _pressed() -> void:
 	UiManager.ui_backtrack.append(UiManager.create_page_v.bind(target_group,on_page,self.get_script(),pos.y))
 	BattleManager.turn_action[BattleManager.turn_order][1]=pos.y+on_page*3
 	BattleManager.turn_action[BattleManager.turn_order][2]=target_group
+	BattleManager.next_turn()
 	#and then end the turn
 	
 

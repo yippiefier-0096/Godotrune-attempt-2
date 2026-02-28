@@ -6,14 +6,14 @@ var options:Array[battle_option]
 var initiator:battle_profile
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in 5:
+	for i in initiator.button_config.size():
 		main_buttons.append(initiator.button_config[i].new(initiator))
 		main_buttons[i].position=Vector2(33*i,160)
 		add_child(main_buttons[i])
 		main_buttons[i].pressed.connect(layer_off)
-	for i in 5:
-		main_buttons[i].focus_neighbor_left=main_buttons[wrapi(i-1,0,5)].get_path()
-		main_buttons[i].focus_neighbor_right=main_buttons[wrapi(i+1,0,5)].get_path()
+	for i in main_buttons.size():
+		main_buttons[i].focus_neighbor_left=main_buttons[wrapi(i-1,0,main_buttons.size())].get_path()
+		main_buttons[i].focus_neighbor_right=main_buttons[wrapi(i+1,0,main_buttons.size())].get_path()
 	main_buttons[0].call_deferred("grab_focus")
 	pass # Replace with function body.
 func _init(_i:battle_profile) -> void:

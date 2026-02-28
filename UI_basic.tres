@@ -3,7 +3,9 @@
 [ext_resource type="FontFile" uid="uid://b0ixdmo1uekv2" path="res://misc resources/DeterminationMonoWebRegular-Z5oq.ttf" id="1_0k3kt"]
 [ext_resource type="Texture2D" uid="uid://cyqtsn82mrsep" path="res://misc resources/battle menu buttons/spr_btact/spr_btact_1.png" id="2_ehlut"]
 [ext_resource type="Texture2D" uid="uid://b5n3xn8jutwtp" path="res://misc resources/battle menu buttons/spr_btact/spr_btact_0.png" id="2_vimfk"]
+[ext_resource type="Texture2D" uid="uid://cyhbm0rved5n8" path="res://misc resources/battle menu buttons/spr_btdefend/spr_btdefend_1.png" id="4_a661w"]
 [ext_resource type="Texture2D" uid="uid://drqslf6j07v3l" path="res://misc resources/battle menu buttons/spr_btfight/spr_btfight_1.png" id="4_m741k"]
+[ext_resource type="Texture2D" uid="uid://mf3rpi0ne3sl" path="res://misc resources/battle menu buttons/spr_btdefend/spr_btdefend_0.png" id="5_8ol7y"]
 [ext_resource type="Texture2D" uid="uid://bp1ckjsnd8vo6" path="res://misc resources/battle menu buttons/spr_btfight/spr_btfight_0.png" id="5_u7xw0"]
 [ext_resource type="Texture2D" uid="uid://br0y5uwohsd6m" path="res://misc resources/soul/spr_heart_0.png" id="6_x452x"]
 [ext_resource type="Texture2D" uid="uid://cqjgikoee3a80" path="res://misc resources/battle menu buttons/spr_btitem/spr_btitem_1.png" id="7_x452x"]
@@ -39,6 +41,13 @@ texture = ExtResource("2_vimfk")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f03di"]
 bg_color = Color(0.45882353, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rf1sx"]
+texture = ExtResource("4_a661w")
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f7bir"]
+texture = ExtResource("5_8ol7y")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8x8na"]
 texture = ExtResource("4_m741k")
@@ -101,6 +110,8 @@ actbutton/styles/normal = SubResource("StyleBoxTexture_i8o3y")
 base_bar/base_type = &"Panel"
 base_bar/styles/panel = SubResource("StyleBoxFlat_f03di")
 defendbutton/base_type = &"Button"
+defendbutton/styles/focus = SubResource("StyleBoxTexture_rf1sx")
+defendbutton/styles/normal = SubResource("StyleBoxTexture_f7bir")
 fightbutton/base_type = &"Button"
 fightbutton/styles/focus = SubResource("StyleBoxTexture_8x8na")
 fightbutton/styles/hover = SubResource("StyleBoxTexture_8x8na")

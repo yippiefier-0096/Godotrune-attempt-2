@@ -37,7 +37,7 @@ script = ExtResource("3_u4b3c")
 metadata/_custom_type_script = "uid://dictttk0lyssi"
 
 [node name="test_battle_2" type="Area2D" parent="." unique_id=127033026]
-position = Vector2(-125, -90.5)
+position = Vector2(-124.5, -90)
 script = ExtResource("4_y0txv")
-enemy_team = Array[GDScript]([ExtResource("5_s1ndw"), ExtResource("6_ejn1u"), ExtResource("5_s1ndw")])
+enemy_team = Array[GDScript]([ExtResource("5_s1ndw"), ExtResource("6_ejn1u"), ExtResource("5_s1ndw"), ExtResource("6_ejn1u"), ExtResource("6_ejn1u")])
 metadata/_custom_type_script = "uid://dictttk0lyssi"

@@ -8,9 +8,7 @@ func _ready() -> void:
 	atk=7
 	def=2
 	mag=0
-
-	
-	
+	button_config=[fightbutton,actbutton,itembutton,mercybutton,defendbutton]
 	pass # Replace with function body.
 
 

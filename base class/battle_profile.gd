@@ -52,12 +52,15 @@ var teammate:bool=true
 var act_list:Dictionary
 
 var active_act:Array[int]
+##things allies can do to help in battle
+var ally_act:Dictionary
 
 var is_ally:bool=false
 ##The list of five buttons that this character gets to access on the first layer of menu (e.g. kris' second button being ACT instead of MAGIC. eg2. DOG button)
 ##[br]alternatively, putting classes extended from sprite2d can effectively make a button "disabled" (as if, it's just a sprite)
 var button_config:Array[GDScript]=[fightbutton,magicbutton,itembutton,mercybutton,defendbutton]
 
+enum target_style {single_enemy,single_ally,all_enemies,all_allies}
 func _ready() -> void:
 	
 	pass # Replace with function body.
@@ -93,3 +96,6 @@ func choose_attack(turn:int=0)->bullet_pattern_base:
 func choose_attack_solo(turn:int=0):
 	if !attack_patterns_solo.is_empty():
 		BattleManager.enemy_attacks.append(attack_patterns_solo[randi_range(0,attack_patterns_solo.size()-1)])
+
+func ally_action(id:int,target:battle_profile):
+	pass

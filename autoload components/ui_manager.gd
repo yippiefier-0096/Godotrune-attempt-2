@@ -95,7 +95,7 @@ func _input(event: InputEvent) -> void:
 			ui_backtrack.pop_back().call()
 		else:
 			if BattleManager.turn_order!=0:
-				BattleManager.turn_order-=1
+				BattleManager.last_turn()
 	pass
 func _process(_delta: float) -> void:
 	pass

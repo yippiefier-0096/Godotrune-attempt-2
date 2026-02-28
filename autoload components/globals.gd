@@ -5,18 +5,18 @@ enum mode_index{overworld,shop,menu,battle_turn,battle_dodge}
 var mode:int=0
 var yourchoice:int=-1
 var party_list:Array[party_member]=[]
-var ally_list:Array[party_member]=[]
+var ally_list:Array[battle_profile]=[]
 var test:bool=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in 4:
-		var ally= party_member.new(i,i)
+		var ally:party_member= party_member.new(i,i)
 		add_child(ally)
 		party_list.append(ally)
 		if ally.profile:
 			ally.profile.is_ally=true
-			ally_list.append(ally)
+			ally_list.append(ally.profile)
 			
 		pass
 	pass # Replace with function body.

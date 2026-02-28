@@ -2,7 +2,7 @@ extends Node2D
 ## Autoload Node that facilitates turn based battles by managing [battle_profile]s. 
 class_name battle_manager
 ## enumerator that notates details about an action, for the purpose of executing them in a consistent order
-enum actioncontext{skipped,attack,act,skill,item,mercy}
+enum actioncontext{empty,attack,act,skill,item,mercy,ally_action,defending,skipped}
 
 enum targetcontext{friendly, foe, team}
 ##the soul used for most normal attacks
@@ -16,49 +16,86 @@ var bt_timer:float=15
 ##the enemy roster for any battle.
 var enemy_team:Array[battle_profile]
 
+var item_use_cache:Array[item_base]
+
+var tp_use_cache:Array[float]
 
 var turn_order:int=0
-## for each entry: [a:int=action context, i:int=the receiver's index, t:array= context, call:Callable=the function that performs the effect]
+## for each entry: [a:int=action context, i:int=the receiver's index, t:array=battle context, call:Callable=the function that performs the effect]
 var turn_action:Array=[]
 ##the battle option the player is currently hovering over. x is left/right, y is up/down, z is layer (context).
 
 
 var current_char:battle_profile
 
-
+var x:int=0
 
 func _ready() -> void:
-	
 	pass
 	
 func battle_start():
-	my_turn()
+	if turn_action.is_empty():
+		my_round()
 	pass
 	
-func my_turn():
-	if globals.mode==globals.mode_index.overworld:
-		globals.mode=globals.mode_index.battle_turn
-		for i in globals.ally_list:
-			turn_action.append([0,0,0,null])
-		turn_order=1
-		character_turn()
+func my_round():
+	turn_action=[]
+	tp_use_cache=[]
+	item_use_cache=[]
+	globals.mode=globals.mode_index.battle_turn
+	for i in globals.ally_list:
+		turn_action.append([0,0,0,null])
+		tp_use_cache.append(0)
+	turn_order=0
+	character_turn()
 
 func character_turn():
-	print(UiManager.get_tree())
+	for i in UiManager.battle_option_array.size():
+		UiManager.battle_option_array.pop_back().queue_free()
 	if UiManager.menu_b:
-		UiManager.queue_free()
-	current_char=globals.ally_list[turn_order].profile
+		UiManager.menu_b.queue_free()
+	current_char=globals.ally_list[turn_order]
 	UiManager.menu_b=battle_ui.new(current_char)
 	UiManager.add_child(UiManager.menu_b)
-	print(UiManager.menu_b,UiManager.menu_b.get_tree())
-func turn_consequence():
-	for i in turn_action.size():
-		pass
-	globals.mode=globals.mode_index.battle_turn
+	print(turn_action)
+func next_turn():
+	UiManager.ui_backtrack=[]
+	turn_order+=1
+	if turn_order>=turn_action.size():
+		round_consequence()
+		return
+	while turn_action[turn_order][0]==actioncontext.skipped:
+		turn_order+=1	
+	if turn_order>=turn_action.size():
+		round_consequence()
+	character_turn()
+	pass
+func last_turn():
 
+	if turn_order>0:
+		match BattleManager.turn_action[BattleManager.turn_order][0]:
+			BattleManager.actioncontext.item:
+				if !BattleManager.item_use_cache.is_empty():
+					Inventory.item_content.append(BattleManager.item_use_cache.pop_back())
+		BattleManager.tp_gauge+=	BattleManager.tp_use_cache[turn_order]
+		BattleManager.tp_use_cache[turn_order]=0
+		turn_order-=1
+		while turn_action[turn_order][0]==actioncontext.skipped and turn_order>0:
+			turn_order-=1
+	turn_action[turn_order]=[0,0,0,null]	
+	UiManager.ui_backtrack=[]
+	character_turn()
+func round_consequence():
+	if UiManager.menu_b:
+		UiManager.menu_b.queue_free()
+	for i in UiManager.battle_option_array.size():
+		UiManager.battle_option_array.pop_back().queue_free()
+	
+	globals.mode=globals.mode_index.battle_turn
+	enemy_turn()
 func enemy_turn():
 	if UiManager.menu_b:
-		UiManager.queue_free()
+		UiManager.menu_b.queue_free()
 	if globals.mode==globals.mode_index.battle_turn:
 		bt_timer=0
 		self.position=OverworldTeam.position
@@ -75,7 +112,7 @@ func enemy_turn():
 		soul_normal.queue_free()
 		for i in enemy_attacks.size():
 			enemy_attacks.pop_front().queue_free()
-		my_turn()
+		my_round()
 	pass
 
 func _process(delta: float) -> void:
