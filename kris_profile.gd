@@ -9,9 +9,48 @@ func _ready() -> void:
 	def=2
 	mag=0
 	button_config=[fightbutton,actbutton,itembutton,mercybutton,defendbutton]
+	power_list={
+		0:{
+			"name":"Courage",
+			"desc":"Weave the power of your SOUL to defend allies.",
+			"b_desc":"Defense UP",
+			"cost":250,
+			"target_mode":target_style.all_allies,
+			"function":courage
+		},
+		1:{
+			"name":"Red Buster",
+			"desc":"Shine your soul on Susie's hopeful heart.",
+			"b_desc":"RED damage",
+			"cost":500,
+			"target_mode":target_style.single_enemy,
+			"function":redbuster,
+			"assist":[susie_profile]
+		},
+		2:{
+			"name":"Quad Heal",
+			"desc":"Immense healing with the power of four souls.",
+			"b_desc":"",
+			"cost":760,
+			"target_mode":target_style.all_allies,
+			"function":redbuster,
+			"assist":[susie_profile,ralsei_profile,noelle_profile]
+		}
+	}
+	active_power=[power_list[0],power_list[1]]
 	pass # Replace with function body.
 
-
+func courage(target:battle_profile):
+	DialogueManager.add_line("Your SOUL shines with a brilliant light...!")
+	DialogueManager.add_line("Kris uses Courage! [br]Everyone's DEF UP!")
+	await DialogueManager.read_dialogue()
+	target.def_aug[3]+=4
+func redbuster(target:battle_profile):
+	DialogueManager.add_line("Your SOUL shines its light unto Susie...!")
+	DialogueManager.add_line("Susie shot RED BUSTER toward [0]!",[target.nametag])
+	await DialogueManager.read_dialogue()	
+func quadheal(target:battle_profile):
+	pass	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

@@ -73,6 +73,8 @@ func create_page_v(list:Array[battle_profile],page_index:int,type:GDScript,init_
 	description.text=""
 	desc_tp.text=""
 	var list_size=list.size()
+	if type==char_option_act:
+		list_size+=1
 	UiManager.battle_option_container.visible=true
 	for i in UiManager.battle_option_array.size():
 		UiManager.battle_option_array.pop_back().queue_free()
@@ -92,12 +94,7 @@ func set_desc(content:String,tp:int=0):
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("cancel"):
-		if !ui_backtrack.is_empty():
-			ui_backtrack.pop_back().call()
-		else:
-			if BattleManager.turn_order!=0:
-				BattleManager.last_turn()
+
 	pass
 func _process(_delta: float) -> void:
 	pass

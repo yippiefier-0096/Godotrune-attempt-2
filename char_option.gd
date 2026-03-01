@@ -12,12 +12,21 @@ var mercy_bar_base:Panel=Panel.new()
 var mercy_bar_true:Panel=Panel.new()
 
 var target_group:Array[battle_profile]
+
+var is_self_act:bool=false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 func _init(y:int,my_targets:Array[battle_profile],my_page:int) -> void:
-	superprep(0,y,my_targets[my_page*3+y],my_page)
+	if my_targets.size()>my_page*3+y:
+		superprep(0,y,my_targets[my_page*3+y],my_page)
+	else:
+		superprep(0,y,null,my_page)
+		is_self_act=true
 	target_group=my_targets
+	if is_self_act:
+		dialog.text="The Fun Gang"
+		return
 	add_child(health_bar_base)
 	health_bar_base.add_child(health_bar_true)
 	health_bar_base.size=Vector2(120,20)

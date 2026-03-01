@@ -15,6 +15,7 @@ func _init(x:int,y:int,my_owner:battle_profile,my_page:int) -> void:
 	#note to self. incorporate more of this function into the base class for readability
 	
 func _pressed():
+	BattleManager.turn_action[BattleManager.turn_order][3]=item_held._use
 	
 	pass
 

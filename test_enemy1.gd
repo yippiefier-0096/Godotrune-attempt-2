@@ -11,9 +11,19 @@ func _ready() -> void:
 	hp=-2
 	attack_patterns=[test_pattern,test_pattern_icee]
 	self.nametag="funny dude"
-	self.act_list={1:["KILL","horribly murders (not)",1000,null]}
+	self.act_list={
+		0:{
+			"name":"Maim",
+			"desc":"Rip and tear",
+			"cost":0,
+			"function":act1
+		}
+	}
+	self.active_act=[act_list[0]]
 	pass # Replace with function body.
-
+func act1():
+	self.mercy+=0.2
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

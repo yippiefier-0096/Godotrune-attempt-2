@@ -13,7 +13,7 @@ func _ready() -> void:
 		0:["N-action","???","ACT on enemies",0,ally_act,target_style.single_enemy],
 		1:["IceShock","ice magic!!! so cool","Chilling ice attack",160,iceshock,target_style.single_enemy]
 	}
-	active_power=[0,1]
+	active_power=[]
 	pass # Replace with function body.
 
 func iceshock(target:battle_profile):

@@ -91,9 +91,14 @@ func round_consequence():
 		UiManager.menu_b.queue_free()
 	for i in UiManager.battle_option_array.size():
 		UiManager.battle_option_array.pop_back().queue_free()
-	
+	for i in turn_action.filter(action_groups):
+		print("blip")
+		DialogueManager.add_line("[0] ATTACKS!",[i])
+		await DialogueManager.read_dialogue()
 	globals.mode=globals.mode_index.battle_turn
 	enemy_turn()
+func action_groups(case:Array):
+	return case[0]==actioncontext.attack
 func enemy_turn():
 	if UiManager.menu_b:
 		UiManager.menu_b.queue_free()
@@ -131,6 +136,15 @@ func end_battle():
 	await DialogueManager.read_dialogue()
 	globals.mode=globals.mode_index.overworld
 	pass
+func _input(event: InputEvent) -> void:
+	if !globals.mode==globals.mode_index.battle_turn:
+		return
+	if event.is_action_pressed("cancel"):
+		if !UiManager.ui_backtrack.is_empty():
+			UiManager.ui_backtrack.pop_back().call()
+		else:
+			if BattleManager.turn_order!=0:
+				BattleManager.last_turn()
 func _process(delta: float) -> void:
 	
 	pass

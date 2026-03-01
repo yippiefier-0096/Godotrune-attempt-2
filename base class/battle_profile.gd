@@ -37,9 +37,9 @@ var equipped_weapon:weapon_base=Inventory.no_weapon
 ## the two pieces of accessories this character currently holds.
 var equipped_armors:Array[equipment_base]=[Inventory.no_armor,Inventory.no_armor]
 ## list of skills. structured like this : [name, description, battle description, tp, callable, target style]
-var power_list:Dictionary={}
+var power_list:Dictionary
 ##which skills are active
-var active_power:Array[int]=[]
+var active_power:Array[Dictionary]
 ##the character's name
 var nametag:String=""
 ##the character's sleepiness
@@ -51,7 +51,7 @@ var teammate:bool=true
 ##acts toward this character, structered like this: [name, description, tp, callable]
 var act_list:Dictionary
 
-var active_act:Array[int]
+var active_act:Array[Dictionary]
 ##things allies can do to help in battle
 var ally_act:Dictionary
 
@@ -64,6 +64,7 @@ enum target_style {single_enemy,single_ally,all_enemies,all_allies}
 func _ready() -> void:
 	
 	pass # Replace with function body.
+	
 func faux_turn():
 	
 	for i in turn_effect.size():
