@@ -58,6 +58,8 @@ func create_page_h(character:battle_profile,page_index:int,type:GDScript,init_po
 			list_size=Inventory.item_content.size()
 		magic_option:
 			list_size=character.active_power.size()
+		act_option:
+			list_size=character.active_act.size()
 	for i in clampi(list_size-6*page_index,0,6):
 		var y:int=i/2
 		var x:int=i%2
