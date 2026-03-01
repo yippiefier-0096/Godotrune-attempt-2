@@ -66,8 +66,9 @@ func next_turn():
 		return
 	while turn_action[turn_order][0]==actioncontext.skipped:
 		turn_order+=1	
-	if turn_order>=turn_action.size():
-		round_consequence()
+		if turn_order>=turn_action.size():
+			round_consequence()
+			return
 	character_turn()
 	pass
 func last_turn():
@@ -113,8 +114,23 @@ func enemy_turn():
 		for i in enemy_attacks.size():
 			enemy_attacks.pop_front().queue_free()
 		my_round()
+		end_battle()
 	pass
-
+func end_battle():
+	
+	if soul_normal:
+		soul_normal.queue_free()
+	for i in UiManager.battle_option_array.size():
+		UiManager.battle_option_array.pop_back().queue_free()
+	if UiManager.menu_b:
+		UiManager.menu_b.queue_free()
+	for i in enemy_team.size():
+		enemy_team.pop_back().queue_free()
+	turn_action=[]
+	DialogueManager.add_line("Battle ended. you get nothing lmao")
+	await DialogueManager.read_dialogue()
+	globals.mode=globals.mode_index.overworld
+	pass
 func _process(delta: float) -> void:
 	
 	pass

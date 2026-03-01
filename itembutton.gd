@@ -7,7 +7,7 @@ func _ready() -> void:
 	self.theme_type_variation="itembutton"
 	replacer.texture=load("uid://cqjgikoee3a80")
 	option_type_called=item_option
-
+	context_pass=BattleManager.actioncontext.item
 	pass # Replace with function body.
 
 #func _init(current_char:battle_profile) -> void:

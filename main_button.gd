@@ -9,7 +9,7 @@ var replacer:Sprite2D=Sprite2D.new()
 var option_type_called:GDScript
 
 ##The context of this action
-var context_pass:int=BattleManager.actioncontext.skipped
+var context_pass:int=BattleManager.actioncontext.empty
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	action_mode=BaseButton.ACTION_MODE_BUTTON_PRESS

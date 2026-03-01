@@ -11,7 +11,10 @@ func _ready() -> void:
 	self.replacer.texture=load("uid://cyqtsn82mrsep")
 	pass # Replace with function body.
 func _pressed() -> void:
-	UiManager.create_page_v(BattleManager.enemy_team,0,option_type_called)
+	var list_with_acts:Array[battle_profile]=BattleManager.enemy_team
+	list_with_acts.append_array(globals.ally_list)
+	list_with_acts=list_with_acts.filter(filter_act)
+	UiManager.create_page_v(list_with_acts,0,option_type_called)
 	self.self_modulate.a=0
 	replacer.visible=true
 	UiManager.ui_backtrack.append(Callable(UiManager.menu_b,"layer_on"))
@@ -20,3 +23,5 @@ func _pressed() -> void:
 func _process(delta: float) -> void:
 	
 	pass
+func filter_act(input:battle_profile)->bool:
+	return !input.active_act.is_empty()

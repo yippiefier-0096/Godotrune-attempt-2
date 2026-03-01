@@ -9,6 +9,8 @@ var pos:Vector2i
 
 var on_page:int
 
+var list_size:int
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 
@@ -41,7 +43,7 @@ func _input(event: InputEvent) -> void:
 				pass
 	if event.is_action_pressed("ui_right") and self.has_focus():
 		if pos.x==1:
-			if on_page<(root_character.active_power.size()/6):
+			if on_page<(list_size/6):
 				UiManager.create_page_h(root_character,on_page+1,self.get_script(),pos.y*2)
 				pass
 func _pressed() -> void:

@@ -63,7 +63,8 @@ func create_page_h(character:battle_profile,page_index:int,type:GDScript,init_po
 	for i in clampi(list_size-6*page_index,0,6):
 		var y:int=i/2
 		var x:int=i%2
-		var _this:Button=type.new(x,y,character,page_index)
+		var _this:battle_option=type.new(x,y,character,page_index)
+		_this.list_size=list_size
 		UiManager.battle_option_container.add_child(_this)
 		UiManager.battle_option_array.append(_this)
 		if i==clampi(init_pos,0,list_size-(6*page_index)-1):
@@ -75,7 +76,6 @@ func create_page_v(list:Array[battle_profile],page_index:int,type:GDScript,init_
 	UiManager.battle_option_container.visible=true
 	for i in UiManager.battle_option_array.size():
 		UiManager.battle_option_array.pop_back().queue_free()
-
 	for i in clampi(list_size-3*page_index,0,3):
 		var y:int=i
 		var _this:Button=type.new(y,list,page_index)
