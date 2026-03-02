@@ -14,7 +14,7 @@ func _ready() -> void:
 	Inventory.equip_armor(1,self,1)
 	Inventory.equip_weapon(1,self)
 	self.nametag="SUSIE"
-	
+	assist_icon="uid://dktm0kdxfba65"
 	#load from 2nd character data slot
 	pass # Replace with function body.
 

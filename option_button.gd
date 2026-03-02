@@ -27,6 +27,7 @@ func superprep(x:int,y:int,my_owner:battle_profile,my_page:int):
 	dialog=RichTextLabel.new()
 	dialog.position=Vector2(22,-8)
 	dialog.size=Vector2(220,40)
+	dialog.bbcode_enabled=true
 	self.position=Vector2(8+220*x,18+50*y)
 	add_child(dialog)
 	pos.x=x

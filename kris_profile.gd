@@ -30,7 +30,7 @@ func _ready() -> void:
 		2:{
 			"name":"Quad Heal",
 			"desc":"Immense healing with the power of four souls.",
-			"b_desc":"",
+			"b_desc":"Everyone heals",
 			"cost":760,
 			"target_mode":target_style.all_allies,
 			"function":redbuster,
@@ -40,16 +40,18 @@ func _ready() -> void:
 	active_power=[power_list[0],power_list[1]]
 	pass # Replace with function body.
 
-func courage(target:battle_profile):
+func courage(targets:Array[battle_profile]):
 	DialogueManager.add_line("Your SOUL shines with a brilliant light...!")
 	DialogueManager.add_line("Kris uses Courage! [br]Everyone's DEF UP!")
 	await DialogueManager.read_dialogue()
-	target.def_aug[3]+=4
-func redbuster(target:battle_profile):
+	targets[0].def_aug[3]+=4
+func redbuster(targets:Array[battle_profile]):
 	DialogueManager.add_line("Your SOUL shines its light unto Susie...!")
-	DialogueManager.add_line("Susie shot RED BUSTER toward [0]!",[target.nametag])
+	DialogueManager.add_line("Susie shot RED BUSTER toward [0]!",[targets[0].nametag])
 	await DialogueManager.read_dialogue()	
-func quadheal(target:battle_profile):
+func quadheal(targets:Array[battle_profile]):
+	DialogueManager.add_line("waow!!!!!!!!")
+	await DialogueManager.read_dialogue()
 	pass	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

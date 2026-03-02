@@ -6,6 +6,7 @@ class_name miracle_drink
 func _ready() -> void:
 	nametag="miracle tea"
 	b_desc="very good tea restore 120 HP"
+	target_mode=target_style.single_ally
 	pass # Replace with function body.
 
 func use(target:battle_profile):

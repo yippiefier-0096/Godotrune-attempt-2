@@ -61,6 +61,8 @@ var is_ally:bool=false
 var button_config:Array[GDScript]=[fightbutton,magicbutton,itembutton,mercybutton,defendbutton]
 
 enum target_style {single_enemy,single_ally,all_enemies,all_allies}
+
+var assist_icon:String
 func _ready() -> void:
 	
 	pass # Replace with function body.

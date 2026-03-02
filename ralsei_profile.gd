@@ -9,6 +9,7 @@ func _ready() -> void:
 	mag=6
 	max_hp=180
 	hp=max_hp
+	assist_icon="uid://bssag1p2qhvin"
 	pass # Replace with function body.
 
 
