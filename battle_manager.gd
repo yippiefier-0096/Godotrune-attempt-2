@@ -44,7 +44,7 @@ func my_round():
 	item_use_cache=[]
 	globals.mode=globals.mode_index.battle_turn
 	for i in globals.ally_list:
-		turn_action.append([0,0,0,null])
+		turn_action.append([0,0,0,null,null,[]])
 		tp_use_cache.append(0)
 	turn_order=0
 	character_turn()
@@ -83,7 +83,9 @@ func last_turn():
 		turn_order-=1
 		while turn_action[turn_order][0]==actioncontext.skipped and turn_order>0:
 			turn_order-=1
-	turn_action[turn_order]=[0,0,0,null]	
+	for i in turn_action[turn_order][5].size():
+		turn_action[turn_action[turn_order][5][i]]=[0,0,0,null,null,[]]
+	turn_action[turn_order]=[0,0,0,null,null,[]]
 	UiManager.ui_backtrack=[]
 	character_turn()
 func round_consequence():
@@ -91,9 +93,9 @@ func round_consequence():
 		UiManager.menu_b.queue_free()
 	for i in UiManager.battle_option_array.size():
 		UiManager.battle_option_array.pop_back().queue_free()
-	for i in turn_action.filter(action_groups):
-		print("blip")
-		DialogueManager.add_line("[0] ATTACKS!",[i])
+	var current_step:int
+	for i in turn_action.filter(func(_c:Array):_c[0]==current_step):
+		DialogueManager.add_line("{0} ATTACKS!",[0])
 		await DialogueManager.read_dialogue()
 	globals.mode=globals.mode_index.battle_turn
 	enemy_turn()
@@ -119,7 +121,7 @@ func enemy_turn():
 		for i in enemy_attacks.size():
 			enemy_attacks.pop_front().queue_free()
 		my_round()
-		end_battle()
+		
 	pass
 func end_battle():
 	
@@ -145,6 +147,8 @@ func _input(event: InputEvent) -> void:
 		else:
 			if BattleManager.turn_order!=0:
 				BattleManager.last_turn()
+	if event.is_action_pressed("d"):
+		end_battle()
 func _process(delta: float) -> void:
 	
 	pass

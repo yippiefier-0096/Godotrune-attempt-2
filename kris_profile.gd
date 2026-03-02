@@ -37,7 +37,7 @@ func _ready() -> void:
 			"assist":[susie_profile,ralsei_profile,noelle_profile]
 		}
 	}
-	active_power=[power_list[0],power_list[1]]
+	active_power=[power_list[0],power_list[1],power_list[2]]
 	pass # Replace with function body.
 
 func courage(targets:Array[battle_profile]):
