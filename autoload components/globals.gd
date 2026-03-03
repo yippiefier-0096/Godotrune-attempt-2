@@ -10,7 +10,7 @@ var test:bool=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in 3:
+	for i in 4:
 		var ally:party_member= party_member.new(i,i)
 		add_child(ally)
 		party_list.append(ally)

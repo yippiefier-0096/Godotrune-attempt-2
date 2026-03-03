@@ -24,18 +24,24 @@ func _init(x:int,y:int,my_owner:battle_profile,my_page:int) -> void:
 	self.focus_entered.connect(UiManager.set_desc.bind(skill_held["b_desc"],skill_held["cost"]))
 	
 func _pressed():
+
 	if BattleManager.tp_gauge<skill_held.get("cost"):
+		print("tp")
 		return
-	var assist_cache:Array=self.skill_held.get("assist").duplicate()
+	var assist_cache:Array
 	var assisted:Array[int]=[]
 	if self.skill_held.has("assist"):
+		assist_cache=self.skill_held.get("assist").duplicate()	
 		for i in globals.ally_list.size():
+			print("check")
 			if BattleManager.turn_action[i][0]!=BattleManager.actioncontext.empty:
+				print (i,"already acted")
 				return
 			for j in assist_cache.size():
-				if globals.ally_list[i].get_script() == assist_cache[j] and !assisted.has(j) :
-					BattleManager.turn_action[i][0]=BattleManager.actioncontext.skipped
+				if globals.ally_list[i].get_script() == assist_cache[j] and !assisted.has(i) :
 					assisted.append(i)
+				print(globals.ally_list[i].get_script(),assist_cache[j],assisted,j,assisted.has(j), " ???")
+		print(assisted)
 		if assisted.size()!=assist_cache.size():
 			return
 		for i in assisted.size():
@@ -43,7 +49,7 @@ func _pressed():
 	BattleManager.turn_action[BattleManager.turn_order][3]=skill_held["function"]
 	BattleManager.turn_action[BattleManager.turn_order][5]=assisted
 	UiManager.ui_backtrack.append(UiManager.create_page_h.bind(root_character,on_page,self.get_script(),pos.x+pos.y*2))
-	BattleManager.tp_use_cache.append(skill_held.get("cost"))
+	BattleManager.tp_use_cache[BattleManager.turn_order]=skill_held.get("cost")
 	match skill_held["target_mode"]:
 		battle_profile.target_style.single_enemy:
 			UiManager.create_page_v(BattleManager.enemy_team,0,char_option)

@@ -78,13 +78,13 @@ func last_turn():
 			BattleManager.actioncontext.item:
 				if !BattleManager.item_use_cache.is_empty():
 					Inventory.item_content.append(BattleManager.item_use_cache.pop_back())
-		BattleManager.tp_gauge+=	BattleManager.tp_use_cache[turn_order]
-		BattleManager.tp_use_cache[turn_order]=0
 		turn_order-=1
 		while turn_action[turn_order][0]==actioncontext.skipped and turn_order>0:
 			turn_order-=1
 	for i in turn_action[turn_order][5].size():
 		turn_action[turn_action[turn_order][5][i]]=[0,0,0,null,null,[]]
+	BattleManager.tp_gauge+=BattleManager.tp_use_cache[turn_order]
+	BattleManager.tp_use_cache[turn_order]=0	
 	turn_action[turn_order]=[0,0,0,null,null,[]]
 	UiManager.ui_backtrack=[]
 	character_turn()
