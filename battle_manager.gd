@@ -21,11 +21,10 @@ var item_use_cache:Array[item_base]
 var tp_use_cache:Array[float]
 
 var turn_order:int=0
-## for each entry: [a:int=action context, i:int=the receiver's index, t:array=battle context, call:Callable=the function that performs the effect]
+## for each entry: [a:int=action context, i:int=the receiver's index, t:array=battle context, call:Callable=the function that performs the effect, initiater: the one using the attack,target_group:the group the target index is based on.]
 var turn_action:Array=[]
-##the battle option the player is currently hovering over. x is left/right, y is up/down, z is layer (context).
 
-
+var temp:Array
 var current_char:battle_profile
 
 var x:int=0

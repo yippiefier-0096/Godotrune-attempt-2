@@ -16,8 +16,9 @@ func _init(x:int,y:int,my_owner:battle_profile,my_page:int) -> void:
 	
 func _pressed():
 	BattleManager.turn_action[BattleManager.turn_order][3]=item_held._use
+	Inventory.item_content.pop_at(2*pos.y+pos.x+6*on_page)
+	BattleManager.item_use_cache.append(item_held)
 	#start here tmw
-	
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
