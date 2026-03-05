@@ -29,7 +29,7 @@ func _pressed() -> void:
 	self.self_modulate.a=0
 	replacer.visible=true
 	UiManager.ui_backtrack.append(Callable(UiManager.menu_b,"layer_on"))
-	BattleManager.turn_action[BattleManager.turn_order][0]=self.context_pass
+	BattleManager.temp_action[0]=self.context_pass
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

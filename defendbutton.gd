@@ -9,7 +9,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _pressed():
-	BattleManager.turn_action[BattleManager.turn_order][0]=self.context_pass
+	BattleManager.temp_action[0]=self.context_pass
 	BattleManager.tp_gauge=clampf(BattleManager.tp_gauge+160,0,1000)
 	BattleManager.tp_use_cache[BattleManager.turn_order]=-160
 	BattleManager.next_turn()

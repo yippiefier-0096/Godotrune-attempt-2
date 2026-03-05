@@ -60,8 +60,8 @@ func _input(event: InputEvent) -> void:
 				pass
 func _pressed() -> void:
 	UiManager.ui_backtrack.append(UiManager.create_page_v.bind(target_group,on_page,self.get_script(),pos.y))
-	BattleManager.turn_action[BattleManager.turn_order][1]=pos.y+on_page*3
-	BattleManager.turn_action[BattleManager.turn_order][2]=target_group
+	BattleManager.temp_action[1]=pos.y+on_page*3
+	BattleManager.temp_action[2]=target_group
 	BattleManager.next_turn()
 	#and then end the turn
 	

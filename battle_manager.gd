@@ -21,10 +21,15 @@ var item_use_cache:Array[item_base]
 var tp_use_cache:Array[float]
 
 var turn_order:int=0
-## for each entry: [a:int=action context, i:int=the receiver's index, t:array=battle context, call:Callable=the function that performs the effect, initiater: the one using the attack,target_group:the group the target index is based on.]
+## for each entry: [a:int=action context, i:int=the receiver's index, t:array=battle context, call:Callable=the function that performs the effect, initiater: the one using the attack,target_group:the group the target index is based on. assist members:character whose turn are spent in this action. array of index in party]
 var turn_action:Array=[]
 
-var temp:Array
+var temp_action:Array
+
+var temp_tp:float
+
+var temp_item:item_base
+
 var current_char:battle_profile
 
 var x:int=0
@@ -42,8 +47,8 @@ func my_round():
 	tp_use_cache=[]
 	item_use_cache=[]
 	globals.mode=globals.mode_index.battle_turn
-	for i in globals.ally_list:
-		turn_action.append([0,0,0,null,null,[]])
+	for i in globals.ally_list.size():
+		turn_action.append([0,0,[],null,globals.ally_list[i],[]])
 		tp_use_cache.append(0)
 	turn_order=0
 	character_turn()
@@ -54,11 +59,16 @@ func character_turn():
 	if UiManager.menu_b:
 		UiManager.menu_b.queue_free()
 	current_char=globals.ally_list[turn_order]
+	temp_action=[0,0,[],null,current_char,[]]
+	turn_action[turn_order]=[0,0,[],null,current_char,[]]
 	UiManager.menu_b=battle_ui.new(current_char)
 	UiManager.add_child(UiManager.menu_b)
 	print(turn_action)
 func next_turn():
 	UiManager.ui_backtrack=[]
+	turn_action[turn_order]=temp_action
+	for i in turn_action[turn_order][5].size():
+		BattleManager.turn_action[turn_action[turn_order][5][i]][0]=BattleManager.actioncontext.skipped
 	turn_order+=1
 	if turn_order>=turn_action.size():
 		round_consequence()
@@ -71,7 +81,7 @@ func next_turn():
 	character_turn()
 	pass
 func last_turn():
-
+	
 	if turn_order>0:
 		match BattleManager.turn_action[BattleManager.turn_order][0]:
 			BattleManager.actioncontext.item:
@@ -81,10 +91,9 @@ func last_turn():
 		while turn_action[turn_order][0]==actioncontext.skipped and turn_order>0:
 			turn_order-=1
 	for i in turn_action[turn_order][5].size():
-		turn_action[turn_action[turn_order][5][i]]=[0,0,0,null,null,[]]
+		turn_action[turn_action[turn_order][5][i]]=[0,0,[],null,null,[]]
 	BattleManager.tp_gauge+=BattleManager.tp_use_cache[turn_order]
-	BattleManager.tp_use_cache[turn_order]=0	
-	turn_action[turn_order]=[0,0,0,null,null,[]]
+	BattleManager.tp_use_cache[turn_order]=0
 	UiManager.ui_backtrack=[]
 	character_turn()
 func round_consequence():

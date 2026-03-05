@@ -34,7 +34,7 @@ func _ready() -> void:
 			"cost":760,
 			"target_mode":target_style.all_allies,
 			"function":redbuster,
-			"assist":[susie_profile,ralsei_profile,noelle_profile]
+			"assist":[ralsei_profile]
 		}
 	}
 	active_power=[power_list[0],power_list[1],power_list[2]]

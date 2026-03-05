@@ -31,7 +31,7 @@ func _pressed() -> void:
 	self.self_modulate.a=0
 	replacer.visible=true
 	UiManager.ui_backtrack.append(Callable(UiManager.menu_b,"layer_on"))
-	BattleManager.turn_action[BattleManager.turn_order][0]=self.context_pass
+	BattleManager.temp_action[0]=self.context_pass
 func check_mercy_hint():
 	if BattleManager.enemy_team.filter(team_mercy_viable).size()>0:
 		life=0

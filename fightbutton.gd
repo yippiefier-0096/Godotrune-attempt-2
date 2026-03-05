@@ -12,7 +12,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 func _pressed() -> void:
 	UiManager.create_page_v(BattleManager.enemy_team,0,option_type_called)
-	BattleManager.turn_action[BattleManager.turn_order][0]=self.context_pass
+	BattleManager.temp_action[0]=self.context_pass
 	self.self_modulate.a=0
 	replacer.visible=true
 	UiManager.ui_backtrack.append(Callable(UiManager.menu_b,"layer_on"))

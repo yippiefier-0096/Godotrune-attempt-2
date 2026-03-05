@@ -11,17 +11,6 @@ func _ready() -> void:
 	self.context_pass=BattleManager.actioncontext.skill
 	pass # Replace with function body.
 
-
-
-#func _pressed() -> void:
-	#UiManager.create_page_h(root_character,0,magic_option)
-	#self.self_modulate.a=0
-	#replacer.visible=true
-	#
-	#pass
-
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

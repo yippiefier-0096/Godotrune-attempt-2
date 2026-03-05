@@ -24,25 +24,27 @@ func _init(x:int,y:int,my_owner:battle_profile,my_page:int) -> void:
 	self.focus_entered.connect(UiManager.set_desc.bind(skill_held["b_desc"],skill_held["cost"]))
 	
 func _pressed():
-
+	print("1")
 	if BattleManager.tp_gauge<skill_held.get("cost"):
 		return
+	print("2")
 	var assist_cache:Array
 	var assisted:Array[int]=[]
 	if self.skill_held.has("assist"):
 		assist_cache=self.skill_held.get("assist").duplicate()	
 		for i in globals.ally_list.size():
 			if BattleManager.turn_action[i][0]!=BattleManager.actioncontext.empty:
-				return
+				print (BattleManager.turn_action[i])
+				continue
 			for j in assist_cache.size():
-				if globals.ally_list[i].get_script() == assist_cache[j] and !assisted.has(i) :
+				if globals.ally_list[i].get_script() == assist_cache[j] and !assisted.has(i):
 					assisted.append(i)
 		if assisted.size()!=assist_cache.size():
+			print(assisted,assist_cache)
 			return
-	for i in assisted.size():
-		BattleManager.turn_action[assisted[i]][0]=BattleManager.actioncontext.skipped
-	BattleManager.turn_action[BattleManager.turn_order][3]=skill_held["function"]
-	BattleManager.turn_action[BattleManager.turn_order][5]=assisted
+	print("3")
+	BattleManager.temp_action[3]=skill_held["function"]#action (callable)
+	BattleManager.temp_action[5]=assisted#everyone that helped (array[int of index of party members])
 	BattleManager.tp_use_cache[BattleManager.turn_order]=skill_held.get("cost")
 	UiManager.ui_backtrack.append(UiManager.create_page_h.bind(root_character,on_page,self.get_script(),pos.x+pos.y*2))
 	match skill_held["target_mode"]:
@@ -51,10 +53,10 @@ func _pressed():
 		battle_profile.target_style.single_ally:	
 			UiManager.create_page_v(globals.ally_list,0,char_option)
 		battle_profile.target_style.all_enemies:
-			BattleManager.turn_action[BattleManager.turn_order][1]=-1
+			BattleManager.temp_action[1]=-1#target index
 			BattleManager.next_turn()
 		battle_profile.target_style.all_allies:
-			BattleManager.turn_action[BattleManager.turn_order][1]=-2
+			BattleManager.temp_action[1]=-2
 			BattleManager.next_turn()		
 	pass
 

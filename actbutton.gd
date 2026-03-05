@@ -13,8 +13,9 @@ func _ready() -> void:
 func _pressed() -> void:
 	var list_with_acts:Array[battle_profile]=BattleManager.enemy_team.duplicate(true)
 	list_with_acts.append_array(globals.ally_list)
-	list_with_acts=list_with_acts.filter(filter_act)
+	list_with_acts=list_with_acts.filter(func(x:battle_profile):return !x.active_act.is_empty())
 	UiManager.create_page_v(list_with_acts,0,option_type_called)
+	BattleManager.temp_action[0]=BattleManager.actioncontext.act
 	self.self_modulate.a=0
 	replacer.visible=true
 	UiManager.ui_backtrack.append(Callable(UiManager.menu_b,"layer_on"))
@@ -23,5 +24,3 @@ func _pressed() -> void:
 func _process(delta: float) -> void:
 	
 	pass
-func filter_act(input:battle_profile)->bool:
-	return !input.active_act.is_empty()
