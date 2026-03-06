@@ -2,12 +2,7 @@ extends battle_option
 class_name magic_option
 ##the individual skill for every single button of this class
 var skill_held:Dictionary
-var assist_icon:Dictionary[GDScript,String]={
-	kris_profile:"uid://bray82k2ek31o",
-	susie_profile:"uid://dktm0kdxfba65",
-	ralsei_profile:"uid://bssag1p2qhvin",
-	noelle_profile:"uid://dpuhhqngcfkbn"
-}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -19,8 +14,8 @@ func _init(x:int,y:int,my_owner:battle_profile,my_page:int) -> void:
 		var assist_cache:Array=self.skill_held.get("assist")
 		print (assist_cache)
 		for i in assist_cache.size():
-			dialog.text="[img]"+assist_icon.get(assist_cache[i])+"[/img]"+dialog.text
-			print (assist_icon.get(assist_cache[i]))
+			dialog.text="[img]"+globals.assist_icon.get(assist_cache[i])+"[/img]"+dialog.text
+			print (globals.assist_icon.get(assist_cache[i]))
 	self.focus_entered.connect(UiManager.set_desc.bind(skill_held["b_desc"],skill_held["cost"]))
 	
 func _pressed():

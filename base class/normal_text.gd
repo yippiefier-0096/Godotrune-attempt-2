@@ -11,6 +11,7 @@ signal next_line
 func _init() -> void:
 	self.add_theme_font_override("normal_font",DTmono)
 	self.add_theme_font_size_override("normal_font_size",32)
+	self.bbcode_enabled=true
 	self.scroll_active=false
 	self.size=Vector2(560,160)
 	self.position=Vector2(40,300)
@@ -31,7 +32,7 @@ func type(input:String,character:int=0,auto:bool=false,tick:float=0.05,wait_tick
 	self.visible=true
 	self.text=input
 	self.visible_characters=0
-	var y:int = self.text.remove_chars("|").length()
+	var y:int = self.get_total_character_count()-self.text.count("|")
 	print (self.text)
 	for i in y:
 		while self.text[i]=="|":

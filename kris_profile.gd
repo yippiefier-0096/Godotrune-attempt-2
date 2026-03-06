@@ -9,6 +9,7 @@ func _ready() -> void:
 	def=2
 	mag=0
 	button_config=[fightbutton,actbutton,itembutton,mercybutton,defendbutton]
+	nametag="KRIS"
 	power_list={
 		0:{
 			"name":"Courage",

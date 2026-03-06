@@ -14,7 +14,7 @@ func _ready() -> void:
 		1:["IceShock","ice magic!!! so cool","Chilling ice attack",160,iceshock,target_style.single_enemy]
 	}
 	active_power=[]
-	assist_icon="uid://dpuhhqngcfkbn"
+	nametag="NOELLE"
 	pass # Replace with function body.
 
 func iceshock(target:battle_profile):

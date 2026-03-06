@@ -32,9 +32,10 @@ BattleManager="*uid://b1jfrgmsnu0la"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=960
+window/size/viewport_width=640
+window/size/viewport_height=480
 window/size/resizable=false
+window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
 [input]

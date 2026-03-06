@@ -34,6 +34,8 @@ var current_char:battle_profile
 
 var x:int=0
 
+var move_sequence:Array[int]=[actioncontext.act,actioncontext.mercy,actioncontext.skill,actioncontext.item,actioncontext.attack]
+
 func _ready() -> void:
 	pass
 	
@@ -101,10 +103,31 @@ func round_consequence():
 		UiManager.menu_b.queue_free()
 	for i in UiManager.battle_option_array.size():
 		UiManager.battle_option_array.pop_back().queue_free()
-	var current_step:int
-	for i in turn_action.filter(func(_c:Array):_c[0]==current_step):
-		DialogueManager.add_line("{0} ATTACKS!",[0])
-		await DialogueManager.read_dialogue()
+
+	for i in move_sequence.size():
+		var roster=turn_action.filter(func(x:Array):return x[0]==move_sequence[i])
+		for j in roster.size():
+			match i:
+				0:
+					await roster[j][3].call()
+					pass#things that happens with using ACTs
+				1:
+					if roster[j][2][roster[j][1]].mercy>=1:
+						DialogueManager.add_line("{0} spared {1}!",[roster[j][4].nametag,roster[j][2][roster[j][1]].nametag])
+					else:
+						DialogueManager.add_line("{0} tried to spare {1}...",[roster[j][4].nametag,roster[j][2][roster[j][1]].nametag])
+						DialogueManager.add_line("But their name wasn't [color=yellow]YELLOW[/color]!")
+					await DialogueManager.read_dialogue()
+					
+					pass#things that happen when one spares an enemy
+				2:
+					pass#using magic skills
+				3:
+					pass#using items
+				4:
+					DialogueManager.add_line("{0} attacked {1}!",[roster[j][4].nametag,roster[j][2][roster[j][1]].nametag])
+					await DialogueManager.read_dialogue()
+					pass#attacking
 	globals.mode=globals.mode_index.battle_turn
 	enemy_turn()
 func action_groups(case:Array):

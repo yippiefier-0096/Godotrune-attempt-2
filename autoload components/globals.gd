@@ -8,6 +8,12 @@ var party_list:Array[party_member]=[]
 var ally_list:Array[battle_profile]=[]
 var test:bool=false
 
+var assist_icon:Dictionary[GDScript,String]={
+	kris_profile:"uid://bray82k2ek31o",
+	susie_profile:"uid://dktm0kdxfba65",
+	ralsei_profile:"uid://bssag1p2qhvin",
+	noelle_profile:"uid://dpuhhqngcfkbn"
+}
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in 4:

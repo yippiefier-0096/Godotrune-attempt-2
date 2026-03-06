@@ -10,6 +10,7 @@ func _ready() -> void:
 	max_hp=180
 	hp=max_hp
 	assist_icon="uid://bssag1p2qhvin"
+	nametag="RALSEI"
 	pass # Replace with function body.
 
 
