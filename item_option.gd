@@ -15,9 +15,20 @@ func _init(x:int,y:int,my_owner:battle_profile,my_page:int) -> void:
 	#note to self. incorporate more of this function into the base class for readability
 	
 func _pressed():
+	_back()
 	BattleManager.temp_action[3]=item_held._use
-	Inventory.item_content.pop_at(2*pos.y+pos.x+6*on_page)
-	BattleManager.item_use_cache.append(item_held)
+	BattleManager.temp_item=2*pos.y+pos.x+6*on_page
+	match item_held.target_mode:
+		battle_profile.target_style.single_enemy:
+			UiManager.create_page_v(BattleManager.enemy_team,0,char_option)
+		battle_profile.target_style.single_ally:	
+			UiManager.create_page_v(globals.ally_list,0,char_option)
+		battle_profile.target_style.all_enemies:
+			BattleManager.temp_action[1]=-1#target index
+			BattleManager.next_turn()
+		battle_profile.target_style.all_allies:
+			BattleManager.temp_action[1]=-2
+			BattleManager.next_turn()		
 	#start here tmw
 	pass
 

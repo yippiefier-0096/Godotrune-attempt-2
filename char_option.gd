@@ -53,11 +53,9 @@ func _input(event: InputEvent) -> void:
 				pass
 	if event.is_action_pressed("ui_down") and self.has_focus():
 		if pos.y==2:
-			print("got here")
 			print(on_page,(target_group))
-			if on_page<(target_group.size()/3):
+			if on_page<((target_group.size()-1)/3):
 				UiManager.create_page_v(target_group,on_page+1,self.get_script(),0)
-				pass
 func _pressed() -> void:
 	UiManager.ui_backtrack.append(UiManager.create_page_v.bind(target_group,on_page,self.get_script(),pos.y))
 	BattleManager.temp_action[1]=pos.y+on_page*3

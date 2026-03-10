@@ -26,9 +26,9 @@ func superprep(x:int,y:int,my_owner:battle_profile,my_page:int):
 	self.theme_type_variation="heartbutton"
 	dialog=RichTextLabel.new()
 	dialog.position=Vector2(22,-8)
-	dialog.size=Vector2(220,40)
+	dialog.size=Vector2(600,40)
 	dialog.bbcode_enabled=true
-	self.position=Vector2(8+220*x,18+50*y)
+	self.position=Vector2(8+220*x,40+34*y)
 	add_child(dialog)
 	pos.x=x
 	pos.y=y
@@ -44,7 +44,7 @@ func _input(event: InputEvent) -> void:
 				pass
 	if event.is_action_pressed("ui_right") and self.has_focus():
 		if pos.x==1:
-			if on_page<(list_size/6):
+			if on_page<(clampi(list_size-1,0,9999)/6):
 				UiManager.create_page_h(root_character,on_page+1,self.get_script(),pos.y*2)
 				pass
 func _pressed() -> void:

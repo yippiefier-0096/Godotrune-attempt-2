@@ -16,6 +16,8 @@ var bt_timer:float=15
 ##the enemy roster for any battle.
 var enemy_team:Array[battle_profile]
 
+var enemy_team_true:Array[battle_profile]
+
 var item_use_cache:Array[item_base]
 
 var tp_use_cache:Array[float]
@@ -28,7 +30,7 @@ var temp_action:Array
 
 var temp_tp:float
 
-var temp_item:item_base
+var temp_item:int
 
 var current_char:battle_profile
 
@@ -36,6 +38,7 @@ var x:int=0
 
 var move_sequence:Array[int]=[actioncontext.act,actioncontext.mercy,actioncontext.skill,actioncontext.item,actioncontext.attack]
 
+signal battle_s_over_everyone_go_home
 func _ready() -> void:
 	pass
 	
@@ -45,6 +48,7 @@ func battle_start():
 	pass
 	
 func my_round():
+	enemy_team=enemy_team_true.filter(func(input:battle_profile):return !input.out)
 	turn_action=[]
 	tp_use_cache=[]
 	item_use_cache=[]
@@ -56,17 +60,22 @@ func my_round():
 	character_turn()
 
 func character_turn():
+	enemy_team=enemy_team_true.filter(func(input:battle_profile):return !input.out)
 	for i in UiManager.battle_option_array.size():
 		UiManager.battle_option_array.pop_back().queue_free()
 	if UiManager.menu_b:
 		UiManager.menu_b.queue_free()
 	current_char=globals.ally_list[turn_order]
 	temp_action=[0,0,[],null,current_char,[]]
+	temp_item=-1
 	turn_action[turn_order]=[0,0,[],null,current_char,[]]
-	UiManager.menu_b=battle_ui.new(current_char)
+	UiManager.menu_b=battle_ui.new(current_char,turn_order)
 	UiManager.add_child(UiManager.menu_b)
 	print(turn_action)
+	
 func next_turn():
+	if  temp_action[0]== actioncontext.item:
+		item_use_cache.append(Inventory.item_content.pop_at(temp_item))
 	UiManager.ui_backtrack=[]
 	turn_action[turn_order]=temp_action
 	for i in turn_action[turn_order][5].size():
@@ -94,11 +103,15 @@ func last_turn():
 			turn_order-=1
 	for i in turn_action[turn_order][5].size():
 		turn_action[turn_action[turn_order][5][i]]=[0,0,[],null,null,[]]
+	if turn_action[turn_order][0]==actioncontext.item:
+		Inventory.item_content.append(item_use_cache.pop_back())
 	BattleManager.tp_gauge+=BattleManager.tp_use_cache[turn_order]
 	BattleManager.tp_use_cache[turn_order]=0
 	UiManager.ui_backtrack=[]
 	character_turn()
 func round_consequence():
+	
+	var attackers:Array[battle_profile]
 	if UiManager.menu_b:
 		UiManager.menu_b.queue_free()
 	for i in UiManager.battle_option_array.size():
@@ -106,28 +119,65 @@ func round_consequence():
 
 	for i in move_sequence.size():
 		var roster=turn_action.filter(func(x:Array):return x[0]==move_sequence[i])
-		for j in roster.size():
+		for j in roster.size():#each character that used a certain category of actions move
+			var target:Array[battle_profile]
+			enemy_team=enemy_team_true.filter(func(input:battle_profile):return !input.out)
+			match roster[j][1]:
+				-1:
+					target=BattleManager.enemy_team
+				-2:
+					target=globals.ally_list
+				_:
+					var viable:Array[battle_profile]=roster[j][2].filter(func(input:battle_profile):return !input.out)
+					if 	roster[j][2][roster[j][1]].out:
+						print("switching targets")
+						target.append(viable[0])#last bug: Out of bounds get index '0' (on base: 'Array[battle_profile]')
+					else:
+						target.append(roster[j][2][roster[j][1]])
+			print(target)
 			match i:
 				0:
-					await roster[j][3].call()
+					if roster[j][3] is int:
+						await target[0].ally_action(roster[j][4])
+					else:
+						await roster[j][3].call(target)
 					pass#things that happens with using ACTs
 				1:
-					if roster[j][2][roster[j][1]].mercy>=1:
-						DialogueManager.add_line("{0} spared {1}!",[roster[j][4].nametag,roster[j][2][roster[j][1]].nametag])
+					if target[0].mercy>=1:
+						DialogueManager.add_line("{0} spared {1}!",[roster[j][4].nametag,target[0].nametag])
+						target[0].leave_mercy()
 					else:
-						DialogueManager.add_line("{0} tried to spare {1}...",[roster[j][4].nametag,roster[j][2][roster[j][1]].nametag])
+						DialogueManager.add_line("{0} tried to spare {1}...",[roster[j][4].nametag,target[0].nametag])
 						DialogueManager.add_line("But their name wasn't [color=yellow]YELLOW[/color]!")
-					await DialogueManager.read_dialogue()
-					
-					pass#things that happen when one spares an enemy
 				2:
+					if roster[j][3] is int:
+						await target[0].ally_action(roster[j][4])
+					else:
+						await roster[j][3].call(target)
 					pass#using magic skills
 				3:
+					await roster[j][3].call(target,roster[j][4])
+					for x in item_use_cache.size():
+						item_use_cache.pop_back().queue_free()
 					pass#using items
 				4:
-					DialogueManager.add_line("{0} attacked {1}!",[roster[j][4].nametag,roster[j][2][roster[j][1]].nametag])
-					await DialogueManager.read_dialogue()
-					pass#attacking
+					DialogueManager.add_line("{0} attacked {1}!",[roster[j][4].nametag,target[0].nametag])
+					attackers.append(roster[j][4])
+			enemy_team=enemy_team_true.filter(func(input:battle_profile):return !input.out)
+			await DialogueManager.read_dialogue()
+			print(enemy_team)
+			if BattleManager.enemy_team.is_empty():
+				print("nobody's here")
+				end_battle()
+				return
+	for k in BattleManager.enemy_team.size():
+		pass
+	await DialogueManager.read_dialogue()
+	print(enemy_team)
+	if BattleManager.enemy_team.is_empty():
+		print("nobody's here")
+		end_battle()
+		return
 	globals.mode=globals.mode_index.battle_turn
 	enemy_turn()
 func action_groups(case:Array):
@@ -155,15 +205,15 @@ func enemy_turn():
 		
 	pass
 func end_battle():
-	
+	battle_s_over_everyone_go_home.emit()
 	if soul_normal:
 		soul_normal.queue_free()
 	for i in UiManager.battle_option_array.size():
 		UiManager.battle_option_array.pop_back().queue_free()
 	if UiManager.menu_b:
 		UiManager.menu_b.queue_free()
-	for i in enemy_team.size():
-		enemy_team.pop_back().queue_free()
+	enemy_team_true=[]
+	enemy_team=[]
 	turn_action=[]
 	DialogueManager.add_line("Battle ended. you get nothing lmao")
 	await DialogueManager.read_dialogue()

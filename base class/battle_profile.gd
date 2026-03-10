@@ -56,6 +56,10 @@ var active_act:Array[Dictionary]
 var ally_act:Dictionary
 
 var is_ally:bool=false
+
+var out:bool=false
+
+var char_color:Color=Color(0.836, 0.0, 0.0, 1.0)
 ##The list of five buttons that this character gets to access on the first layer of menu (e.g. kris' second button being ACT instead of MAGIC. eg2. DOG button)
 ##[br]alternatively, putting classes extended from sprite2d can effectively make a button "disabled" (as if, it's just a sprite)
 var button_config:Array[GDScript]=[fightbutton,magicbutton,itembutton,mercybutton,defendbutton]
@@ -63,12 +67,14 @@ var button_config:Array[GDScript]=[fightbutton,magicbutton,itembutton,mercybutto
 enum target_style {single_enemy,single_ally,all_enemies,all_allies}
 
 var assist_icon:String
+
+var affinities:Dictionary[String,float]={}
+
 func _ready() -> void:
 	
 	pass # Replace with function body.
 	
 func faux_turn():
-	
 	for i in turn_effect.size():
 		if turn_timer[i]>0:
 			turn_effect[i].call(self)
@@ -84,7 +90,6 @@ func faux_turn():
 		self.equipped_armors[i].passive_effect(self)
 	print (self.atk_aug)
 		
-
 func _input(event: InputEvent) -> void:
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -95,10 +100,40 @@ func choose_attack(turn:int=0)->bullet_pattern_base:
 		return attack_patterns[randi_range(0,attack_patterns.size()-1)].new()	
 	else:
 		return null
-
+func receive_damage(from:battle_profile,amount:int,d_type:Array[String]=["",""],bypass:bool=false):
+	var effective_damage:int=amount
+	var effective_max_hp:int=max_hp+maxhp_aug.reduce(func(accum:int,x:int):return accum+x)
+	var effective_def=def+def_aug.reduce(func(accum:int,x:int):return accum+x)
+	for i in d_type.size():
+		effective_damage*=affinities.get(d_type[i],1)
+	if !bypass:
+		effective_damage-=effective_def*3
+	hp-=effective_damage
+	if hp <=0:
+		if d_type.has("ice") and from.get_script()==noelle_profile:
+			pass#iceshock capacity
+		leave_violence()
+	pass
 func choose_attack_solo(turn:int=0):
 	if !attack_patterns_solo.is_empty():
 		BattleManager.enemy_attacks.append(attack_patterns_solo[randi_range(0,attack_patterns_solo.size()-1)])
 
-func ally_action(id:int,target:battle_profile):
+
+	
+func leave_mercy():
+	BattleManager.battle_s_over_everyone_go_home.connect(self.queue_free)
+	out=true
+func leave_violence():
+	BattleManager.battle_s_over_everyone_go_home.connect(self.queue_free)
+	out=true
+func leave_sleep():
+	BattleManager.battle_s_over_everyone_go_home.connect(self.queue_free)
+	out=true
+
+func ally_action(from:battle_profile):
+	
+	pass
+
+func state_update():
+	
 	pass

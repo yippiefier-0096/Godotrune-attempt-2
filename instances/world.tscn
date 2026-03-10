@@ -30,8 +30,10 @@ script = ExtResource("2_oaqeo")
 metadata/_custom_type_script = "uid://cqjtg4hvctykg"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=497903260]
+position = Vector2(0.5, 0)
 
 [node name="test_battle_1" type="Area2D" parent="." unique_id=438572945]
+position = Vector2(-25.5, -16)
 script = ExtResource("3_u4b3c")
 metadata/_custom_type_script = "uid://dictttk0lyssi"
 

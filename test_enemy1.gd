@@ -29,11 +29,24 @@ func _ready() -> void:
 	}
 	self.active_act=[act_list[0],act_list[1]]
 	pass # Replace with function body.
-func act1():
+func act1(target:Array[battle_profile]):
 	self.mercy+=0.2
-func act2():
+func act2(target:Array[battle_profile]):
 	self.hp=1
 	self.mercy=1
+func ally_action(from:battle_profile):
+	match from.char_id:
+		0:
+			pass
+		1:
+			DialogueManager.add_line("Susie drop kicked the enemy!")
+			self.mercy+=0.5
+		2:
+			DialogueManager.add_line("Ralsei whipped the enemy into shape!")
+			self.mercy+=0.25
+		3:
+			DialogueManager.add_line("Noelle gently tapped the enemy.")
+			self.mercy+=0.1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

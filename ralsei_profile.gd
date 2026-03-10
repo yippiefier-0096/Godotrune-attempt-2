@@ -11,6 +11,16 @@ func _ready() -> void:
 	hp=max_hp
 	assist_icon="uid://bssag1p2qhvin"
 	nametag="RALSEI"
+	power_list={
+		0:{
+			"name":"R-Action",
+			"b_desc":"",
+			"cost":0,
+			"target_mode":target_style.single_enemy,
+			"function":int(0)
+		}
+	}
+	active_power=[power_list[0]]
 	pass # Replace with function body.
 
 

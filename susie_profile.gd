@@ -15,6 +15,16 @@ func _ready() -> void:
 	Inventory.equip_weapon(1,self)
 	self.nametag="SUSIE"
 	assist_icon="uid://dktm0kdxfba65"
+	power_list={
+		0:{
+			"name":"S-Action",
+			"b_desc":"",
+			"cost":0,
+			"target_mode":target_style.single_enemy,
+			"function":int(0)
+		}
+	}
+	active_power=[power_list[0]]
 	#load from 2nd character data slot
 	pass # Replace with function body.
 

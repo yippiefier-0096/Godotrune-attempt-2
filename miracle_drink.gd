@@ -9,9 +9,10 @@ func _ready() -> void:
 	target_mode=target_style.single_ally
 	pass # Replace with function body.
 
-func use(target:battle_profile):
-	target.turn_effect.append(Callable(Effects,"hp_up"))
-	target.turn_timer.append(3)
+func use(target:Array[battle_profile]):
+	
+	target[0].turn_effect.append(Callable(Effects,"hp_up"))
+	target[0].turn_timer.append(3)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 	
