@@ -70,10 +70,21 @@ var assist_icon:String
 
 var affinities:Dictionary[String,float]={}
 
+var avatar:actor_base
+
+var enemy_sprite:SpriteFrames
+
+var position_in_team:int
+
 func _ready() -> void:
 	
 	pass # Replace with function body.
-	
+func _init(order:int,ally:bool=true) -> void:
+	is_ally=ally
+	position_in_team=order
+	pass
+
+	#move to after variables are assigned with start()
 func faux_turn():
 	for i in turn_effect.size():
 		if turn_timer[i]>0:
@@ -90,6 +101,14 @@ func faux_turn():
 		self.equipped_armors[i].passive_effect(self)
 	print (self.atk_aug)
 		
+		
+func set_avatar():
+	if !is_ally:
+		avatar=actor_base.new()
+		avatar.sprite_frames=enemy_sprite
+	else:	
+		avatar=party_member.new(position_in_team,char_id)
+	add_sibling(avatar)
 func _input(event: InputEvent) -> void:
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,0 +1,454 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b142oqqg5opp3"]
+
+[ext_resource type="Texture2D" uid="uid://dty77xnwdo5cx" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_0.png" id="1_lbbc5"]
+[ext_resource type="Texture2D" uid="uid://bmg0my8s2ffxj" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_1.png" id="2_46w6l"]
+[ext_resource type="Texture2D" uid="uid://d3uhe4h4bib8s" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_2.png" id="3_kf7nx"]
+[ext_resource type="Texture2D" uid="uid://ctfsntw42bjfk" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_3.png" id="4_ky1qe"]
+[ext_resource type="Texture2D" uid="uid://dk4f44vqgmqtp" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_4.png" id="5_3m4nc"]
+[ext_resource type="Texture2D" uid="uid://ck4v2f8sc6p3v" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_5.png" id="6_ro4hv"]
+[ext_resource type="Texture2D" uid="uid://1bvmkk08n7ep" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_6.png" id="7_40gv6"]
+[ext_resource type="Texture2D" uid="uid://cq84nuicuav5b" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_7.png" id="8_4srff"]
+[ext_resource type="Texture2D" uid="uid://cqxue4nn36xu4" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_8.png" id="9_p6dss"]
+[ext_resource type="Texture2D" uid="uid://bwnl4y2qd2mhf" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_9.png" id="10_0ctlq"]
+[ext_resource type="Texture2D" uid="uid://bstjhmcvywe5q" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_act/spr_krisb_act_10.png" id="11_gc6xv"]
+[ext_resource type="Texture2D" uid="uid://dnx2eycf1b0b3" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_actready/spr_krisb_actready_0.png" id="12_ri4ct"]
+[ext_resource type="Texture2D" uid="uid://b7niua0qnrd8r" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_actready/spr_krisb_actready_1.png" id="13_keat7"]
+[ext_resource type="Texture2D" uid="uid://b8vcifonfw2io" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_defend/spr_krisb_defend_0.png" id="14_8sdf7"]
+[ext_resource type="Texture2D" uid="uid://0f53ecjsrnu4" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_defend/spr_krisb_defend_1.png" id="15_ux2cg"]
+[ext_resource type="Texture2D" uid="uid://b6yr8rl3kwbkl" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_defend/spr_krisb_defend_2.png" id="16_x4wdq"]
+[ext_resource type="Texture2D" uid="uid://dxnmfej8ef53w" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_defend/spr_krisb_defend_3.png" id="17_ghy6m"]
+[ext_resource type="Texture2D" uid="uid://d4gyhp5ut7adi" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_defend/spr_krisb_defend_4.png" id="18_fu47s"]
+[ext_resource type="Texture2D" uid="uid://ffrcj4xus217" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_defend/spr_krisb_defend_5.png" id="19_c0sfg"]
+[ext_resource type="Texture2D" uid="uid://dxkjvhv3ptcmi" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_defeat/spr_krisb_defeat_0.png" id="20_kbwm8"]
+[ext_resource type="Texture2D" uid="uid://b6avfryek6aef" path="res://misc resources/main characters sprites/fraud overworld/spr_krisd_dark/spr_krisd_dark_0.png" id="21_ghy6m"]
+[ext_resource type="Texture2D" uid="uid://bjwc384fgb06s" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_attack/spr_krisb_attack_0.png" id="21_htt71"]
+[ext_resource type="Texture2D" uid="uid://e55ll7oq04ok" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_attack/spr_krisb_attack_1.png" id="22_5skqt"]
+[ext_resource type="Texture2D" uid="uid://dudxjnqb7v8r0" path="res://misc resources/main characters sprites/fraud overworld/spr_krisd_dark/spr_krisd_dark_1.png" id="22_fu47s"]
+[ext_resource type="Texture2D" uid="uid://cy0dt155ta2tx" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_attack/spr_krisb_attack_2.png" id="23_byin3"]
+[ext_resource type="Texture2D" uid="uid://b83reo5ncjbve" path="res://misc resources/main characters sprites/fraud overworld/spr_krisd_dark/spr_krisd_dark_2.png" id="23_c0sfg"]
+[ext_resource type="Texture2D" uid="uid://djiccmjhgbjw6" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_attack/spr_krisb_attack_3.png" id="24_hxe6i"]
+[ext_resource type="Texture2D" uid="uid://dm7kctmc2vo86" path="res://misc resources/main characters sprites/fraud overworld/spr_krisd_dark/spr_krisd_dark_3.png" id="24_kbwm8"]
+[ext_resource type="Texture2D" uid="uid://d2h4g2frlbbcg" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_attack/spr_krisb_attack_4.png" id="25_nrgp6"]
+[ext_resource type="Texture2D" uid="uid://chqkcjhaxdu44" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_attack/spr_krisb_attack_5.png" id="26_r8snv"]
+[ext_resource type="Texture2D" uid="uid://2inb36yjpkcn" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_attack/spr_krisb_attack_6.png" id="27_hn7im"]
+[ext_resource type="Texture2D" uid="uid://c7shmm4dj35ti" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_attackready/spr_krisb_attackready_0.png" id="28_nuj3x"]
+[ext_resource type="Texture2D" uid="uid://doo3ehvhneuke" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_hurt/spr_krisb_hurt_0.png" id="29_wx7hx"]
+[ext_resource type="Texture2D" uid="uid://br2hnc37qr1rc" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_idle/spr_krisb_idle_0.png" id="30_nxfim"]
+[ext_resource type="Texture2D" uid="uid://b7f8kwagpa1ha" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_idle/spr_krisb_idle_1.png" id="31_u2buo"]
+[ext_resource type="Texture2D" uid="uid://b13dyay2ltppq" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_idle/spr_krisb_idle_2.png" id="32_u68xx"]
+[ext_resource type="Texture2D" uid="uid://x0xi5hh0fkov" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_idle/spr_krisb_idle_3.png" id="33_467l1"]
+[ext_resource type="Texture2D" uid="uid://blfcd5ip3uygt" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_idle/spr_krisb_idle_4.png" id="34_ykn56"]
+[ext_resource type="Texture2D" uid="uid://7fmfyic6m3rs" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_idle/spr_krisb_idle_5.png" id="35_vjy2r"]
+[ext_resource type="Texture2D" uid="uid://4bch6qj7g2sn" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_0.png" id="36_kv0aq"]
+[ext_resource type="Texture2D" uid="uid://b4r2uujcwf5bs" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_1.png" id="37_ao46c"]
+[ext_resource type="Texture2D" uid="uid://c20qutqbwttfq" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_2.png" id="38_6r641"]
+[ext_resource type="Texture2D" uid="uid://dsex6t0ulhnqa" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_3.png" id="39_eqbcp"]
+[ext_resource type="Texture2D" uid="uid://3jt37mghkpsx" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_4.png" id="40_lejfx"]
+[ext_resource type="Texture2D" uid="uid://wkvwt0wij63q" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_5.png" id="41_oqmea"]
+[ext_resource type="Texture2D" uid="uid://b4gw2ohtngjo1" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_6.png" id="42_p1hy3"]
+[ext_resource type="Texture2D" uid="uid://ci2g0m7uugksb" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_7.png" id="43_khdxj"]
+[ext_resource type="Texture2D" uid="uid://dn423ocpfisq0" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_8.png" id="44_b4xcq"]
+[ext_resource type="Texture2D" uid="uid://dwv62q7xrgwfb" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_9.png" id="45_wvr67"]
+[ext_resource type="Texture2D" uid="uid://cg42o25s7ijmx" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_10.png" id="46_n0vmy"]
+[ext_resource type="Texture2D" uid="uid://pilkwmo87aj3" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_intro/spr_krisb_intro_11.png" id="47_kbua2"]
+[ext_resource type="Texture2D" uid="uid://buld322omhwqc" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_item/spr_krisb_item_0.png" id="48_uswd0"]
+[ext_resource type="Texture2D" uid="uid://uxpu557mjmij" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_item/spr_krisb_item_1.png" id="49_h4fif"]
+[ext_resource type="Texture2D" uid="uid://s5ouvqwvgti3" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_item/spr_krisb_item_2.png" id="50_s435e"]
+[ext_resource type="Texture2D" uid="uid://ba1oog5g6kfhp" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_item/spr_krisb_item_3.png" id="51_pd1wu"]
+[ext_resource type="Texture2D" uid="uid://dwt7j8yja6i0t" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_item/spr_krisb_item_4.png" id="52_55oo0"]
+[ext_resource type="Texture2D" uid="uid://ca3gkfkiaokeh" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_item/spr_krisb_item_5.png" id="53_a2s8v"]
+[ext_resource type="Texture2D" uid="uid://d4m1mhbmiwc5k" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_item/spr_krisb_item_6.png" id="54_hximy"]
+[ext_resource type="Texture2D" uid="uid://dkx4m14il0rvb" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_itemready/spr_krisb_itemready_0.png" id="55_gdgn7"]
+[ext_resource type="Texture2D" uid="uid://b482n680rl63c" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_victory/spr_krisb_victory_0.png" id="56_r7pdk"]
+[ext_resource type="Texture2D" uid="uid://cho80el3gty1x" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_victory/spr_krisb_victory_1.png" id="57_n4r7o"]
+[ext_resource type="Texture2D" uid="uid://c46bvybxq3lg4" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_victory/spr_krisb_victory_2.png" id="58_lf7wr"]
+[ext_resource type="Texture2D" uid="uid://c03mj07s6i1jp" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_victory/spr_krisb_victory_3.png" id="59_5xxrh"]
+[ext_resource type="Texture2D" uid="uid://blf6ickd217sp" path="res://misc resources/main characters sprites/fraud overworld/spr_krisl_dark/spr_krisl_dark_0.png" id="60_htt71"]
+[ext_resource type="Texture2D" uid="uid://dwubh12hdw2m7" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_victory/spr_krisb_victory_4.png" id="60_qe0vl"]
+[ext_resource type="Texture2D" uid="uid://cxcjg5v2jdqc5" path="res://misc resources/main characters sprites/fraud overworld/spr_krisl_dark/spr_krisl_dark_1.png" id="61_5skqt"]
+[ext_resource type="Texture2D" uid="uid://bdyhoyq0uxp6w" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_victory/spr_krisb_victory_5.png" id="61_icq8i"]
+[ext_resource type="Texture2D" uid="uid://kc4s2rpa6ysh" path="res://misc resources/main characters sprites/fraud overworld/spr_krisl_dark/spr_krisl_dark_2.png" id="62_byin3"]
+[ext_resource type="Texture2D" uid="uid://457u07t5gcru" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_victory/spr_krisb_victory_6.png" id="62_erg5g"]
+[ext_resource type="Texture2D" uid="uid://m4k64lngl8ne" path="res://misc resources/main characters sprites/fraud overworld/spr_krisl_dark/spr_krisl_dark_3.png" id="63_hxe6i"]
+[ext_resource type="Texture2D" uid="uid://gbeynieukm2i" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_victory/spr_krisb_victory_7.png" id="63_oyuq2"]
+[ext_resource type="Texture2D" uid="uid://dtyiqwedt1fx7" path="res://misc resources/main characters sprites/fraud battle/spr_krisb_victory/spr_krisb_victory_8.png" id="64_ba4qw"]
+[ext_resource type="Texture2D" uid="uid://devj0aiwah6sr" path="res://misc resources/main characters sprites/fraud overworld/spr_krisr_dark/spr_krisr_dark_0.png" id="64_nrgp6"]
+[ext_resource type="Texture2D" uid="uid://cyn5cjsk04bgs" path="res://misc resources/main characters sprites/fraud overworld/spr_krisr_dark/spr_krisr_dark_1.png" id="65_r8snv"]
+[ext_resource type="Texture2D" uid="uid://5kkhoc8p3aui" path="res://misc resources/main characters sprites/fraud overworld/spr_krisr_dark/spr_krisr_dark_2.png" id="66_hn7im"]
+[ext_resource type="Texture2D" uid="uid://efekcnme3fh1" path="res://misc resources/main characters sprites/fraud overworld/spr_krisr_dark/spr_krisr_dark_3.png" id="67_nuj3x"]
+[ext_resource type="Texture2D" uid="uid://02eeb2ss7x8p" path="res://misc resources/main characters sprites/fraud overworld/spr_krisu_dark/spr_krisu_dark_0.png" id="68_wx7hx"]
+[ext_resource type="Texture2D" uid="uid://b7guh3h0jt1jq" path="res://misc resources/main characters sprites/fraud overworld/spr_krisu_dark/spr_krisu_dark_1.png" id="69_nxfim"]
+[ext_resource type="Texture2D" uid="uid://c25kpq4w1ljg1" path="res://misc resources/main characters sprites/fraud overworld/spr_krisu_dark/spr_krisu_dark_2.png" id="70_u2buo"]
+[ext_resource type="Texture2D" uid="uid://ca06dwn266w48" path="res://misc resources/main characters sprites/fraud overworld/spr_krisu_dark/spr_krisu_dark_3.png" id="71_u68xx"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lbbc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_46w6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kf7nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ky1qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3m4nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ro4hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_40gv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4srff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p6dss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0ctlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gc6xv")
+}],
+"loop": false,
+"name": &"act",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ri4ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_keat7")
+}],
+"loop": true,
+"name": &"act_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_kbwm8")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_8sdf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ux2cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_x4wdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ghy6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fu47s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_c0sfg")
+}],
+"loop": true,
+"name": &"defend",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_ghy6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_fu47s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_c0sfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_kbwm8")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_htt71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5skqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_byin3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_hxe6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_nrgp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_r8snv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hn7im")
+}],
+"loop": true,
+"name": &"fight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_nuj3x")
+}],
+"loop": true,
+"name": &"fight_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_wx7hx")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_nxfim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u2buo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_u68xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_467l1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ykn56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_vjy2r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_kv0aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ao46c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_6r641")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_eqbcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_lejfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_oqmea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_p1hy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_khdxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_b4xcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_wvr67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_n0vmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_kbua2")
+}],
+"loop": false,
+"name": &"intro",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_uswd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_h4fif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_s435e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_pd1wu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_55oo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_a2s8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_hximy")
+}],
+"loop": true,
+"name": &"item",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_gdgn7")
+}],
+"loop": true,
+"name": &"item_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_htt71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_5skqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_byin3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_hxe6i")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("64_nrgp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_r8snv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_hn7im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_nuj3x")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lbbc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_46w6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kf7nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ky1qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3m4nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ro4hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_40gv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4srff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p6dss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0ctlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gc6xv")
+}],
+"loop": false,
+"name": &"skill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ri4ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_keat7")
+}],
+"loop": true,
+"name": &"skill_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_wx7hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_nxfim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_u2buo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_u68xx")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_r7pdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_n4r7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_lf7wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_5xxrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_qe0vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_icq8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_erg5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_oyuq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ba4qw")
+}],
+"loop": true,
+"name": &"victory",
+"speed": 5.0
+}]

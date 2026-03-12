@@ -9,6 +9,7 @@ func _ready() -> void:
 	mag=9
 	max_hp=150
 	hp=max_hp
+	char_id=3
 	power_list={
 		0:{
 			"name":"N-Action",
@@ -30,6 +31,7 @@ func _ready() -> void:
 	}
 	active_power=[power_list[0],power_list[1]]
 	nametag="NOELLE"
+	set_avatar()
 	pass # Replace with function body.
 
 func iceshock(targets:Array[battle_profile]):

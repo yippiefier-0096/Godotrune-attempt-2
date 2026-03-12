@@ -4,6 +4,7 @@ class_name enemy1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	name="enemy 1"
 	atk=5
 	def=2
 	mag=0

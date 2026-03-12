@@ -16,16 +16,13 @@ var assist_icon:Dictionary[GDScript,String]={
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in 4:
-		var ally:party_member= party_member.new(i,i)
-		add_child(ally)
-		party_list.append(ally)
-		if ally.profile:
-			ally.profile.is_ally=true
-			ally_list.append(ally.profile)
-			
-		pass
-	pass # Replace with function body.
+	
+	ally_list=[kris_profile.new(0),susie_profile.new(1),noelle_profile.new(2),ralsei_profile.new(3)]
+	for i in ally_list.size():
+		add_child(ally_list[i])
+		
+	pass # Replace with function body
+	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("menu"):
 		if test==false:

@@ -31,7 +31,7 @@ func battle(area:Area2D):
 	if hit:
 		return
 	for i in self.enemy_team.size():
-		var _v:battle_profile=self.enemy_team[i].new()
+		var _v:battle_profile=self.enemy_team[i].new(i,false)
 		BattleManager.enemy_team_true.append(_v)
 		BattleManager.add_child(_v)
 	BattleManager.battle_s_over_everyone_go_home.connect(self.queue_free)

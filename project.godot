@@ -29,6 +29,7 @@ Inventory="*uid://bhnliqb4iu3bv"
 MenuManager="*uid://bnh23xswbfxfk"
 Effects="*uid://cxgt2mdbe3cxn"
 BattleManager="*uid://b1jfrgmsnu0la"
+CutsceneManager="*uid://dmxbynmgsbb1o"
 
 [display]
 

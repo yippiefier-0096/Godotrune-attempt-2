@@ -1,0 +1,450 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ds5qo1uhvsek0"]
+
+[ext_resource type="Texture2D" uid="uid://bnu4xnflg8ly5" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_0.png" id="1_ov3ak"]
+[ext_resource type="Texture2D" uid="uid://c18dvrw5v4sdv" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_1.png" id="2_tnj3p"]
+[ext_resource type="Texture2D" uid="uid://dl6edtj87ftro" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_2.png" id="3_u3jh1"]
+[ext_resource type="Texture2D" uid="uid://bcvysydpvj7t" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_3.png" id="4_wwfdj"]
+[ext_resource type="Texture2D" uid="uid://dfuek3shmnyyr" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_4.png" id="5_f71s1"]
+[ext_resource type="Texture2D" uid="uid://cf0mp7x1148tj" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_5.png" id="6_26hqt"]
+[ext_resource type="Texture2D" uid="uid://di8uku32461re" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_6.png" id="7_t062d"]
+[ext_resource type="Texture2D" uid="uid://l4xbdpj53vmn" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_7.png" id="8_b64iw"]
+[ext_resource type="Texture2D" uid="uid://blpco0tnmo6ah" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_8.png" id="9_cu0ko"]
+[ext_resource type="Texture2D" uid="uid://c7bvdbpxokf1g" path="res://misc resources/main characters sprites/susie battle/spr_susie_act/spr_susie_act_9.png" id="10_ykwkc"]
+[ext_resource type="Texture2D" uid="uid://cd6re7342c64f" path="res://misc resources/main characters sprites/susie battle/spr_susie_actready/spr_susie_actready_0.png" id="11_5lji0"]
+[ext_resource type="Texture2D" uid="uid://e77a7om5huf0" path="res://misc resources/main characters sprites/susie battle/spr_susie_defend/spr_susie_defend_0.png" id="12_is5et"]
+[ext_resource type="Texture2D" uid="uid://b2ahvmca6e0px" path="res://misc resources/main characters sprites/susie battle/spr_susie_defend/spr_susie_defend_1.png" id="13_rgb0t"]
+[ext_resource type="Texture2D" uid="uid://buin8icdvk4fm" path="res://misc resources/main characters sprites/susie battle/spr_susie_defend/spr_susie_defend_2.png" id="14_q13yi"]
+[ext_resource type="Texture2D" uid="uid://dttyrcfef7ykt" path="res://misc resources/main characters sprites/susie battle/spr_susie_defend/spr_susie_defend_3.png" id="15_i1j6c"]
+[ext_resource type="Texture2D" uid="uid://de40vfpn8e5ej" path="res://misc resources/main characters sprites/susie battle/spr_susie_defend/spr_susie_defend_4.png" id="16_iylon"]
+[ext_resource type="Texture2D" uid="uid://exkplh7h012n" path="res://misc resources/main characters sprites/susie battle/spr_susieb_defeat/spr_susieb_defeat_0.png" id="17_mrp6g"]
+[ext_resource type="Texture2D" uid="uid://cqdwt3jvhpxjk" path="res://misc resources/main characters sprites/susie battle/spr_susie_attack/spr_susie_attack_0.png" id="18_achyl"]
+[ext_resource type="Texture2D" uid="uid://upo0f55ybujf" path="res://misc resources/main characters sprites/susie overworld/spr_susieu_dark/spr_susieu_dark_0.png" id="18_i7uu6"]
+[ext_resource type="Texture2D" uid="uid://gad0m60mmev4" path="res://misc resources/main characters sprites/susie battle/spr_susie_attack/spr_susie_attack_1.png" id="19_exude"]
+[ext_resource type="Texture2D" uid="uid://tkq5udumib61" path="res://misc resources/main characters sprites/susie overworld/spr_susieu_dark/spr_susieu_dark_1.png" id="19_qtxus"]
+[ext_resource type="Texture2D" uid="uid://dn5xprmmncfr" path="res://misc resources/main characters sprites/susie battle/spr_susie_attack/spr_susie_attack_2.png" id="20_csqs0"]
+[ext_resource type="Texture2D" uid="uid://cjnnn7gd3n20h" path="res://misc resources/main characters sprites/susie overworld/spr_susieu_dark/spr_susieu_dark_2.png" id="20_dtbbg"]
+[ext_resource type="Texture2D" uid="uid://bemc1uxjydyvn" path="res://misc resources/main characters sprites/susie battle/spr_susie_attack/spr_susie_attack_3.png" id="21_6uuy8"]
+[ext_resource type="Texture2D" uid="uid://bix7q6ykl87r2" path="res://misc resources/main characters sprites/susie overworld/spr_susieu_dark/spr_susieu_dark_3.png" id="21_sner2"]
+[ext_resource type="Texture2D" uid="uid://bsq4sk0s33w5a" path="res://misc resources/main characters sprites/susie battle/spr_susie_attackready/spr_susie_attackready_0.png" id="22_707cn"]
+[ext_resource type="Texture2D" uid="uid://bik0nbyxikrm7" path="res://misc resources/main characters sprites/susie battle/spr_susie_hurt/spr_susie_hurt_0.png" id="23_i1pob"]
+[ext_resource type="Texture2D" uid="uid://bcuxpsp4x0mst" path="res://misc resources/main characters sprites/susie battle/spr_susie_idle/spr_susie_idle_0.png" id="24_dnm1v"]
+[ext_resource type="Texture2D" uid="uid://55xxoym86t26" path="res://misc resources/main characters sprites/susie battle/spr_susie_idle/spr_susie_idle_1.png" id="25_ky2pg"]
+[ext_resource type="Texture2D" uid="uid://cxkft6fcqlawb" path="res://misc resources/main characters sprites/susie battle/spr_susie_idle/spr_susie_idle_2.png" id="26_1aoal"]
+[ext_resource type="Texture2D" uid="uid://d0cu48kq680y0" path="res://misc resources/main characters sprites/susie battle/spr_susie_idle/spr_susie_idle_3.png" id="27_r67hn"]
+[ext_resource type="Texture2D" uid="uid://c3ntnhrssf3q0" path="res://misc resources/main characters sprites/susie battle/spr_susie_item/spr_susie_item_0.png" id="28_i6rxp"]
+[ext_resource type="Texture2D" uid="uid://cma6yqj5cadfh" path="res://misc resources/main characters sprites/susie battle/spr_susie_item/spr_susie_item_1.png" id="29_0lqmv"]
+[ext_resource type="Texture2D" uid="uid://3j2m1t4mh6jj" path="res://misc resources/main characters sprites/susie battle/spr_susie_item/spr_susie_item_2.png" id="30_i7uu6"]
+[ext_resource type="Texture2D" uid="uid://d1pjyhcrcwfpb" path="res://misc resources/main characters sprites/susie battle/spr_susie_item/spr_susie_item_3.png" id="31_qtxus"]
+[ext_resource type="Texture2D" uid="uid://bj7dgxpqwme75" path="res://misc resources/main characters sprites/susie battle/spr_susie_item/spr_susie_item_4.png" id="32_dtbbg"]
+[ext_resource type="Texture2D" uid="uid://br6yltpd7w41r" path="res://misc resources/main characters sprites/susie battle/spr_susie_itemready/spr_susie_itemready_0.png" id="33_sner2"]
+[ext_resource type="Texture2D" uid="uid://p67kdi4or3bg" path="res://misc resources/main characters sprites/susie battle/spr_susie_itemready/spr_susie_itemready_1.png" id="34_66qv8"]
+[ext_resource type="Texture2D" uid="uid://bajbjndkjrfxr" path="res://misc resources/main characters sprites/susie battle/spr_susie_spell/spr_susie_spell_0.png" id="35_wmbv1"]
+[ext_resource type="Texture2D" uid="uid://xe12c6e3sss8" path="res://misc resources/main characters sprites/susie battle/spr_susie_spell/spr_susie_spell_1.png" id="36_1davj"]
+[ext_resource type="Texture2D" uid="uid://dmid6rj2lo8yv" path="res://misc resources/main characters sprites/susie battle/spr_susie_spell/spr_susie_spell_2.png" id="37_mds0o"]
+[ext_resource type="Texture2D" uid="uid://deyj3pttcdwbg" path="res://misc resources/main characters sprites/susie battle/spr_susie_spell/spr_susie_spell_3.png" id="38_lhb08"]
+[ext_resource type="Texture2D" uid="uid://w2c5qyopjoob" path="res://misc resources/main characters sprites/susie overworld/spr_susiel_dark_eyes/spr_susiel_dark_eyes_0.png" id="39_66qv8"]
+[ext_resource type="Texture2D" uid="uid://d32xflmcih2ph" path="res://misc resources/main characters sprites/susie battle/spr_susie_spell/spr_susie_spell_4.png" id="39_bflvd"]
+[ext_resource type="Texture2D" uid="uid://cce5qwwse3mmq" path="res://misc resources/main characters sprites/susie battle/spr_susie_spell/spr_susie_spell_5.png" id="40_8j6lw"]
+[ext_resource type="Texture2D" uid="uid://b1hxnv57n6dv5" path="res://misc resources/main characters sprites/susie overworld/spr_susiel_dark_eyes/spr_susiel_dark_eyes_1.png" id="40_wmbv1"]
+[ext_resource type="Texture2D" uid="uid://ci3ec68ubaqib" path="res://misc resources/main characters sprites/susie overworld/spr_susiel_dark_eyes/spr_susiel_dark_eyes_2.png" id="41_1davj"]
+[ext_resource type="Texture2D" uid="uid://cexr0x7cmt47b" path="res://misc resources/main characters sprites/susie battle/spr_susie_spell/spr_susie_spell_6.png" id="41_sxx3r"]
+[ext_resource type="Texture2D" uid="uid://d2p0ieyrx5pem" path="res://misc resources/main characters sprites/susie battle/spr_susie_spell/spr_susie_spell_7.png" id="42_fw2qr"]
+[ext_resource type="Texture2D" uid="uid://s5ywtyeu66ro" path="res://misc resources/main characters sprites/susie overworld/spr_susiel_dark_eyes/spr_susiel_dark_eyes_3.png" id="42_mds0o"]
+[ext_resource type="Texture2D" uid="uid://2t6ectkneqc" path="res://misc resources/main characters sprites/susie battle/spr_susie_spell/spr_susie_spell_8.png" id="43_4b5o8"]
+[ext_resource type="Texture2D" uid="uid://d17744mepcomj" path="res://misc resources/main characters sprites/susie overworld/spr_susier_dark_eyes/spr_susier_dark_eyes_0.png" id="43_lhb08"]
+[ext_resource type="Texture2D" uid="uid://1j2chmy1dhyi" path="res://misc resources/main characters sprites/susie overworld/spr_susier_dark_eyes/spr_susier_dark_eyes_1.png" id="44_bflvd"]
+[ext_resource type="Texture2D" uid="uid://dvqlhobedm1jv" path="res://misc resources/main characters sprites/susie battle/spr_susie_spellready/spr_susie_spellready_0.png" id="44_jkefk"]
+[ext_resource type="Texture2D" uid="uid://c86s3liel7jin" path="res://misc resources/main characters sprites/susie battle/spr_susie_spellready/spr_susie_spellready_1.png" id="45_7dngw"]
+[ext_resource type="Texture2D" uid="uid://dmw6trrtpvtqh" path="res://misc resources/main characters sprites/susie overworld/spr_susier_dark_eyes/spr_susier_dark_eyes_2.png" id="45_8j6lw"]
+[ext_resource type="Texture2D" uid="uid://yp4k36sivnhm" path="res://misc resources/main characters sprites/susie overworld/spr_susier_dark_eyes/spr_susier_dark_eyes_3.png" id="46_sxx3r"]
+[ext_resource type="Texture2D" uid="uid://bw841obproed1" path="res://misc resources/main characters sprites/susie battle/spr_susie_spellready/spr_susie_spellready_2.png" id="46_uqaj6"]
+[ext_resource type="Texture2D" uid="uid://ddst73wwml1fd" path="res://misc resources/main characters sprites/susie battle/spr_susie_spellready/spr_susie_spellready_3.png" id="47_3rjyc"]
+[ext_resource type="Texture2D" uid="uid://q3gfmqe2ch7" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_0.png" id="48_c0is4"]
+[ext_resource type="Texture2D" uid="uid://b7nfl6csfufs8" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_1.png" id="49_43r3d"]
+[ext_resource type="Texture2D" uid="uid://ds3x245ovnlos" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_2.png" id="50_fowj7"]
+[ext_resource type="Texture2D" uid="uid://oygydp8q2j3q" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_3.png" id="51_ucs2l"]
+[ext_resource type="Texture2D" uid="uid://bccaxk21gjwdy" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_4.png" id="52_y5qib"]
+[ext_resource type="Texture2D" uid="uid://buva436ff6qi4" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_5.png" id="53_vvybf"]
+[ext_resource type="Texture2D" uid="uid://boa63jx04pi3w" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_6.png" id="54_mijfh"]
+[ext_resource type="Texture2D" uid="uid://b0hc5qdsxragl" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_7.png" id="55_ipqtu"]
+[ext_resource type="Texture2D" uid="uid://bpm2k5sf88ctt" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_8.png" id="56_tea04"]
+[ext_resource type="Texture2D" uid="uid://bhjet0w7hfjv1" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_9.png" id="57_jgaoy"]
+[ext_resource type="Texture2D" uid="uid://dfqaehmqg7n6n" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_10.png" id="58_jexr0"]
+[ext_resource type="Texture2D" uid="uid://crw05axtotm18" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_11.png" id="59_jm0s4"]
+[ext_resource type="Texture2D" uid="uid://q5ldukxrqx6b" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_12.png" id="60_kkogh"]
+[ext_resource type="Texture2D" uid="uid://3qm10ob527hy" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_13.png" id="61_xr7fp"]
+[ext_resource type="Texture2D" uid="uid://5ye8qbb0ongu" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_14.png" id="62_jrgkw"]
+[ext_resource type="Texture2D" uid="uid://olkcxhu88kpg" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_15.png" id="63_ut4pu"]
+[ext_resource type="Texture2D" uid="uid://cd5dsis7h4f0s" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_16.png" id="64_oe4ak"]
+[ext_resource type="Texture2D" uid="uid://01btagvmx3fg" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_17.png" id="65_fmbvn"]
+[ext_resource type="Texture2D" uid="uid://bxdh5jttm42ai" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_18.png" id="66_ubh1j"]
+[ext_resource type="Texture2D" uid="uid://vagc1crsnn0e" path="res://misc resources/main characters sprites/susie battle/spr_susie_victory/spr_susie_victory_19.png" id="67_wmy3c"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ov3ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tnj3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u3jh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wwfdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f71s1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_26hqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t062d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b64iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cu0ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ykwkc")
+}],
+"loop": true,
+"name": &"act",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_5lji0")
+}],
+"loop": true,
+"name": &"act_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_mrp6g")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_is5et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rgb0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q13yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i1j6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_iylon")
+}],
+"loop": true,
+"name": &"defend",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_i7uu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qtxus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dtbbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_sner2")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_achyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_exude")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_csqs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6uuy8")
+}],
+"loop": true,
+"name": &"fight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_707cn")
+}],
+"loop": true,
+"name": &"fight_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_i1pob")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_dnm1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ky2pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1aoal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_r67hn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_achyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_exude")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_csqs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6uuy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6uuy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6uuy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6uuy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6uuy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_achyl")
+}],
+"loop": false,
+"name": &"intro",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_i6rxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0lqmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_i7uu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_qtxus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dtbbg")
+}],
+"loop": true,
+"name": &"item",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_sner2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_66qv8")
+}],
+"loop": true,
+"name": &"item_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_66qv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wmbv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_1davj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_mds0o")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_lhb08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_bflvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8j6lw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_sxx3r")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_wmbv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_1davj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_mds0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_lhb08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_bflvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_8j6lw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_sxx3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_fw2qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_4b5o8")
+}],
+"loop": true,
+"name": &"skill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_jkefk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_7dngw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_uqaj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_3rjyc")
+}],
+"loop": true,
+"name": &"skill_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_i7uu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qtxus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dtbbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_sner2")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_c0is4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_43r3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_fowj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ucs2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_y5qib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_vvybf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_mijfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ipqtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_tea04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_jgaoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_jexr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_jm0s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_kkogh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_xr7fp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_jrgkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ut4pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_oe4ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_fmbvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ubh1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_wmy3c")
+}],
+"loop": true,
+"name": &"victory",
+"speed": 5.0
+}]

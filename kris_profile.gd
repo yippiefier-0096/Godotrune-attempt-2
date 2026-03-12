@@ -10,6 +10,7 @@ func _ready() -> void:
 	mag=0
 	button_config=[fightbutton,actbutton,itembutton,mercybutton,defendbutton]
 	nametag="KRIS"
+	char_id=0
 	char_color=Color(0.0, 0.635, 0.91, 1.0)
 	power_list={
 		0:{
@@ -47,6 +48,7 @@ func _ready() -> void:
 		}
 	}
 	active_power=[power_list[1],power_list[2],power_list[3]]
+	set_avatar()
 	pass # Replace with function body.
 
 func courage(targets:Array[battle_profile]):
@@ -60,6 +62,7 @@ func redbuster(targets:Array[battle_profile]):
 func quadheal(targets:Array[battle_profile]):
 	DialogueManager.add_line("waow!!!!!!!!")
 	for i in targets.size():
+		
 		pass
 	pass	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

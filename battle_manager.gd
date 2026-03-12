@@ -43,6 +43,15 @@ func _ready() -> void:
 	pass
 	
 func battle_start():
+	globals.mode=globals.mode_index.battle_turn
+	var target:Array[Vector2]
+	var interval:Array[float]
+	for i in globals.ally_list.size():
+			globals.ally_list[i].avatar.b_intro()
+	#for i in joined.size():
+		#target.append(Vector2(50,50+i*100))
+		#interval.append((joined[i].position-target[i]).length()/20.0)
+
 	if turn_action.is_empty():
 		my_round()
 	pass

@@ -9,33 +9,39 @@ var pos_del:Vector2
 var profile:battle_profile
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-
-	pass # Replace with function body.
 func _init(_order:int=-1,char:int=0) -> void:
 	party_order=_order
 	match char:
 		0:
-			self.sprite_frames=load("uid://bfa4q01xr86tx")
-			self.profile=kris_profile.new()
+			nametag="kris"
+			self.sprite_frames=load("uid://b142oqqg5opp3")
 		1:
-			self.profile=susie_profile.new()
-			self.sprite_frames=load("uid://pqi56gxfkg52")
+			nametag="susie"
+			self.sprite_frames=load("uid://ds5qo1uhvsek0")
 		2:
-			self.sprite_frames=load("uid://ta0xkgr01rjj")
-			self.profile=ralsei_profile.new()
+			nametag="ralsei"
+			self.sprite_frames=load("uid://gd8tjngqkj4l")
 		3:
-			self.sprite_frames=load("uid://cgmj7xivj1yhx")
-			self.profile=noelle_profile.new()
+			nametag="noelle"
+			self.sprite_frames=load("uid://bgp5lea4s21mf")
+
+func _ready() -> void:
+	print("?????")
 	
-	add_child(self.profile)
+	globals.party_list.append(self)
+
 
 func regroup(_o:int=-1):
 	self.party_order=_o
-
+func b_intro():
+	play("intro")
+	await animation_finished
+	play("idle")
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	
+	if globals.mode!=globals.mode_index.overworld:
+		return 
 	if OverworldTeam.get_real_velocity().length()>1 and self.party_order>=0:
 		if (self.position-OverworldTeam.trail[party_order*25]).length()>5:
 			pos_del=OverworldTeam.trail[party_order*25]-self.position

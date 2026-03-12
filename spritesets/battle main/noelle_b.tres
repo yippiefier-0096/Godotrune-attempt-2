@@ -1,0 +1,451 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bgp5lea4s21mf"]
+
+[ext_resource type="Texture2D" uid="uid://dybggdawrjf2k" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_0.png" id="1_3deru"]
+[ext_resource type="Texture2D" uid="uid://blmjao6ukxeac" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_1.png" id="2_bffw4"]
+[ext_resource type="Texture2D" uid="uid://dbtbxllkab6ep" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_2.png" id="3_1jebb"]
+[ext_resource type="Texture2D" uid="uid://1wxj0r0o1f5u" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_3.png" id="4_0lhs0"]
+[ext_resource type="Texture2D" uid="uid://d1bw86a021kdh" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_4.png" id="5_0bddg"]
+[ext_resource type="Texture2D" uid="uid://dxm3fm778xlmi" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_5.png" id="6_34p6c"]
+[ext_resource type="Texture2D" uid="uid://e7jlgk5d83vw" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_6.png" id="7_fn7i0"]
+[ext_resource type="Texture2D" uid="uid://dwblecdv20hwm" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_7.png" id="8_is7um"]
+[ext_resource type="Texture2D" uid="uid://tr4eb778cj8h" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_8.png" id="9_02tcv"]
+[ext_resource type="Texture2D" uid="uid://ujypbr6g8dxq" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_9.png" id="10_7gnpa"]
+[ext_resource type="Texture2D" uid="uid://c3vu6v7vicjod" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_10.png" id="11_u8w0t"]
+[ext_resource type="Texture2D" uid="uid://de1gj1iqnapd1" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_act/spr_noelleb_act_11.png" id="12_ty8cx"]
+[ext_resource type="Texture2D" uid="uid://cn3oi01oebswp" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_actready/spr_noelleb_actready_0.png" id="13_vrf35"]
+[ext_resource type="Texture2D" uid="uid://ckrsl56treuak" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_actready/spr_noelleb_actready_1.png" id="14_lehax"]
+[ext_resource type="Texture2D" uid="uid://d3mf5hsu7qaqy" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_defend/spr_noelleb_defend_0.png" id="15_vxjia"]
+[ext_resource type="Texture2D" uid="uid://27gi3xcm3ieg" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_defeat/spr_noelleb_defeat_0.png" id="16_mfn8p"]
+[ext_resource type="Texture2D" uid="uid://xtuvs2a0usyh" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_attack/spr_noelleb_attack_0.png" id="17_mijbd"]
+[ext_resource type="Texture2D" uid="uid://cgf2gb4i4pjei" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_down_dw/spr_noelle_walk_down_dw_0.png" id="17_vrf35"]
+[ext_resource type="Texture2D" uid="uid://btv8yq3imdtlg" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_attack/spr_noelleb_attack_1.png" id="18_d7jlo"]
+[ext_resource type="Texture2D" uid="uid://be6leb21yctti" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_down_dw/spr_noelle_walk_down_dw_1.png" id="18_lehax"]
+[ext_resource type="Texture2D" uid="uid://47qi3uaps0r5" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_attack/spr_noelleb_attack_2.png" id="19_2jkaq"]
+[ext_resource type="Texture2D" uid="uid://clg2echs6j23w" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_down_dw/spr_noelle_walk_down_dw_2.png" id="19_vxjia"]
+[ext_resource type="Texture2D" uid="uid://b7kyu1j3equb8" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_attack/spr_noelleb_attack_3.png" id="20_dkc0d"]
+[ext_resource type="Texture2D" uid="uid://bkqxtc3pyj2vm" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_down_dw/spr_noelle_walk_down_dw_3.png" id="20_mfn8p"]
+[ext_resource type="Texture2D" uid="uid://d1esfjx377rcm" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_attack/spr_noelleb_attack_4.png" id="21_l1gdu"]
+[ext_resource type="Texture2D" uid="uid://culv83y83lkmi" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_attackready/spr_noelleb_attackready_0.png" id="22_8rmy8"]
+[ext_resource type="Texture2D" uid="uid://dtvv3q0tibhcl" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_hurt/spr_noelleb_hurt_0.png" id="23_qnd4p"]
+[ext_resource type="Texture2D" uid="uid://cknc7yunangyv" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_idle/spr_noelleb_idle_0.png" id="24_qwv8y"]
+[ext_resource type="Texture2D" uid="uid://3m38hj3aaurw" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_idle/spr_noelleb_idle_1.png" id="25_fevoe"]
+[ext_resource type="Texture2D" uid="uid://c8kpbf6wh8aot" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_idle/spr_noelleb_idle_2.png" id="26_6cjjh"]
+[ext_resource type="Texture2D" uid="uid://37y075s067r8" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_idle/spr_noelleb_idle_3.png" id="27_3m6pe"]
+[ext_resource type="Texture2D" uid="uid://bsup0knyuvinu" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_idle/spr_noelleb_idle_4.png" id="28_rihc3"]
+[ext_resource type="Texture2D" uid="uid://b0o53ppns4l4e" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_0.png" id="29_jd1e6"]
+[ext_resource type="Texture2D" uid="uid://csfu30ts5i82v" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_1.png" id="30_7cd6a"]
+[ext_resource type="Texture2D" uid="uid://b8u2edojikag7" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_2.png" id="31_uay6e"]
+[ext_resource type="Texture2D" uid="uid://ci165fqw5xex2" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_3.png" id="32_tj7qq"]
+[ext_resource type="Texture2D" uid="uid://bf1laovmk8xbv" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_4.png" id="33_8ac5e"]
+[ext_resource type="Texture2D" uid="uid://cqajj7oi56bht" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_5.png" id="34_4twu5"]
+[ext_resource type="Texture2D" uid="uid://b3f5ftnt2snh8" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_6.png" id="35_5qvhi"]
+[ext_resource type="Texture2D" uid="uid://u4qb0k0ijnuv" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_7.png" id="36_ynwkh"]
+[ext_resource type="Texture2D" uid="uid://wg4pl7u8qub0" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_8.png" id="37_r87gv"]
+[ext_resource type="Texture2D" uid="uid://r5r8ye6im02v" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_9.png" id="38_4bp4r"]
+[ext_resource type="Texture2D" uid="uid://b0hl4lku8b30" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_10.png" id="39_ym5w5"]
+[ext_resource type="Texture2D" uid="uid://c4nrmlpfc03ud" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_11.png" id="40_hb2it"]
+[ext_resource type="Texture2D" uid="uid://c5dd378b6og0f" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_12.png" id="41_g3g0r"]
+[ext_resource type="Texture2D" uid="uid://dodwk42k3tup" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_13.png" id="42_8qtw3"]
+[ext_resource type="Texture2D" uid="uid://c4jhry8b3ddaj" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_battleintro/spr_noelleb_battleintro_14.png" id="43_vt83k"]
+[ext_resource type="Texture2D" uid="uid://c3felmdko6pfe" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_0.png" id="44_lu7yx"]
+[ext_resource type="Texture2D" uid="uid://bdl2xvq1ei12e" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_1.png" id="45_o6stl"]
+[ext_resource type="Texture2D" uid="uid://bkxphpieepjoi" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_2.png" id="46_5e0qa"]
+[ext_resource type="Texture2D" uid="uid://x5cmntj8gvmc" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_3.png" id="47_11jyv"]
+[ext_resource type="Texture2D" uid="uid://dd1xkqi0q2gyl" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_4.png" id="48_776e5"]
+[ext_resource type="Texture2D" uid="uid://br3vnep24ea58" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_5.png" id="49_eqxin"]
+[ext_resource type="Texture2D" uid="uid://be4430ynrqpey" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_6.png" id="50_ftaik"]
+[ext_resource type="Texture2D" uid="uid://bvhhhu6cm7gph" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_7.png" id="51_yinog"]
+[ext_resource type="Texture2D" uid="uid://ckdmc4f0hqtkx" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_8.png" id="52_65b78"]
+[ext_resource type="Texture2D" uid="uid://xa1628gadaxu" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_item/spr_noelleb_item_9.png" id="53_iwocf"]
+[ext_resource type="Texture2D" uid="uid://qcl4tgjngrdv" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_itemready/spr_noelleb_itemready_0.png" id="54_3u87o"]
+[ext_resource type="Texture2D" uid="uid://dcnkx3ao6tkj2" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_itemready/spr_noelleb_itemready_1.png" id="55_35d22"]
+[ext_resource type="Texture2D" uid="uid://df6iqimywdr3n" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spell/spr_noelleb_spell_0.png" id="56_63kk2"]
+[ext_resource type="Texture2D" uid="uid://be24mbys1jb6r" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spell/spr_noelleb_spell_1.png" id="57_1kvjm"]
+[ext_resource type="Texture2D" uid="uid://by46t7lhd3o0k" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spell/spr_noelleb_spell_2.png" id="58_f12s0"]
+[ext_resource type="Texture2D" uid="uid://c0hqica30qbf0" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spell/spr_noelleb_spell_3.png" id="59_cqqk2"]
+[ext_resource type="Texture2D" uid="uid://cwf56vk3vlatb" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_left_dw/spr_noelle_walk_left_dw_0.png" id="60_mijbd"]
+[ext_resource type="Texture2D" uid="uid://k1b7c2s10d6u" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spell/spr_noelleb_spell_4.png" id="60_y15fb"]
+[ext_resource type="Texture2D" uid="uid://coh32xkublvr1" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_left_dw/spr_noelle_walk_left_dw_1.png" id="61_d7jlo"]
+[ext_resource type="Texture2D" uid="uid://biw2n24jqkbdo" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spell/spr_noelleb_spell_5.png" id="61_lrcvq"]
+[ext_resource type="Texture2D" uid="uid://ye6sqku5jjji" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_left_dw/spr_noelle_walk_left_dw_2.png" id="62_2jkaq"]
+[ext_resource type="Texture2D" uid="uid://8hrynnvntm7f" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spell/spr_noelleb_spell_6.png" id="62_ikjyd"]
+[ext_resource type="Texture2D" uid="uid://ct05lvoxdi7wf" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spell/spr_noelleb_spell_7.png" id="63_8r6se"]
+[ext_resource type="Texture2D" uid="uid://bsdv1np7xf08q" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_left_dw/spr_noelle_walk_left_dw_3.png" id="63_dkc0d"]
+[ext_resource type="Texture2D" uid="uid://dblfsfxmsjppl" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_right_dw/spr_noelle_walk_right_dw_0.png" id="64_l1gdu"]
+[ext_resource type="Texture2D" uid="uid://ca3vmb5l3bk3l" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spell/spr_noelleb_spell_8.png" id="64_ltp6b"]
+[ext_resource type="Texture2D" uid="uid://cthdgjbvu7su8" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_right_dw/spr_noelle_walk_right_dw_1.png" id="65_8rmy8"]
+[ext_resource type="Texture2D" uid="uid://b8fc07h1pfi8o" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_spellready/spr_noelleb_spellready_0.png" id="65_sr60l"]
+[ext_resource type="Texture2D" uid="uid://c6ka8l3bjgxja" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_right_dw/spr_noelle_walk_right_dw_2.png" id="66_qnd4p"]
+[ext_resource type="Texture2D" uid="uid://c1kussx6stw85" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_victory/spr_noelleb_victory_0.png" id="66_xp0on"]
+[ext_resource type="Texture2D" uid="uid://dd8tv3h43ba6j" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_victory/spr_noelleb_victory_1.png" id="67_23slw"]
+[ext_resource type="Texture2D" uid="uid://hrsklxsjd6xy" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_right_dw/spr_noelle_walk_right_dw_3.png" id="67_qwv8y"]
+[ext_resource type="Texture2D" uid="uid://qitdvd3kcnn" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_victory/spr_noelleb_victory_2.png" id="68_kalpo"]
+[ext_resource type="Texture2D" uid="uid://bw2x14e5qbpm1" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_victory/spr_noelleb_victory_3.png" id="69_ikucg"]
+[ext_resource type="Texture2D" uid="uid://bxj5y5gjm1p8d" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_victory/spr_noelleb_victory_4.png" id="70_5qqqa"]
+[ext_resource type="Texture2D" uid="uid://cg71a7ruu302n" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_victory/spr_noelleb_victory_5.png" id="71_pbcat"]
+[ext_resource type="Texture2D" uid="uid://dbbwcnr6bwebt" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_victory/spr_noelleb_victory_6.png" id="72_b78kh"]
+[ext_resource type="Texture2D" uid="uid://plt47hl54qfx" path="res://misc resources/main characters sprites/noelle battle/spr_noelleb_victory/spr_noelleb_victory_7.png" id="73_xwg6h"]
+[ext_resource type="Texture2D" uid="uid://2eycix837iey" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_up_dw/spr_noelle_walk_up_dw_0.png" id="78_mijbd"]
+[ext_resource type="Texture2D" uid="uid://cc7o6c7kxw4ju" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_up_dw/spr_noelle_walk_up_dw_1.png" id="79_d7jlo"]
+[ext_resource type="Texture2D" uid="uid://ca4c204rokwde" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_up_dw/spr_noelle_walk_up_dw_2.png" id="80_2jkaq"]
+[ext_resource type="Texture2D" uid="uid://b6epsorko5r50" path="res://misc resources/main characters sprites/noelle overworld/spr_noelle_walk_up_dw/spr_noelle_walk_up_dw_3.png" id="81_dkc0d"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3deru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bffw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1jebb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0lhs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0bddg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_34p6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fn7i0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_is7um")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_02tcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7gnpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u8w0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ty8cx")
+}],
+"loop": false,
+"name": &"act",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_vrf35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_lehax")
+}],
+"loop": true,
+"name": &"act_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_mfn8p")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_vxjia")
+}],
+"loop": true,
+"name": &"defend",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_vrf35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lehax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vxjia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mfn8p")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_mijbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_d7jlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2jkaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dkc0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_l1gdu")
+}],
+"loop": false,
+"name": &"fight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_8rmy8")
+}],
+"loop": true,
+"name": &"fight_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_qnd4p")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_qwv8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fevoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_6cjjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3m6pe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rihc3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_jd1e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7cd6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_uay6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_tj7qq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_8ac5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_4twu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5qvhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ynwkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_r87gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_4bp4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ym5w5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_hb2it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_g3g0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_8qtw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_vt83k")
+}],
+"loop": false,
+"name": &"intro",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_lu7yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_o6stl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_5e0qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_11jyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_776e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_eqxin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ftaik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yinog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_65b78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_iwocf")
+}],
+"loop": false,
+"name": &"item",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_3u87o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_35d22")
+}],
+"loop": true,
+"name": &"item_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_mijbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_d7jlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_2jkaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_dkc0d")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("64_l1gdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_8rmy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_qnd4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_qwv8y")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_63kk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_1kvjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_f12s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_cqqk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_y15fb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_lrcvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_ikjyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_8r6se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ltp6b")
+}],
+"loop": false,
+"name": &"skill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_sr60l")
+}],
+"loop": true,
+"name": &"skill_ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("78_mijbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_d7jlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_2jkaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_dkc0d")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_xp0on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_23slw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_kalpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_ikucg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_5qqqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_pbcat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_b78kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_xwg6h")
+}],
+"loop": true,
+"name": &"victory",
+"speed": 5.0
+}]
