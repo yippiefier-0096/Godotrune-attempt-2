@@ -47,7 +47,8 @@ func battle_start():
 	var target:Array[Vector2]
 	var interval:Array[float]
 	for i in globals.ally_list.size():
-			globals.ally_list[i].avatar.b_intro()
+			globals.ally_list[i].b_intro()
+	await globals.ally_list[0].intro_finished
 	#for i in joined.size():
 		#target.append(Vector2(50,50+i*100))
 		#interval.append((joined[i].position-target[i]).length()/20.0)
@@ -90,6 +91,10 @@ func next_turn():
 	for i in turn_action[turn_order][5].size():
 		BattleManager.turn_action[turn_action[turn_order][5][i]][0]=BattleManager.actioncontext.skipped
 	turn_order+=1
+	for i in globals.ally_list.size():
+		var handled:battle_profile=globals.ally_list[i]
+		if !handled.out:
+			handled.avatar.play(util.action_ready_anim.get(turn_action[i][0]))
 	if turn_order>=turn_action.size():
 		round_consequence()
 		return
@@ -114,9 +119,14 @@ func last_turn():
 		turn_action[turn_action[turn_order][5][i]]=[0,0,[],null,null,[]]
 	if turn_action[turn_order][0]==actioncontext.item:
 		Inventory.item_content.append(item_use_cache.pop_back())
+	turn_action[turn_order]=[0,0,[],null,null,[]]
 	BattleManager.tp_gauge+=BattleManager.tp_use_cache[turn_order]
 	BattleManager.tp_use_cache[turn_order]=0
 	UiManager.ui_backtrack=[]
+	for i in globals.ally_list.size():
+		var handled:battle_profile=globals.ally_list[i]
+		if !handled.out:
+			handled.avatar.play(util.action_ready_anim.get(turn_action[i][0]))
 	character_turn()
 func round_consequence():
 	

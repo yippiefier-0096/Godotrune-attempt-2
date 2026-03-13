@@ -33,11 +33,7 @@ func _ready() -> void:
 
 func regroup(_o:int=-1):
 	self.party_order=_o
-func b_intro():
-	play("intro")
-	await animation_finished
-	play("idle")
-	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if globals.mode!=globals.mode_index.overworld:

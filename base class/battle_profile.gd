@@ -75,7 +75,7 @@ var avatar:actor_base
 var enemy_sprite:SpriteFrames
 
 var position_in_team:int
-
+signal intro_finished
 func _ready() -> void:
 	
 	pass # Replace with function body.
@@ -114,6 +114,21 @@ func _input(event: InputEvent) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+func b_intro():
+	var target:Vector2
+	if is_ally:
+		target=util.battle_position_ally.get([globals.ally_list.size(),position_in_team])
+	var velocity:float=(avatar.position-target).length()/30
+	for i in 31:
+		avatar.position=avatar.position.move_toward(target,velocity)
+		var temp=afterimage.new(avatar.sprite_frames.get_frame_texture(avatar.animation,avatar.frame),avatar.position,0.5)
+		add_sibling(temp)
+		await get_tree().physics_frame
+	avatar.position=target
+	avatar.play("intro")
+	await avatar.animation_finished
+	avatar.play("idle")
+	intro_finished.emit()
 func choose_attack(turn:int=0)->bullet_pattern_base:
 	if !attack_patterns.is_empty():
 		return attack_patterns[randi_range(0,attack_patterns.size()-1)].new()	
