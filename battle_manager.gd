@@ -46,9 +46,8 @@ func battle_start():
 	globals.mode=globals.mode_index.battle_turn
 	var target:Array[Vector2]
 	var interval:Array[float]
-	for i in globals.ally_list.size():
-			globals.ally_list[i].b_intro()
-	await globals.ally_list[0].intro_finished
+	for i in globals.ally_list:
+			i.b_intro()
 	#for i in joined.size():
 		#target.append(Vector2(50,50+i*100))
 		#interval.append((joined[i].position-target[i]).length()/20.0)
@@ -63,9 +62,11 @@ func my_round():
 	tp_use_cache=[]
 	item_use_cache=[]
 	globals.mode=globals.mode_index.battle_turn
-	for i in globals.ally_list.size():
-		turn_action.append([0,0,[],null,globals.ally_list[i],[]])
+	for i in globals.ally_list:
+		turn_action.append([0,0,[],null,i,[]])
 		tp_use_cache.append(0)
+		i.avatar.play("idle")
+
 	turn_order=0
 	character_turn()
 
@@ -83,17 +84,22 @@ func character_turn():
 	UiManager.add_child(UiManager.menu_b)
 	print(turn_action)
 	
+	
 func next_turn():
+	var update_anim:Array[int]=[]
 	if  temp_action[0]== actioncontext.item:
 		item_use_cache.append(Inventory.item_content.pop_at(temp_item))
 	UiManager.ui_backtrack=[]
 	turn_action[turn_order]=temp_action
-	for i in turn_action[turn_order][5].size():
-		BattleManager.turn_action[turn_action[turn_order][5][i]][0]=BattleManager.actioncontext.skipped
+	update_anim.append(turn_order)
+	for i in turn_action[turn_order][5]:
+		update_anim.append(i)
+		BattleManager.turn_action[i][0]=BattleManager.actioncontext.skipped
 	turn_order+=1
-	for i in globals.ally_list.size():
+	print(update_anim)
+	for i in update_anim:
 		var handled:battle_profile=globals.ally_list[i]
-		if !handled.out:
+		if !handled.out :
 			handled.avatar.play(util.action_ready_anim.get(turn_action[i][0]))
 	if turn_order>=turn_action.size():
 		round_consequence()
@@ -125,7 +131,8 @@ func last_turn():
 	UiManager.ui_backtrack=[]
 	for i in globals.ally_list.size():
 		var handled:battle_profile=globals.ally_list[i]
-		if !handled.out:
+		if !handled.out and turn_action[i][0]==0:
+			print(turn_action[i][0])
 			handled.avatar.play(util.action_ready_anim.get(turn_action[i][0]))
 	character_turn()
 func round_consequence():
@@ -137,51 +144,51 @@ func round_consequence():
 		UiManager.battle_option_array.pop_back().queue_free()
 
 	for i in move_sequence.size():
-		var roster=turn_action.filter(func(x:Array):return x[0]==move_sequence[i])
-		for j in roster.size():#each character that used a certain category of actions move
+		var roster:Array=turn_action.filter(func(x:Array):return x[0]==move_sequence[i])
+		for subject in roster:#each character that used a certain category of actions move
 			var target:Array[battle_profile]
 			enemy_team=enemy_team_true.filter(func(input:battle_profile):return !input.out)
-			match roster[j][1]:
+			match subject[1]:
 				-1:
 					target=BattleManager.enemy_team
 				-2:
 					target=globals.ally_list
 				_:
-					var viable:Array[battle_profile]=roster[j][2].filter(func(input:battle_profile):return !input.out)
-					if 	roster[j][2][roster[j][1]].out:
+					var viable:Array[battle_profile]=subject[2].filter(func(input:battle_profile):return !input.out)
+					if 	subject[2][subject[1]].out:
 						print("switching targets")
 						target.append(viable[0])#last bug: Out of bounds get index '0' (on base: 'Array[battle_profile]')
 					else:
-						target.append(roster[j][2][roster[j][1]])
+						target.append(subject[2][subject[1]])
 			print(target)
 			match i:
 				0:
-					if roster[j][3] is int:
-						await target[0].ally_action(roster[j][4])
+					if subject[3] is int:
+						await target[0].ally_action(subject[4])
 					else:
-						await roster[j][3].call(target)
+						await subject[3].call(target)
 					pass#things that happens with using ACTs
 				1:
 					if target[0].mercy>=1:
-						DialogueManager.add_line("{0} spared {1}!",[roster[j][4].nametag,target[0].nametag])
+						DialogueManager.add_line("{0} spared {1}!",[subject[4].nametag,target[0].nametag])
 						target[0].leave_mercy()
 					else:
-						DialogueManager.add_line("{0} tried to spare {1}...",[roster[j][4].nametag,target[0].nametag])
+						DialogueManager.add_line("{0} tried to spare {1}...",[subject[4].nametag,target[0].nametag])
 						DialogueManager.add_line("But their name wasn't [color=yellow]YELLOW[/color]!")
 				2:
-					if roster[j][3] is int:
-						await target[0].ally_action(roster[j][4])
+					if subject[3] is int:
+						await target[0].ally_action(subject[4])
 					else:
-						await roster[j][3].call(target)
+						await subject[3].call(target)
 					pass#using magic skills
 				3:
-					await roster[j][3].call(target,roster[j][4])
+					await subject[3].call(target,subject[4])
 					for x in item_use_cache.size():
 						item_use_cache.pop_back().queue_free()
 					pass#using items
 				4:
-					DialogueManager.add_line("{0} attacked {1}!",[roster[j][4].nametag,target[0].nametag])
-					attackers.append(roster[j][4])
+					DialogueManager.add_line("{0} attacked {1}!",[subject[4].nametag,target[0].nametag])
+					attackers.append(subject[4])
 			enemy_team=enemy_team_true.filter(func(input:battle_profile):return !input.out)
 			await DialogueManager.read_dialogue()
 			print(enemy_team)

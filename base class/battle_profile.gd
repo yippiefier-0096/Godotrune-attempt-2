@@ -82,6 +82,7 @@ func _ready() -> void:
 func _init(order:int,ally:bool=true) -> void:
 	is_ally=ally
 	position_in_team=order
+	
 	pass
 
 	#move to after variables are assigned with start()
@@ -109,6 +110,9 @@ func set_avatar():
 	else:	
 		avatar=party_member.new(position_in_team,char_id)
 	add_sibling(avatar)
+	avatar.animation_changed.connect(output)
+func output():
+	print(self.nametag, " changed to ", avatar.animation)
 func _input(event: InputEvent) -> void:
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -127,6 +131,7 @@ func b_intro():
 	avatar.position=target
 	avatar.play("intro")
 	await avatar.animation_finished
+	print(nametag)
 	avatar.play("idle")
 	intro_finished.emit()
 func choose_attack(turn:int=0)->bullet_pattern_base:
