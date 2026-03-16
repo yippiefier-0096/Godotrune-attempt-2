@@ -1,40 +1,172 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://gd8tjngqkj4l"]
 
 [ext_resource type="Texture2D" uid="uid://dwk6krmjm5svb" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_down/spr_ralsei_walk_down_0.png" id="1_5t47m"]
+[ext_resource type="Texture2D" uid="uid://brhrd8uusm4nr" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_0.png" id="1_x73i5"]
 [ext_resource type="Texture2D" uid="uid://ociyhd5aotrj" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_down/spr_ralsei_walk_down_1.png" id="2_7i8q7"]
+[ext_resource type="Texture2D" uid="uid://bs8uicx2h5md" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_1.png" id="2_pwi3w"]
+[ext_resource type="Texture2D" uid="uid://bx7yhwgc0kyh7" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_2.png" id="3_1xl50"]
 [ext_resource type="Texture2D" uid="uid://bdy32mtwoaoli" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_down/spr_ralsei_walk_down_2.png" id="3_ywt08"]
+[ext_resource type="Texture2D" uid="uid://ch7u0y8e7xfgf" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_3.png" id="4_4od1r"]
 [ext_resource type="Texture2D" uid="uid://uwvfe65pcx8u" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_down/spr_ralsei_walk_down_3.png" id="4_aemep"]
+[ext_resource type="Texture2D" uid="uid://crur4l8ndecxe" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_4.png" id="5_51t3d"]
 [ext_resource type="Texture2D" uid="uid://brjamb6ty5f8i" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_left/spr_ralsei_walk_left_0.png" id="5_xwqcy"]
 [ext_resource type="Texture2D" uid="uid://c1gupt8khhxa7" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_left/spr_ralsei_walk_left_1.png" id="6_j2r3g"]
+[ext_resource type="Texture2D" uid="uid://dqd1s2emr6htr" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_5.png" id="6_tvu4m"]
 [ext_resource type="Texture2D" uid="uid://c833xmw63xlb5" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_left/spr_ralsei_walk_left_2.png" id="7_2pk17"]
+[ext_resource type="Texture2D" uid="uid://bp833rctjc5e1" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_6.png" id="7_x0sbc"]
+[ext_resource type="Texture2D" uid="uid://bb46imvqlxse3" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_7.png" id="8_cqpvw"]
 [ext_resource type="Texture2D" uid="uid://cl3xqje3jv1vn" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_left/spr_ralsei_walk_left_3.png" id="8_wx3t1"]
 [ext_resource type="Texture2D" uid="uid://dbb57qlcgafxv" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_right/spr_ralsei_walk_right_0.png" id="9_85ue5"]
+[ext_resource type="Texture2D" uid="uid://d1h8sp5tf0sqj" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_8.png" id="9_l13wj"]
+[ext_resource type="Texture2D" uid="uid://kxssj5hj34ai" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_9.png" id="10_f5rji"]
 [ext_resource type="Texture2D" uid="uid://dpn200p5tu18" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_right/spr_ralsei_walk_right_1.png" id="10_lnrkv"]
 [ext_resource type="Texture2D" uid="uid://dex5bc1vjibse" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_right/spr_ralsei_walk_right_2.png" id="11_ffq8q"]
+[ext_resource type="Texture2D" uid="uid://byhl36owa0f1j" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_act/spr_ralsei_act_10.png" id="11_qbaed"]
 [ext_resource type="Texture2D" uid="uid://ct4j5kd63metl" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_right/spr_ralsei_walk_right_3.png" id="12_gmq5s"]
+[ext_resource type="Texture2D" uid="uid://bhdyfwgmgl434" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_actready/spr_ralsei_actready_0.png" id="12_ybmn0"]
+[ext_resource type="Texture2D" uid="uid://bi37w0c6sjgbw" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_defeat/spr_ralsei_defeat_0.png" id="13_42s6q"]
 [ext_resource type="Texture2D" uid="uid://drstwuvxedyg5" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_up/spr_ralsei_walk_up_0.png" id="13_qordi"]
 [ext_resource type="Texture2D" uid="uid://gwrcx1r2627a" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_up/spr_ralsei_walk_up_1.png" id="14_baxvo"]
+[ext_resource type="Texture2D" uid="uid://c0sbj4w5gg8rq" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_defend/spr_ralsei_defend_0.png" id="14_wnlc4"]
+[ext_resource type="Texture2D" uid="uid://cy2ihiou0p4gv" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_defend/spr_ralsei_defend_1.png" id="15_0q3wi"]
 [ext_resource type="Texture2D" uid="uid://cfm0bem5ifegs" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_up/spr_ralsei_walk_up_2.png" id="15_ikuwq"]
 [ext_resource type="Texture2D" uid="uid://bsk0gylikv78q" path="res://misc resources/main characters sprites/ralsei overworld/spr_ralsei_walk_up/spr_ralsei_walk_up_3.png" id="16_i65g4"]
+[ext_resource type="Texture2D" uid="uid://cegu17vn1ng5p" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_defend/spr_ralsei_defend_2.png" id="16_vsc8d"]
+[ext_resource type="Texture2D" uid="uid://cb5oro23ap137" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_defend/spr_ralsei_defend_3.png" id="17_ngtpv"]
+[ext_resource type="Texture2D" uid="uid://cpl02bs1rjs1d" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_defend/spr_ralsei_defend_4.png" id="18_6rumw"]
+[ext_resource type="Texture2D" uid="uid://cpue20p2j6cxe" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_defend/spr_ralsei_defend_5.png" id="19_4n3fs"]
+[ext_resource type="Texture2D" uid="uid://bxqhb2ldmv847" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_defend/spr_ralsei_defend_6.png" id="20_joy62"]
+[ext_resource type="Texture2D" uid="uid://dowxff1cknfib" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_defend/spr_ralsei_defend_7.png" id="21_ifymv"]
+[ext_resource type="Texture2D" uid="uid://bb15nyf8q5rsf" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_attack/spr_ralsei_attack_0.png" id="26_pw7hq"]
+[ext_resource type="Texture2D" uid="uid://x5ac1gnfdgxr" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_attack/spr_ralsei_attack_1.png" id="27_2omjn"]
+[ext_resource type="Texture2D" uid="uid://d0foh4mvi0ndu" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_attack/spr_ralsei_attack_2.png" id="28_w48hx"]
+[ext_resource type="Texture2D" uid="uid://igcf8hfysikg" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_attack/spr_ralsei_attack_3.png" id="29_2qn22"]
+[ext_resource type="Texture2D" uid="uid://dyl25plnpgvrh" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_attack/spr_ralsei_attack_4.png" id="30_geq4o"]
+[ext_resource type="Texture2D" uid="uid://b7g65t5wepjg5" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_attack/spr_ralsei_attack_5.png" id="31_scotm"]
+[ext_resource type="Texture2D" uid="uid://dubewvgbqpoyw" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_attack/spr_ralsei_attack_6.png" id="32_taa4a"]
+[ext_resource type="Texture2D" uid="uid://bvgu1akhd24yf" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_attackready/spr_ralsei_attackready_0.png" id="33_e111r"]
+[ext_resource type="Texture2D" uid="uid://ngeomvmxje7x" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_hurt/spr_ralsei_hurt_0.png" id="34_55ng7"]
+[ext_resource type="Texture2D" uid="uid://d0lhhl2auudt2" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_0.png" id="35_5xk02"]
+[ext_resource type="Texture2D" uid="uid://butmao5stp2vm" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_idle/spr_ralsei_idle_0.png" id="35_e111r"]
+[ext_resource type="Texture2D" uid="uid://blqsekjksw8o8" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_idle/spr_ralsei_idle_1.png" id="36_55ng7"]
+[ext_resource type="Texture2D" uid="uid://560yj5web3m4" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_1.png" id="36_p4iag"]
+[ext_resource type="Texture2D" uid="uid://d2mrjcn5m854j" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_2.png" id="37_2wqqq"]
+[ext_resource type="Texture2D" uid="uid://bcnpp3mdxl62g" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_idle/spr_ralsei_idle_2.png" id="37_5xk02"]
+[ext_resource type="Texture2D" uid="uid://dr8uem3vpr58w" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_3.png" id="38_kygby"]
+[ext_resource type="Texture2D" uid="uid://eqta43ut43i1" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_idle/spr_ralsei_idle_3.png" id="38_p4iag"]
+[ext_resource type="Texture2D" uid="uid://bpn0yvd21k6sb" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_idle/spr_ralsei_idle_4.png" id="39_2wqqq"]
+[ext_resource type="Texture2D" uid="uid://d1dvudih7rdk6" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_4.png" id="39_uvnrk"]
+[ext_resource type="Texture2D" uid="uid://b0qk0f6vvwo1b" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_5.png" id="40_2vbj5"]
+[ext_resource type="Texture2D" uid="uid://blcjykc8x2jn0" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_6.png" id="41_lh3e8"]
+[ext_resource type="Texture2D" uid="uid://dmedgxkokheij" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_7.png" id="42_mx4jk"]
+[ext_resource type="Texture2D" uid="uid://bdks2i608wi3n" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_8.png" id="43_7rq4u"]
+[ext_resource type="Texture2D" uid="uid://bmg2qsm7kp07" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_9.png" id="44_be1lt"]
+[ext_resource type="Texture2D" uid="uid://bi2cblj8sbloo" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_battleintro/spr_ralsei_battleintro_10.png" id="45_m8gfq"]
+[ext_resource type="Texture2D" uid="uid://bamxc8chcqggr" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_item/spr_ralsei_item_0.png" id="51_kygby"]
+[ext_resource type="Texture2D" uid="uid://da4e3ogwtyd2o" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_item/spr_ralsei_item_1.png" id="52_uvnrk"]
+[ext_resource type="Texture2D" uid="uid://dxxdt3wieranv" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_item/spr_ralsei_item_2.png" id="53_2vbj5"]
+[ext_resource type="Texture2D" uid="uid://bgw3co30dadku" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_item/spr_ralsei_item_3.png" id="54_lh3e8"]
+[ext_resource type="Texture2D" uid="uid://is28upfkjr6l" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_item/spr_ralsei_item_4.png" id="55_mx4jk"]
+[ext_resource type="Texture2D" uid="uid://xucgmpc4ouuv" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_item/spr_ralsei_item_5.png" id="56_7rq4u"]
+[ext_resource type="Texture2D" uid="uid://cvcnkh5ifh56x" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_item/spr_ralsei_item_6.png" id="57_be1lt"]
+[ext_resource type="Texture2D" uid="uid://bn356y23rgvox" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_itemready/spr_ralsei_itemready_0.png" id="58_m8gfq"]
+[ext_resource type="Texture2D" uid="uid://bkf8t0udxua7g" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_0.png" id="67_stxfi"]
+[ext_resource type="Texture2D" uid="uid://cs2pikqvn1631" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_1.png" id="68_kjo15"]
+[ext_resource type="Texture2D" uid="uid://7samhwbbtfs1" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_2.png" id="69_xc2f8"]
+[ext_resource type="Texture2D" uid="uid://clvgyagt8lk5m" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_3.png" id="70_ichal"]
+[ext_resource type="Texture2D" uid="uid://crbd68vghhcax" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_4.png" id="71_x2y3h"]
+[ext_resource type="Texture2D" uid="uid://d3dhdu7apbwki" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_5.png" id="72_h6rex"]
+[ext_resource type="Texture2D" uid="uid://dit1ug318lxtw" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_6.png" id="73_7f3mn"]
+[ext_resource type="Texture2D" uid="uid://cm2fcpemmp5ll" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_7.png" id="74_xk5mu"]
+[ext_resource type="Texture2D" uid="uid://bd66pvwcis7j7" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_8.png" id="75_j1u2y"]
+[ext_resource type="Texture2D" uid="uid://lqslvoyj0028" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_9.png" id="76_6qxc0"]
+[ext_resource type="Texture2D" uid="uid://cvxh7lery4di8" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spell/spr_ralsei_spell_10.png" id="77_m48h2"]
+[ext_resource type="Texture2D" uid="uid://benjn8ahsfu06" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spellready/spr_ralsei_spellready_0.png" id="78_ucd6p"]
+[ext_resource type="Texture2D" uid="uid://d37udki808qn8" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spellready/spr_ralsei_spellready_1.png" id="79_3su20"]
+[ext_resource type="Texture2D" uid="uid://i4m74cyfdotn" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spellready/spr_ralsei_spellready_2.png" id="80_ty44w"]
+[ext_resource type="Texture2D" uid="uid://d3kb8suajhfj6" path="res://misc resources/main characters sprites/ralsei battle/spr_ralsei_spellready/spr_ralsei_spellready_3.png" id="81_ygg7b"]
 
 [resource]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x73i5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pwi3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1xl50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4od1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_51t3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tvu4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x0sbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cqpvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_l13wj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f5rji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qbaed")
+}],
 "loop": true,
 "name": &"act",
 "speed": 5.0
 }, {
-"frames": [],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ybmn0")
+}],
+"loop": false,
 "name": &"act_ready",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_42s6q")
+}],
 "loop": true,
 "name": &"defeat",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_wnlc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0q3wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vsc8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ngtpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6rumw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4n3fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_joy62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ifymv")
+}],
 "loop": false,
 "name": &"defend",
 "speed": 12.0
@@ -56,37 +188,136 @@ animations = [{
 "name": &"down",
 "speed": 5.0
 }, {
-"frames": [],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_pw7hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2omjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_w48hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_2qn22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_geq4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_scotm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_taa4a")
+}],
+"loop": false,
 "name": &"fight",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_e111r")
+}],
 "loop": true,
 "name": &"fight_ready",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_55ng7")
+}],
 "loop": true,
 "name": &"hurt",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_e111r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_55ng7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_5xk02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_p4iag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_2wqqq")
+}],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_5xk02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_p4iag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_2wqqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_kygby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_uvnrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_2vbj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_lh3e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_mx4jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_7rq4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_be1lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_m8gfq")
+}],
 "loop": false,
 "name": &"intro",
 "speed": 12.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_kygby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_uvnrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_2vbj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_lh3e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_mx4jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_7rq4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_be1lt")
+}],
 "loop": true,
 "name": &"item",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("58_m8gfq")
+}],
 "loop": true,
 "name": &"item_ready",
 "speed": 5.0
@@ -125,12 +356,57 @@ animations = [{
 "name": &"right",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("67_stxfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_kjo15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_xc2f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_ichal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_x2y3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_h6rex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_7f3mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_xk5mu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_j1u2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_6qxc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_m48h2")
+}],
 "loop": true,
 "name": &"skill",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("78_ucd6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_3su20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_ty44w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_ygg7b")
+}],
 "loop": true,
 "name": &"skill_ready",
 "speed": 5.0

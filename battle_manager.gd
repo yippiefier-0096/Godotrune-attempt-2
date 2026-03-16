@@ -46,12 +46,12 @@ func battle_start():
 	globals.mode=globals.mode_index.battle_turn
 	var target:Array[Vector2]
 	var interval:Array[float]
+	var wait_time:float
 	for i in globals.ally_list:
-			i.b_intro()
-	#for i in joined.size():
-		#target.append(Vector2(50,50+i*100))
-		#interval.append((joined[i].position-target[i]).length()/20.0)
-
+		i.b_intro()
+	await globals.ally_list[0].intro_finished
+	for i in globals.ally_list:
+		i.avatar.animation_finished.emit()
 	if turn_action.is_empty():
 		my_round()
 	pass

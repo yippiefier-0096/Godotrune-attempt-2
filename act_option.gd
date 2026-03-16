@@ -30,15 +30,27 @@ func _pressed():
 	var assisted:Array[int]=[]
 	if self.this_act.has("assist"):
 		assist_cache=self.this_act.get("assist").duplicate()	
-		for i in globals.ally_list.size():
-			if BattleManager.turn_action[i][0]!=BattleManager.actioncontext.empty:
-				print (BattleManager.turn_action[i])
-				continue
-			for j in assist_cache.size():
-				if globals.ally_list[i].get_script() == assist_cache[j] and !assisted.has(i):
-					assisted.append(i)
+		for i in assist_cache:
+			for j in globals.ally_list.size():
+				if BattleManager.turn_action[j][0]!=BattleManager.actioncontext.empty:
+					print (BattleManager.turn_action[j])
+					continue				
+				else:
+					if globals.ally_list[j].get_script() != i:
+						continue
+					assisted.append(j)
+					print(assisted,assist_cache,j)
+				break
+		#for i in globals.ally_list.size():
+			#if BattleManager.turn_action[i][0]!=BattleManager.actioncontext.empty:
+				#print (BattleManager.turn_action[i])
+				#continue
+			#for j in assist_cache.size():
+				#if globals.ally_list[i].get_script() == assist_cache[j] and !assisted.has(i):
+					#assisted.append(i)
+					#print(assisted,assist_cache,j)
+					#break
 		if assisted.size()!=assist_cache.size():
-			print(assisted,assist_cache)
 			return
 	print("3")
 	BattleManager.temp_action[3]=this_act["function"]#action (callable)

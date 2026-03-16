@@ -26,14 +26,10 @@ func _init(_order:int=-1,char:int=0) -> void:
 			self.sprite_frames=load("uid://bgp5lea4s21mf")
 
 func _ready() -> void:
-	print("?????")
-	
 	globals.party_list.append(self)
-
-
+	super()
 func regroup(_o:int=-1):
 	self.party_order=_o
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if globals.mode!=globals.mode_index.overworld:
