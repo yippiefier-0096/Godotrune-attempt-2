@@ -39,7 +39,7 @@ func _ready() -> void:
 func behavior(life:float):
 	if life<=5:
 		pass
-	print("yes I am active lol")
+
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

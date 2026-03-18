@@ -16,6 +16,8 @@ var hitbox_enemy:CollisionShape2D=CollisionShape2D.new()
 
 var hit:bool=false
 
+var special_attacks:Dictionary[int,GDScript]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hitbox_enemy.shape=RectangleShape2D.new()
@@ -35,7 +37,7 @@ func battle(area:Area2D):
 		BattleManager.enemy_team_true.append(_v)
 		BattleManager.add_child(_v)
 	BattleManager.battle_s_over_everyone_go_home.connect(self.queue_free)
-	BattleManager.battle_start()
+	BattleManager.battle_start(self)
 	self.hitbox_enemy.set_deferred("disabled",true)	
 	hit=true
 	

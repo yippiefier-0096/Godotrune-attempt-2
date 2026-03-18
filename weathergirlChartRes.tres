@@ -1,0 +1,7 @@
+[gd_resource type="Resource" format=3 uid="uid://dpxuwy4ln1yi0"]
+
+[ext_resource type="Script" uid="uid://cmpq61dgqbgl5" path="res://weathergirl_chart.gd" id="1_cl3fr"]
+
+[resource]
+script = ExtResource("1_cl3fr")
+metadata/_custom_type_script = "uid://ry1ik7it1prd"

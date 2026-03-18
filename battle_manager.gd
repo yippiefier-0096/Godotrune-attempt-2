@@ -5,8 +5,8 @@ class_name battle_manager
 enum actioncontext{empty,attack,act,skill,item,mercy,ally_action,defending,skipped}
 
 enum targetcontext{friendly, foe, team}
-##the soul used for most normal attacks
-var soul_normal:heart_shaped_object
+##the soul used for the current attack
+var soul:heart_shaped_object
 ## the effective tp the player has. caps at 1000 - effectively 100%.
 var tp_gauge:float
 ##
@@ -34,29 +34,32 @@ var temp_item:int
 
 var current_char:battle_profile
 
-var x:int=0
-
 var move_sequence:Array[int]=[actioncontext.act,actioncontext.mercy,actioncontext.skill,actioncontext.item,actioncontext.attack]
 
+var current_battle:battle_instance
+
+var turn_counter=0
 signal battle_s_over_everyone_go_home
 func _ready() -> void:
 	pass
 	
-func battle_start():
+func battle_start(initiator:battle_instance):
+	current_battle=initiator
 	globals.mode=globals.mode_index.battle_turn
-	var target:Array[Vector2]
-	var interval:Array[float]
-	var wait_time:float
+	BgmManager.stream=load("uid://t32vdm66vrbh")
+	BgmManager.play()
 	for i in globals.ally_list:
 		i.b_intro()
 	await globals.ally_list[0].intro_finished
 	for i in globals.ally_list:
 		i.avatar.animation_finished.emit()
+	turn_counter=0
 	if turn_action.is_empty():
 		my_round()
 	pass
 	
 func my_round():
+	turn_counter+=1
 	enemy_team=enemy_team_true.filter(func(input:battle_profile):return !input.out)
 	turn_action=[]
 	tp_use_cache=[]
@@ -66,7 +69,6 @@ func my_round():
 		turn_action.append([0,0,[],null,i,[]])
 		tp_use_cache.append(0)
 		i.avatar.play("idle")
-
 	turn_order=0
 	character_turn()
 
@@ -214,17 +216,26 @@ func enemy_turn():
 	if globals.mode==globals.mode_index.battle_turn:
 		bt_timer=0
 		self.position=OverworldTeam.position
-		soul_normal=heart_shaped_object.new()
-		self.add_child(soul_normal)
 		globals.mode=globals.mode_index.battle_dodge
-		for i in enemy_team.size():
-			var _v=enemy_team[i].choose_attack()
-			add_child(_v)
-			enemy_attacks.append(_v)
-			bt_timer+=enemy_attacks[i].attack_length
+		if current_battle.special_attacks.has(turn_counter):
+			enemy_attacks.append(current_battle.special_attacks[turn_counter].new())
+			bt_timer=enemy_attacks[0].attack_length
+		else:
+			for i in enemy_team.size():
+				var _v=enemy_team[i].choose_attack()
+				enemy_attacks.append(_v)
+				bt_timer+=enemy_attacks[i].attack_length
+		print(enemy_attacks)
+		for i in enemy_attacks:
+			add_child(i)
+		if enemy_attacks[0].soul_mode:
+			soul=enemy_attacks[0].soul_mode.new()
+		else:
+			soul=heart_shaped_object.new()
+		self.add_child(soul)
 		bt_timer/=enemy_attacks.size()	
 		await get_tree().create_timer(bt_timer).timeout
-		soul_normal.queue_free()
+		soul.queue_free()
 		for i in enemy_attacks.size():
 			enemy_attacks.pop_front().queue_free()
 		my_round()
@@ -232,8 +243,8 @@ func enemy_turn():
 	pass
 func end_battle():
 	battle_s_over_everyone_go_home.emit()
-	if soul_normal:
-		soul_normal.queue_free()
+	if soul:
+		soul.queue_free()
 	for i in UiManager.battle_option_array.size():
 		UiManager.battle_option_array.pop_back().queue_free()
 	if UiManager.menu_b:

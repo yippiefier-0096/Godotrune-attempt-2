@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://mx30b18f0y0r"]
+
+[ext_resource type="Texture2D" uid="uid://i0b3ii438h1d" path="res://misc resources/spr_heart_0.png" id="1_rgdw4"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rgdw4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

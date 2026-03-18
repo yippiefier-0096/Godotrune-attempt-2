@@ -38,7 +38,6 @@ func _physics_process(delta: float) -> void:
 				self.highlight.visible=true
 			self.temp_tp+=get_overlapping_bodies()[i].graze_sustain
 			highlight.self_modulate=highlight.self_modulate.clamp(Color(0.804, 0.498, 0.675, 1.0))
-	print(temp_tp)
 	highlight.self_modulate-=Color(0.2, 1.0, 1.0, 1.0)*delta*4
 	if self.area.disabled:
 		highlight.self_modulate.a=0

@@ -1,15 +1,11 @@
-extends battle_instance
-
+extends AudioStreamPlayer
+class_name bgm_manager
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	super()
-	special_attacks={
-		1:music_attack_base,
-		2:music_attack_base
-	}
-	enemy_team=[enemy1,enemy1]
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

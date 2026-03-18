@@ -30,6 +30,7 @@ MenuManager="*uid://bnh23xswbfxfk"
 Effects="*uid://cxgt2mdbe3cxn"
 BattleManager="*uid://b1jfrgmsnu0la"
 CutsceneManager="*uid://dmxbynmgsbb1o"
+BgmManager="*uid://16xdmbrv4be6"
 
 [display]
 
