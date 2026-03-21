@@ -10,6 +10,7 @@ func _ready() -> void:
 	super()
 	self.scale.y*=2
 	self.position.y=200
+	state=state_enum.idle
 	
 func hit(this:int=0)->bool:
 	if absf(just_timing-util.current_playback_ms())<300:
