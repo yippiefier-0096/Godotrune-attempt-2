@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bterbb0hdxf4d"]
+
+[ext_resource type="Texture2D" uid="uid://dfqdq6v86tpp7" path="res://misc resources/spr_heart_0_void.png" id="1_64330"]
+[ext_resource type="Texture2D" uid="uid://b46xdtn2peqj8" path="res://misc resources/spr_heart_1_void.png" id="2_3q7kp"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_64330")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3q7kp")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}]

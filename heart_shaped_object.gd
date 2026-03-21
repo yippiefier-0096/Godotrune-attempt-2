@@ -5,9 +5,10 @@ var speed:float=1.8
 var hitbox:CollisionShape2D
 var graze:graze_box
 var graphics:AnimatedSprite2D
+var mobile:bool=false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	self.global_position=globals.ally_list[0].avatar.global_position
 	hitbox=CollisionShape2D.new()
 	hitbox.shape=CircleShape2D.new()
 	self.add_child(hitbox)
@@ -21,6 +22,22 @@ func _ready() -> void:
 	collision_mask=2
 	self.scale=Vector2(0.6,0.6)
 	pass # Replace with func`tion body.
+	
+func intro(pulse:bool=false):
+	mobile=false
+	graphics.stop()
+	var dest:Vector2=Vector2(320,240)
+	print(global_position,get_viewport_transform().origin)
+	var vel:float=(position-dest).length()/60
+	for i in 60:
+		position=position.move_toward(dest,vel)
+		await get_tree().physics_frame
+	pass
+	position=dest
+	if pulse:
+		pass
+		#some cool effect idk
+	mobile=true
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("cancel"):
 		speed=1.0
@@ -31,10 +48,10 @@ func _input(event: InputEvent) -> void:
 
 # Called every frame. 'd`elta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	self.position+=Input.get_vector("left","right","up","down")*speed
+	if mobile:
+		self.position+=Input.get_vector("left","right","up","down")*speed
 	if get_overlapping_bodies().size()>0:
 		print("ouch")
-		
 		graphics.play("hurt")
 		self.hitbox.set_deferred("disabled",true)
 		graze.area.set_deferred("disabled",true)

@@ -121,7 +121,7 @@ func _process(delta: float) -> void:
 func b_intro():
 	var target:Vector2
 	if is_ally:
-		target=util.battle_position_ally.get([globals.ally_list.size(),position_in_team])
+		target=util.battle_position_ally.get([globals.ally_list.size(),position_in_team])+BattleManager.position
 	var velocity:float=(avatar.position-target).length()/30
 	for i in 31:
 		avatar.position=avatar.position.move_toward(target,velocity)

@@ -33,7 +33,8 @@ static var action_ready_anim:Dictionary[int,StringName]={
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-
+static func current_playback_ms()->float:
+	return (BgmManager.get_playback_position()+AudioServer.get_time_since_last_mix())*1000
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

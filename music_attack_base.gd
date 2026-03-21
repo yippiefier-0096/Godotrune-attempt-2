@@ -2,39 +2,56 @@ extends bullet_pattern_base
 class_name music_attack_base
 
 var note_data:chart_data_base
-var current_note_list:Array[note_base]
+var current_note_list:Array
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	note_data=load("uid://dpxuwy4ln1yi0")
-	var start_time=BgmManager.get_playback_position()+AudioServer.get_time_since_last_mix()
-	var spawn_queue=note_data.note_list.filter(func(input:Array):return start_time*1000+4*note_data.delta_beat<input[2] and input[2]<start_time*1000+50*note_data.delta_beat)	
+	var start_time=util.current_playback_ms()
+	var spawn_queue=note_data.note_list.filter(func(input:Array):return start_time+4*note_data.delta_beat<input[2] and input[2]<start_time+999*note_data.delta_beat)	
 	for i in spawn_queue:
 		spawn_note(i)
 	self.attack_length=50
 	pass # Replace with function body.
-
+func _init(_intensity:float=1) -> void:
+	soul_mode=void_mode.new()
+	soul_mode.attack_handled=self
 func spawn_note(info:Array):
-	var lower_lane:bool
+	var lane:int
 	var this_note:note_base
+	var last_note:note_base=current_note_list.back()
 	match info[0]:
-		205:
-			lower_lane=true
-			this_note= note_base.new(info[2],info[2],1.0,lower_lane,true)
-			add_child(this_note)
-			current_note_list.append(this_note)
 		308:
-			lower_lane=false
-			this_note=note_base.new(info[2],info[2],1.0,lower_lane,true)
-			add_child(this_note)
-			current_note_list.append(this_note)
-		410:
-			pass
-			#both lane notes
+			lane=0
+		205:
+			lane=1
 		511:
-			pass
-			#effect notes
-	
-	pass
+			lane=2
+		410:
+			lane=3
+
+	if info[5]>=3:
+		if lane == 1 or lane == 0:
+			this_note= hold_note.new(info[2],info[5],1.0,lane,true)
+			add_child(this_note)
+	else:
+		if lane == 1 or lane == 0:
+			this_note= note_base.new(info[2],info[2],1.0,lane,true)
+			add_child(this_note)
+		if lane == 2:
+			if last_note is freestyle_note:
+				this_note=freestyle_followup.new(info[2],info[2],1.0,lane,true)
+				last_note.followups.append(this_note)
+				add_child(this_note)
+				this_note.missed.connect(last_note.sub_missed)
+				return
+			else:
+				this_note=freestyle_note.new(info[2],info[2],1.0,lane,true)
+				add_child(this_note)
+	if this_note is not freestyle_note:
+		if last_note is freestyle_note:
+			current_note_list.append_array(last_note.followups)
+	if this_note:
+		current_note_list.append(this_note)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

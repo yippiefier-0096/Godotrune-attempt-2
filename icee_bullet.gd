@@ -5,7 +5,6 @@ class_name icee_bullets
 func _ready() -> void:
 	invulnerable=0.2
 	print(position)
-	self.position=BattleManager.position+Vector2(randf(),randf())*45
 	super()
 	graphics.sprite_frames.add_frame("default",load("uid://cwpxqcyp80vu6"))
 	initial_velocity= Vector2(randf_range(0.5,-0.5),1)

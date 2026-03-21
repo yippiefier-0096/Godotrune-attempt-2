@@ -44,6 +44,7 @@ func _ready() -> void:
 	pass
 	
 func battle_start(initiator:battle_instance):
+	global_position-=get_global_transform_with_canvas().get_origin()
 	current_battle=initiator
 	globals.mode=globals.mode_index.battle_turn
 	BgmManager.stream=load("uid://t32vdm66vrbh")
@@ -208,31 +209,29 @@ func round_consequence():
 		return
 	globals.mode=globals.mode_index.battle_turn
 	enemy_turn()
-func action_groups(case:Array):
-	return case[0]==actioncontext.attack
+
+
 func enemy_turn():
 	if UiManager.menu_b:
 		UiManager.menu_b.queue_free()
 	if globals.mode==globals.mode_index.battle_turn:
 		bt_timer=0
-		self.position=OverworldTeam.position
 		globals.mode=globals.mode_index.battle_dodge
 		if current_battle.special_attacks.has(turn_counter):
 			enemy_attacks.append(current_battle.special_attacks[turn_counter].new())
-			bt_timer=enemy_attacks[0].attack_length
 		else:
 			for i in enemy_team.size():
 				var _v=enemy_team[i].choose_attack()
 				enemy_attacks.append(_v)
-				bt_timer+=enemy_attacks[i].attack_length
-		print(enemy_attacks)
-		for i in enemy_attacks:
-			add_child(i)
 		if enemy_attacks[0].soul_mode:
-			soul=enemy_attacks[0].soul_mode.new()
+			soul=enemy_attacks[0].soul_mode
 		else:
 			soul=heart_shaped_object.new()
 		self.add_child(soul)
+		await soul.intro()
+		for i in enemy_attacks:
+			add_child(i)
+			bt_timer+=i.attack_length
 		bt_timer/=enemy_attacks.size()	
 		await get_tree().create_timer(bt_timer).timeout
 		soul.queue_free()

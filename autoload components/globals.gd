@@ -38,11 +38,11 @@ func _input(event: InputEvent) -> void:
 			test=false
 			
 	if event.is_action_pressed("q"):
-		Inventory.use_item(0,[ally_list[1].profile])
+		Inventory.use_item(0,[ally_list[1]])
 	if event.is_action_pressed("w"):
-		Inventory.equip_weapon(0,ally_list[1].profile)
+		Inventory.equip_weapon(0,ally_list[1])
 	if event.is_action_pressed("e"):
-		Inventory.equip_weapon(1,ally_list[1].profile)
+		Inventory.equip_weapon(1,ally_list[1])
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

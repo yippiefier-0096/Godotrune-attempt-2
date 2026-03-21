@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func behavior(life:float):
 	if life==0:
-		self.position=BattleManager.position+Vector2(randf(),randf())*8
+		self.position=Vector2(randf(),randf())*8
 	elif life<=2:
 		self.position+=initial_velocity
 		initial_velocity+=Vector2(0,0.05)

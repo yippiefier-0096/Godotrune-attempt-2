@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 ## Base class for events where bullets spawn as a part of an attack.
 ##
 ## Nodes that extend off this script are each their own "attack pattern" that instanciates various bullets in different ways.
@@ -7,7 +7,7 @@ extends Node
 class_name bullet_pattern_base
 
 var intensity:float=1
-var soul_mode:GDScript
+var soul_mode:heart_shaped_object
 var attack_length:float=10
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
