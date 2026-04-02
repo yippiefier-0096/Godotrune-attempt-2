@@ -3,6 +3,7 @@ class_name bgm_manager
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print("yolo")
 	pass # Replace with function body.
 
 
