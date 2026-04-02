@@ -14,14 +14,18 @@ func _ready() -> void:
 	
 func hit(this:int=0)->bool:
 	if absf(just_timing-util.current_playback_ms())<300:
-		state=state_enum.finished
+		safe_free()
 		return true
 	else:
 		return false
+func safe_free():
+	print("hapen")
+	super()
+	self.queue_free()
 func _process(delta: float) -> void:
 	match state:
 		state_enum.idle:
-			position.x=320+clampf((just_timing-util.current_playback_ms()),0,10000000)
+			position.x=320+clampf((just_timing-util.current_playback_ms())/(scroll_speed*4.5),0,10000000)
 		_:
 			position.y-=y_velo
 			y_velo-=0.3

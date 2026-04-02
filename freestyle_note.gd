@@ -3,7 +3,7 @@ class_name freestyle_note
 
 var followups:Array[freestyle_followup]
 
-
+signal clear
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	super()
@@ -17,6 +17,7 @@ func hit(this:int=0)->bool:
 	var results:String
 	if absf(_i)<300:
 		state=state_enum.state1
+		safe_free()
 	
 	return true
 func _process(delta: float) -> void:
@@ -34,18 +35,18 @@ func _process(delta: float) -> void:
 		if followups.is_empty():
 			state=state_enum.finished
 			safe_free()
+		else:
+			if !followups[0]:
+				followups.pop_front()
 	if util.current_playback_ms()-just_timing>300:
 		if state==state_enum.idle:
-			print("FIRST MISS")
-			safe_free()
-			self.queue_free()
+			sub_missed()
 	pass
 
 func sub_missed():
 	print("CHAIN FAIL")
 	for i in followups:
-		i.safe_free()
-		i.queue_free()
+		clear.emit()
 	self.safe_free()
 	self.queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.

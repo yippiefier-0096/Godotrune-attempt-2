@@ -2,7 +2,7 @@ extends chart_data_base
 
 func _init() -> void:
 	bpm=169
-	delta_beat=60000/bpm
+	delta_beat=60000.0/bpm
 	note_list=[
 [205,192,5680,1,0,0],
 [308,192,5680,1,0,0],

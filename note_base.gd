@@ -22,6 +22,7 @@ var y_velo:float
 
 var state:int
 
+var tweener:Tween
 enum state_enum{idle,in_range,state1,state2,finished}
 func _init(timing:int,end:int,scroll:float,lane:int,side:bool):
 	state=state_enum.idle

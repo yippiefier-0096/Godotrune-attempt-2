@@ -20,9 +20,9 @@ func equip(target:battle_profile,slot:int):
 		target.equipped_armors[slot].is_equipped=false
 	self.is_equipped=true
 	target.equipped_armors[slot]=self
-	target.atk_aug[1+slot]=self.atk_arg+target.atk*self.atk_bonus
-	target.def_aug[1+slot]=self.def_arg+target.def*self.def_bonus
-	target.mag_aug[1+slot]=self.mag_arg+target.mag*self.mag_bonus
+	target.atk_aug[1+slot]=roundi(self.atk_arg+target.atk*self.atk_bonus)
+	target.def_aug[1+slot]=roundi(self.def_arg+target.def*self.def_bonus)
+	target.mag_aug[1+slot]=roundi(self.mag_arg+target.mag*self.mag_bonus)
 	print(target,target.equipped_armors,slot)
 	pass
 

@@ -29,29 +29,6 @@ func _input(event: InputEvent) -> void:
 		target=temp_list[0]
 		target.hit(event_keycode)
 		print("hit_up",target)
-	#if event is InputEventKey:
-		#if event.is_released():
-			#return
-		#if InputMap.event_is_action(event,"rhythm_down"):
-			#var temp_list=all_notes.filter(func(x:note_base):return x.on_lane==x.lane_meaning.down or x.on_lane==x.lane_meaning.both)
-			#if temp_list.is_empty():
-				#return
-			#target=temp_list[0]
-			#target.hit(event.keycode)
-			#print("hit_down",target)
-			#pass
-		#if InputMap.event_is_action(event,"rhythm_up"):
-			#var temp_list=all_notes.filter(func(x:note_base):return x.on_lane==x.lane_meaning.up or x.on_lane==x.lane_meaning.both)
-			#if temp_list.is_empty():
-				#return
-			#target=temp_list[0]
-			#target.hit(event.keycode)
-			#print("hit_up",target)
-
-		pass
-
-
-	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

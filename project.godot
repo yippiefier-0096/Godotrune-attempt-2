@@ -44,6 +44,12 @@ window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
+[editor]
+
+movie_writer/video_quality=1.0
+movie_writer/movie_file="C:/Users/Johnny Pai/desktop/test.avi"
+movie_writer/fps=144
+
 [input]
 
 ui_accept={
