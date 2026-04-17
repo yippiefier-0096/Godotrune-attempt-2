@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name Globals
 
 enum mode_index{overworld,shop,menu,battle_turn,battle_dodge}
@@ -16,12 +16,9 @@ var assist_icon:Dictionary[GDScript,String]={
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
 	ally_list=[kris_profile.new(0),susie_profile.new(1),noelle_profile.new(2),ralsei_profile.new(3)]
 	for i in ally_list.size():
 		add_child(ally_list[i])
-		
-	pass # Replace with function body
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("menu"):

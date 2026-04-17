@@ -5,6 +5,7 @@ var initial_hit:bool=false
 var held_input_event:int
 var extension:AnimatedSprite2D=AnimatedSprite2D.new()
 var tail:AnimatedSprite2D=AnimatedSprite2D.new()
+signal note_released
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	state=state_enum.idle
@@ -45,6 +46,7 @@ func release():
 	else:
 		print("HIT")
 		self.outro()
+	note_released.emit()
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

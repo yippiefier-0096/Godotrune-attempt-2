@@ -83,7 +83,10 @@ func _process(delta: float) -> void:
 			pass
 		else:
 			safe_free()
-		self.queue_free()
+			self.queue_free()
+	elif util.current_playback_ms()-just_timing>300:
+		safe_free()
+		self.queue_free()	
 	pass
 func safe_free():
 	get_parent().current_note_list.erase(self)
