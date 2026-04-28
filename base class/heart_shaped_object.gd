@@ -12,7 +12,7 @@ func _ready() -> void:
 	hitbox=CollisionShape2D.new()
 	hitbox.shape=CircleShape2D.new()
 	self.add_child(hitbox)
-	hitbox.scale*=0.4
+	hitbox.scale*=0.6
 	graphics=AnimatedSprite2D.new()
 	graphics.sprite_frames=load("uid://bnb3jasd8ffra")
 	self.add_child(graphics)
@@ -20,7 +20,7 @@ func _ready() -> void:
 	add_child(graze)
 	collision_layer=2
 	collision_mask=2
-	self.scale=Vector2(0.6,0.6)
+	self.scale*=0.9
 	pass # Replace with func`tion body.
 	
 func intro(pulse:bool=false):

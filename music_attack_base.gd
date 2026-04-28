@@ -18,7 +18,7 @@ func _init(_intensity:float=1) -> void:
 func spawn_note(info:Array):
 	var lane:int
 	var this_note:note_base
-	var last_note:note_base=current_note_list.back()
+	var last_note:note_base=current_note_list.back() if !current_note_list.is_empty() else null
 	match info[0]:
 		308:
 			lane=0

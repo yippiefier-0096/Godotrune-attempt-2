@@ -26,17 +26,17 @@ func _draw() -> void:
 	elif state==state_enum.idle:
 		draw_rect(Rect2(0,-15,(end_timing-just_timing)/(4.5*scroll_speed),30),Color.YELLOW,true)
 	pass
-func hit(this:int=0):
+func hit(this:int=0) ->bool:
 	var _i = util.current_playback_ms() - just_timing
 	if absf(_i)>300:
-		return
+		return false
 	initial_result=_i
 	initial_hit=true
 	state=state_enum.state1
 	held_input_event=this
 	safe_free()
 	pass
-	
+	return true
 func release():
 	var _i = util.current_playback_ms() - end_timing
 	if absf(_i)>300:

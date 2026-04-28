@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://babbyw1h1omwg" path="res://instances/object_2.gd" id="2_oaqeo"]
 [ext_resource type="Script" uid="uid://lyirym8l4rru" path="res://instances/test_battle_1.gd" id="3_u4b3c"]
 [ext_resource type="Script" uid="uid://dictttk0lyssi" path="res://base class/battle_instance.gd" id="4_y0txv"]
-[ext_resource type="Script" uid="uid://bup3t6k60os1u" path="res://test_enemy1.gd" id="5_s1ndw"]
-[ext_resource type="Script" uid="uid://dh717s28il530" path="res://test_enemy_2.gd" id="6_ejn1u"]
+[ext_resource type="Script" uid="uid://bup3t6k60os1u" path="res://instances/test instances/test_enemy1.gd" id="5_s1ndw"]
+[ext_resource type="Script" uid="uid://dh717s28il530" path="res://instances/test instances/test_enemy_2.gd" id="6_ejn1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oaqeo"]
 size = Vector2(101.859985, 161.63342)
