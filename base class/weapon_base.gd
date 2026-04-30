@@ -22,7 +22,9 @@ var def_bonus:float=0.0
 ## multiplier of the user's innate magic.
 var mag_bonus:float=0.0
 
+var strike_type:battle_strike_bar.pattern_lookup=battle_strike_bar.pattern_lookup.LINEAR
 func _ready() -> void:
+	
 	pass 
 
 ## If and only if not equipped (I.e. [member is_equipped] is null) be equipped to [param target] and give it this equipment's stat bonus.
