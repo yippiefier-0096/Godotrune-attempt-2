@@ -18,5 +18,10 @@ func _init(_character:battle_profile,beats:Array[int]) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	current_beat
+	pass
+func _input(event: InputEvent) -> void:
+	if event.is_action("confirm"):
+		for i in strike_notes:
+			if current_beat<i.beat+1 and current_beat>i.beat-1:
+				pass
 	pass
