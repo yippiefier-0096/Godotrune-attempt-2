@@ -23,6 +23,7 @@ var def_bonus:float=0.0
 var mag_bonus:float=0.0
 
 var strike_type:battle_strike_bar.pattern_lookup=battle_strike_bar.pattern_lookup.LINEAR
+var strike_split_range:Array[int]=[1,1]
 func _ready() -> void:
 	
 	pass 

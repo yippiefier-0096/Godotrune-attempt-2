@@ -24,8 +24,13 @@ func _init(pattern:pattern_lookup=pattern_lookup.LINEAR,new_beat:int=0) -> void:
 	beat=new_beat
 	beat_delay=beat*0.150
 	pass
+func hit(timing:int)->int:
+	if timing<80 and timing >70:
+		return 100
+		#perfect 
+	return 100
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	current_life=(Time.get_ticks_msec()-start_time)/1000
-	position.x=motion.execute([(1+beat_delay)-current_life])*10
+	position.x=motion.execute([(1.0+beat_delay)-current_life])*10
 	pass
